@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+    font-weight: 300;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
+    grid-template-rows: 3rem 4rem 3rem 0.5rem auto 0.5rem 3rem;
+    grid-template-areas:
+    "header header header header header header header header"
+    ". mainimage mainimage mainimage mainimage mainimage mainimage ."
+    ". categories categories categories categories categories categories ."
+    ". . . . . . . ."
+    ". feed feed feed feed feed feed ."
+    ". . . . . . . ."
+    "footer footer footer footer footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
+    grid-template-areas: ". btnmenu searchbar searchbar searchbar searchbar btnsearch .";
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.headerelements{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnmenu {
+    grid-area: btnmenu;
+
+}
+
+#searchbar {
+    grid-area: searchbar;
+    font-size: 12pt;
+    padding: 0.25rem;
+    border: solid 1px;
+}
+
+#btnsearch {
+    grid-area: btnsearch;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
+    grid-template-areas: ". btnmenu searchbar searchbar searchbar searchbar btnsearch .";
+}
+
+#mainimage {
+    grid-area: mainimage;
+
+}
+
+#categories {
+    grid-area: categories;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "health accommodation places shopping education nonprofit";
+    border-bottom: solid 1px;
+}
+
+#health {
+    grid-area: health;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#health:hover {
+    border-bottom: solid 8px rgb(234,125,24);
+}
+
+#accommodation {
+    grid-area: accommodation;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#accommodation:hover {
+    border-bottom: solid 8px rgb(24, 175, 234);
+}
+
+#places {
+    grid-area: places;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#places:hover {
+    border-bottom: solid 8px rgb(219, 48, 182);
+}
+
+#shopping {
+    grid-area: shopping;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#shopping:hover {
+    border-bottom: solid 8px rgb(221, 51, 102);
+}
+
+#education {
+    grid-area: education;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#education:hover {
+    border-bottom: solid 8px rgb(253, 240, 57);
+}
+
+#nonprofit {
+    grid-area: nonprofit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nonprofit:hover {
+    border-bottom: solid 8px rgb(95, 196, 37);
+}
+
+#feed {
+    grid-area: feed;
+}

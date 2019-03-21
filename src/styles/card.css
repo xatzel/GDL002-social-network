@@ -1,0 +1,122 @@
+.card {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1rem 3rem 1fr 3rem;
+    grid-template-rows: 3rem auto auto auto 3rem auto;
+    grid-template-areas:
+        "leftbar name name btnfavorite"
+        "leftbar schedule scheduleinfo scheduleinfo"
+        "leftbar telephone telephoneinfo telephoneinfo"
+        "leftbar address addressinfo addressinfo"
+        "leftbar reviewgrid reviewgrid rating";
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
+    border-radius: 0.15rem;
+}
+
+#leftbar {
+    grid-area: leftbar;
+    background-color: rgb(234,125,24);
+    border-radius: 0.15rem 0 0 0.15rem;
+}
+
+#name {
+    grid-area: name;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;/*falta revisar que tipo de display para que muestre ellipsis y se pueda centrar*/
+
+}
+
+#btnfavorite {
+    grid-area: btnfavorite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#schedule {
+    grid-area: schedule;
+    display: flex;
+    height: 3rem;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#scheduleinfo {
+    grid-area: scheduleinfo;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#telephone {
+    grid-area: telephone;
+    display: flex;
+    height: 3rem;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#telephoneinfo {
+    grid-area: telephoneinfo;
+    padding: 0.25rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+#address {
+    grid-area: address;
+    display: flex;
+    height: 3rem;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#addressinfo {
+    grid-area: addressinfo;
+    padding: 0.25rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+#reviewgrid {
+    grid-area: reviewgrid;
+    display: grid;
+    grid-template-columns: 1fr 0.5rem 1fr;
+    grid-template-areas: "showreviews . btnreview";
+    padding: 0.5rem;
+}
+
+#showreviews {
+    grid-area: showreviews;
+    display: flex;
+    background-color:rgb(210, 226, 228);
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.15rem;
+}
+
+#btnreview {
+    grid-area: btnreview;
+    display: flex;
+    background-color:rgb(210, 226, 228);
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.15rem;
+}
+
+#rating {
+    grid-area: rating;
+    display: flex;
+    background-color: rgb(163, 211, 53);
+    margin: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
