@@ -1,6 +1,6 @@
 {
     "services": [{
-        "category" : "Salud",
+        "num" : 1,
         "name" : "VeteriAna",
         "address" : "Av Rafael Sanzio 400, La Estancia, 45030, Zapopan",
         "phone" : "(33) 3110 6256",
@@ -21,7 +21,7 @@
             "Venta de alimento"
         ]
     }, {
-        "category" : "Salud",
+        "num" : 2,
         "name" : "Hospital Veterinario de Occidente",
         "address" : "Av Clouthier 2246, Colli Urbano, 45070, Zapopan",
         "phone" : "(33) 3125 5543",
@@ -39,7 +39,7 @@
             "Venta de alimento"
         ]
     }, {
-        "category": "Salud",
+        "num": 3,
         "name" : "Centro Veterinario Terranova",
         "address" : "Av Guadalupe 5233, Jardines de Guadalupe, 45030, Zapopan",
         "phone" : "(33) 1204 0772",
@@ -63,7 +63,7 @@
             "Transporte"
         ]
     }, {
-        "category" : "Hospedaje",
+        "num" : 4,
         "name" : "Dogtown Hotel & Spa",
         "address" : "Calle Puerto Yavaros 40, Col Miramar, 45060, Zapopan",
         "phone" : "(044)(33) 2795 1952",
@@ -79,7 +79,7 @@
             "Venta de alimento"        
         ]
     }, {
-        "category" : "Hospedaje",
+        "num" : 5,
         "name" : "Pet Camp",
         "address" : "Calz José Guadalupe Gallo 1818, Agua Blanca Habitacional, 45235, Zapopan",
         "phone" : "(33) 1279 3779",
@@ -97,7 +97,7 @@
             "Transporte"
         ]
     }, {
-        "category" : "Pet friendly",
+        "num" : 6,
         "name" : "Coffee & Pets Deli",
         "address" : "Independencia 5785, Arcos de Guadalupe, 45037, Zapopan",
         "phone" : "(33) 1186 7656",
@@ -110,7 +110,7 @@
             "Café"
         ]
     }, {
-        "category" : "Pet friendly",
+        "num" : 7,
         "name" : "Poi Poi Kings Burgers",
         "address" : "Ingenieros Sur 1099, Chapalita Las Fuentes, 45030, Zapopan",
         "phone" : "(33) 2304 8075",
@@ -123,7 +123,7 @@
             "Burgers"
         ]
     }, { 
-        "category" : "Autoservicios",
+        "num" : 8,
         "name" : "Petco Cordilleras",
         "address" : "Av Patria 888, Jardines de Guadalupe, 45030, Zapopan",
         "phone" : "(33) 1652 3075",
@@ -140,7 +140,7 @@
             "Adopción de mascotas"
         ]
     }, {
-        "category" : "Autoservicios",
+        "num" : 9,
         "name" : "Mascottchen",
         "address" : "Av Manuel J. Clouthier 888, Mirador del Sol, 45054, Zapopan",
         "phone" : "(33) 3563 8175",
@@ -155,7 +155,7 @@
             "Venta de alimento"
         ]
     }, {
-        "category": "Entrenamiento",
+        "num" : 10,
         "name" : "Club de Agility Delta",
         "address" : "Av Volcán del Colli 1195, Colli Urbano, 45070, Zapopan",
         "phone" : "(33) 3587 2964",
@@ -170,7 +170,7 @@
             "Criadero"
         ]
     }, {
-        "category" : "Entrenamiento",
+        "num" : 11,
         "name" : "Clicker Pets México",
         "address" : "Privada Juan Partí 377, El Triángulo, 45138, Zapopan",
         "phone" : "(33) 1543 9383",
