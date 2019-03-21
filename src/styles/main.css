@@ -3,7 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    font-size: 16pt;
+    font-size: 12pt;
     font-weight: 300;
 }
 
@@ -24,7 +24,7 @@ main {
     ". mainimage mainimage mainimage mainimage mainimage mainimage ."
     ". categories categories categories categories categories categories ."
     ". . . . . . . ."
-    ".feed feed feed feed feed feed ."
+    ". feed feed feed feed feed feed ."
     ". . . . . . . ."
     "footer footer footer footer footer footer footer footer";
 }
@@ -145,4 +145,8 @@ header {
 
 #nonprofit:hover {
     border-bottom: solid 8px rgb(95, 196, 37);
+}
+
+#feed {
+    grid-area: feed;
 }
