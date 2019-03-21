@@ -4,11 +4,11 @@
     grid-template-columns: 1rem 3rem 1fr 3rem;
     grid-template-rows: 3rem auto auto auto 3rem auto;
     grid-template-areas:
-        "leftbar name name btnfavorite"
+        "leftbar rating name btnfavorite"
         "leftbar schedule scheduleinfo scheduleinfo"
         "leftbar telephone telephoneinfo telephoneinfo"
         "leftbar address addressinfo addressinfo"
-        "leftbar reviewgrid reviewgrid rating";
+        "leftbar reviewgrid reviewgrid reviewgrid";
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
     border-radius: 0.15rem;
 }
