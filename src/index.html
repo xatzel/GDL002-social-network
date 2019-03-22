@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css"  href="styles/main.css">
     <link rel="stylesheet" type="text/css"  href="styles/card.css">
+    <link rel="stylesheet" type="text/css"  href="styles/reviews-rate.css">
     <script src="main.js"></script>
 </head>
 
+    
 <body>
     <main>
         <header>
@@ -24,33 +26,63 @@
         <div id= "mainimage"></div>
 
         <section id="categories">
-
-            <div id="health"><i class="fas fa-clinic-medical"></i></div>
-            <div id="accommodation"><i class="fas fa-concierge-bell"></i></div>
-            <div id="places"><i class="fas fa-map-marker-alt"></i></div>
-            <div id="shopping"><i class="fas fa-shopping-basket"></i></div>
-            <div id="education"><i class="fas fa-graduation-cap"></i></div>
-            <div id="nonprofit"><i class="fas fa-hand-holding-heart"></i></div>
-
+            <div id="health"><img class="categoryimg" src="images/009-red-cross.svg" width="100%" height="100%"></div>
+            <div id="accommodation"><img class="categoryimg" src="images/006-dog-house.svg" width="100%" height="100%"></div>
+            <div id="places"><img class="categoryimg" src="images/007-pet.svg" width="100%" height="100%"></div>
+            <div id="shopping"><img class="categoryimg" src="images/010-shopping-basket.svg" width="100%" height="100%"></div>
+            <div id="education"><img class="categoryimg" src="images/011-graduation-cap.svg" width="100%" height="100%"></div>
+            <div id="nonprofit"><img class="categoryimg" src="images/009-red-cross.svg" width="100%" height="100%"></div>
         </section>
 
         <section id="feed">
 
-            <div class="card">
-                <div id="leftbar"></div>
-                <div id="name"> </div>
-                <div id="btnfavorite"><i class="far fa-star"></i></div>
-                <div id="schedule"><i class="fas fa-clock"></i></div>
-                <div id="scheduleinfo"> </div>
-                <div id="telephone"><i class="fas fa-phone"></i></div>
-                <div id="telephoneinfo"> </div>
-                <div id="address"><i class="fas fa-map-marker"></i></div>
-                <div id="addressinfo"> </div>
-                <div id="reviewgrid">
-                    <div id="showreviews">Reseñas</div>
-                    <div id="btnreview">Calificar</div>
+            <div class="infocard">
+
+                <div id="primaryinfo">
+                    <div id="leftbar"></div>
+                    <div id="name">Hospital Veterinario de Occidente</div>
+                    <div id="rating">9.2</div>
+                    <div id="btnfavorite"><i class="far fa-star"></i></div>
+                    <div id="basicservices">
+                        <div id="creditcard"><img class="basicsimg" src="images/003-credit-card.svg" width="100%" height="100%"></div>
+                        <div id="cashonly"><img class="basicsimg" src="images/004-notes.svg" width="100%" height="100%"></div>
+                        <div id="openallday"><img class="bascisimg" src="images/002-24-hours.svg" width="100%" height="100%"></div>
+                        <div id="transport"><img class="bascisimg" src="images/008-ambulance.svg" width="100%" height="100%"></div>
+                        <div id="parking"><img class="bascisimg" src="images/005-parking-sign.svg" width="100%" height="100%"></div>
+                        <div id="lab"><img class="bascisimg" src="images/001-microscope.svg" width="100%" height="100%"></div>
+                    </div>
+                    <div id="specialfeatures">Cuenta con especialidades clínicas</div>
                 </div>
-                <div id="rating">92%</div>
+
+                <div id="secondaryinfo">
+                    <div id="secondaryleftbar"></div>
+                    <div id="schedule"><i class="fas fa-clock"></i></div>
+                    <div id="scheduleinfo">Lunes a Sábado: 9:00 A.M. - 6:00 P.M.</div>
+                    <div id="telephone"><i class="fas fa-phone"></i></div>
+                    <div id="telephoneinfo">333 121 7299<br>333 122 7386<br>331 366 9193 (Emergencias)</div>
+                    <div id="website"><i class="fas fa-globe"></i></div>
+                    <div id="websiteinfo">www.hospitalveterinariodeoccidente.com</div>
+                    <div id="address"><i class="fas fa-map-marker"></i></div>
+                    <div id="addressinfo">Av Clouthier 2246, Colli Urbano, 45070, Zapopan</div>
+                    <div id="reviewgrid">
+                        <div id="btnshowreviews">Opiniones</div>
+                        <div id="btnrate">Calificar</div>
+                    </div>
+                </div>
+
+                <div id="reviewcontainer">
+                    <div id="btnedit"><i class="far fa-edit fa-xs"></i></div>
+                    <div id="authorinfo">Fulanita escribió:</div>
+                    <div id="writtenreview">"Fido se enfermó de la panza y el veterinario lo apapachó y lo curó."</div>
+                    <div id="heartcount">3</div>
+                    <div id="heart"><i class="far fa-heart"></i></div>
+                </div>
+
+                <div id="rateform">
+                <textarea class="textinput" placeholder="Escribe aquí tu opinión..."></textarea>
+                <div id="btnsend"></div>
+                </div>
+
             </div>
 
         </section>
@@ -59,5 +91,6 @@
 
 
     </main>
+    <script src="main.js"></script>
 </body>
 </html>
