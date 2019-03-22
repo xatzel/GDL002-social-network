@@ -1,5 +1,5 @@
 #reviewcontainer {
-    display: grid;
+    display: none;
     grid-template-columns:1rem auto 3rem 3rem ;
     grid-template-rows: 1rem 2rem auto 2rem;
     grid-template-areas:
@@ -37,4 +37,8 @@
 #writtenreview {
     grid-area: writtenreview;
     display: block;
+}
+
+#rateform {
+    display: none;
 }

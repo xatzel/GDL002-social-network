@@ -204,12 +204,12 @@
     grid-area: reviewgrid;
     display: grid;
     grid-template-columns: 1fr 0.5rem 1fr;
-    grid-template-areas: "showreviews . btnreview";
+    grid-template-areas: "btnshowreviews . btnrate";
     padding: 0.5rem;
 }
 
-#showreviews {
-    grid-area: showreviews;
+#btnshowreviews {
+    grid-area: btnshowreviews;
     display: flex;
     background-color:rgb(210, 226, 228);
     align-items: center;
@@ -217,8 +217,8 @@
     border-radius: 0.15rem;
 }
 
-#btnreview {
-    grid-area: btnreview;
+#btnrate {
+    grid-area: btnrate;
     display: flex;
     background-color:rgb(210, 226, 228);
     align-items: center;
