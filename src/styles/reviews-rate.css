@@ -1,0 +1,44 @@
+#reviewcontainer {
+    display: none;
+    grid-template-columns:1rem auto 3rem 3rem ;
+    grid-template-rows: 1rem 2rem auto 2rem;
+    grid-template-areas:
+        ". . . btnedit"
+        ". authorinfo . ."
+        ". writtenreview . ."
+        ". . heartcount heart";
+}
+
+#btnedit {
+    grid-area: btnedit;
+    display: none;
+}
+
+#authorinfo {
+    grid-area: authorinfo;
+    display: flex;
+}
+
+#heartcount {
+    grid-area: heartcount;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#heart {
+    grid-area: heart;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#writtenreview {
+    grid-area: writtenreview;
+    display: block;
+}
+
+#rateform {
+    display: none;
+}

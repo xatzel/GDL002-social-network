@@ -1,22 +1,41 @@
-.card {
+.infocard {
     display: grid;
-    width: 100%;
-    grid-template-columns: 1rem 3rem 1fr 3rem;
-    grid-template-rows: 3rem auto auto auto 3rem auto;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-        "leftbar name name btnfavorite"
-        "leftbar schedule scheduleinfo scheduleinfo"
-        "leftbar telephone telephoneinfo telephoneinfo"
-        "leftbar address addressinfo addressinfo"
-        "leftbar reviewgrid reviewgrid rating";
+        "primaryinfo"
+        "secondaryinfo"
+        "ratesandreviews";
+    cursor: pointer;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
     border-radius: 0.15rem;
+}
+
+#primaryinfo {
+	grid-area: primaryinfo;
+	display: grid;
+    grid-template-columns: 1rem 4rem 1fr 3rem;
+    grid-template-rows: 4rem 3rem 2rem;
+	grid-template-areas:
+        "leftbar rating name btnfavorite"
+        "leftbar basicservices basicservices basicservices"
+        "leftbar specialfeatures specialfeatures specialfeatures";
 }
 
 #leftbar {
     grid-area: leftbar;
     background-color: rgb(234,125,24);
     border-radius: 0.15rem 0 0 0.15rem;
+}
+
+#rating {
+    grid-area: rating;
+    display: flex;
+    background-color: rgb(163, 211, 53);
+    margin: 0.1rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 #name {
@@ -27,7 +46,6 @@
     font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;/*falta revisar que tipo de display para que muestre ellipsis y se pueda centrar*/
-
 }
 
 #btnfavorite {
@@ -37,10 +55,91 @@
     justify-content: center;
 }
 
+#basicservices{
+    grid-area: basicservices;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "creditcard cashonly openallday transport parking lab"
+}
+
+#creditcard {
+    grid-area: creditcard;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.5rem;
+}
+
+#cashonly {
+    grid-area: cashonly;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.25rem;
+}
+
+#openallday {
+    grid-area: openallday;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.25rem;
+}
+
+#transport {
+    grid-area: transport;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.25rem;
+}
+
+#parking {
+    grid-area: parking;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.25rem;
+}
+
+#lab {
+    grid-area: lab;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.25rem;
+}
+
+#specialfeatures {
+    grid-area: specialfeatures;
+    display: flex;
+    padding: 0.5rem;
+    align-items: flex-start;
+
+}
+
+#secondaryinfo {
+	grid-area: secondaryinfo;
+	display: grid;
+    grid-template-columns: 1rem 3rem 1fr 3rem;
+    grid-template-rows: 3rem auto 3rem auto 3rem;
+    grid-template-areas:
+    "secondaryleftbar schedule scheduleinfo scheduleinfo"
+    "secondaryleftbar telephone telephoneinfo telephoneinfo"
+    "secondaryleftbar website websiteinfo websiteinfo"
+    "secondaryleftbar address addressinfo addressinfo"
+    "secondaryleftbar reviewgrid reviewgrid reviewgrid";
+}
+
+#secondaryleftbar {
+    grid-area: secondaryleftbar;
+    background-color: rgb(234,125,24);
+    border-radius: 0.15rem 0 0 0.15rem;
+}
+
 #schedule {
     grid-area: schedule;
     display: flex;
-    height: 3rem;
     padding: 0.25rem;
     align-items: center;
     justify-content: center;
@@ -49,6 +148,7 @@
 #scheduleinfo {
     grid-area: scheduleinfo;
     display: flex;
+    padding: 0.25rem;
     align-items: center;
     overflow: hidden;
 }
@@ -56,7 +156,6 @@
 #telephone {
     grid-area: telephone;
     display: flex;
-    height: 3rem;
     padding: 0.25rem;
     align-items: center;
     justify-content: center;
@@ -72,7 +171,6 @@
 #address {
     grid-area: address;
     display: flex;
-    height: 3rem;
     padding: 0.25rem;
     align-items: center;
     justify-content: center;
@@ -85,16 +183,33 @@
     overflow: hidden;
 }
 
+#website {
+    grid-area: website;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#websiteinfo {
+    grid-area: websiteinfo;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+/*    text-overflow: ellipsis; preguntar como hacer para display flex y overflow ellipsis*/
+    overflow: hidden;
+}
+
 #reviewgrid {
     grid-area: reviewgrid;
     display: grid;
     grid-template-columns: 1fr 0.5rem 1fr;
-    grid-template-areas: "showreviews . btnreview";
+    grid-template-areas: "btnshowreviews . btnrate";
     padding: 0.5rem;
 }
 
-#showreviews {
-    grid-area: showreviews;
+#btnshowreviews {
+    grid-area: btnshowreviews;
     display: flex;
     background-color:rgb(210, 226, 228);
     align-items: center;
@@ -102,21 +217,11 @@
     border-radius: 0.15rem;
 }
 
-#btnreview {
-    grid-area: btnreview;
+#btnrate {
+    grid-area: btnrate;
     display: flex;
     background-color:rgb(210, 226, 228);
     align-items: center;
     justify-content: center;
     border-radius: 0.15rem;
-}
-
-#rating {
-    grid-area: rating;
-    display: flex;
-    background-color: rgb(163, 211, 53);
-    margin: 0.5rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
 }
