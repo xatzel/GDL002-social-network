@@ -18,7 +18,8 @@
             "Estética",
             "Profilaxis dental",
             "Farmacia",
-            "Venta de alimento"
+            "Venta de alimento",
+            "Estacionamiento"
         ]
     }, {
         "num" : 2,
@@ -36,7 +37,8 @@
             "Cirugía",
             "Pensión",
             "Farmacia",
-            "Venta de alimento"
+            "Venta de alimento",
+            "Estacionamiento"
         ]
     }, {
         "num": 3,
@@ -60,7 +62,8 @@
             "Estética",
             "Farmacia",
             "Venta de alimento",
-            "Transporte"
+            "Transporte",
+            "Estacionamiento"
         ]
     }, {
         "num" : 4,
