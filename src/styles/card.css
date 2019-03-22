@@ -1,10 +1,11 @@
 .infocard {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
         "primaryinfo"
-        "secondaryinfo";
+        "secondaryinfo"
+        "ratesandreviews";
     cursor: pointer;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
     border-radius: 0.15rem;
@@ -195,6 +196,7 @@
     display: flex;
     padding: 0.25rem;
     align-items: center;
+/*    text-overflow: ellipsis; preguntar como hacer para display flex y overflow ellipsis*/
     overflow: hidden;
 }
 
@@ -223,23 +225,3 @@
     justify-content: center;
     border-radius: 0.15rem;
 }
-
-
-
-/*
-.infocard {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1rem 3rem 1fr 3rem;
-    grid-template-rows: 3rem auto auto auto auto 3rem auto;
-    grid-template-areas:
-        "leftbar rating name btnfavorite"
-        "leftbar schedule scheduleinfo scheduleinfo"
-        "leftbar telephone telephoneinfo telephoneinfo"
-        "leftbar website websiteinfo websiteinfo"
-        "leftbar address addressinfo addressinfo"
-        "leftbar reviewgrid reviewgrid reviewgrid";
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
-    border-radius: 0.15rem;
-}
-*/

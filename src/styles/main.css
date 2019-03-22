@@ -54,6 +54,7 @@ header {
     font-size: 12pt;
     padding: 0.25rem;
     border: solid 1px;
+    border-radius: 0.15rem;
 }
 
 #btnsearch {
