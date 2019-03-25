@@ -36,6 +36,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    font-weight: 900;
 }
 
 #name {
@@ -122,8 +123,9 @@
 	grid-area: secondaryinfo;
 	display: grid;
     grid-template-columns: 1rem 3rem 1fr 3rem;
-    grid-template-rows: 3rem auto 3rem auto 3rem;
+    grid-template-rows: 3rem 3rem auto 3rem auto 3rem;
     grid-template-areas:
+    "secondaryleftbar pricerange pricerangeinfo ."
     "secondaryleftbar schedule scheduleinfo scheduleinfo"
     "secondaryleftbar telephone telephoneinfo telephoneinfo"
     "secondaryleftbar website websiteinfo websiteinfo"
@@ -135,6 +137,20 @@
     grid-area: secondaryleftbar;
     background-color: rgb(234,125,24);
     border-radius: 0.15rem 0 0 0.15rem;
+}
+
+#pricerange {
+    grid-area: pricerange;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pricerangeinfo {
+    grid-area: pricerangeinfo;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
 }
 
 #schedule {
