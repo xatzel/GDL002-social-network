@@ -46,8 +46,30 @@ header {
 
 #btnmenu {
     grid-area: btnmenu;
-
+    display: block;
 }
+
+.dropdown {
+    display: none;
+    min-width: 30vw;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  #btnmenu:hover .dropdown{
+    display: block;
+  }
+
+  .menuoption {
+      padding: 0.5rem;
+  }
+
+  .menuoption:hover {
+    border-right: solid 0.5rem rgb(190, 33, 108);
+  }
+
 
 #searchbar {
     grid-area: searchbar;
