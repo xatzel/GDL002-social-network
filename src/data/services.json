@@ -8,10 +8,16 @@
         "rating" : "94%",
         "rates" : 41,
         "privacy" : "Friends",
+        "general" : [
+            "Limpieza - 4/5",
+            "Servicio -5/5",
+            "Precio - $$"
+        ],
         "details" : [
             "Veterianaria",
             "Fisioterapia",
-            "Traumatología & Ortopedia",
+            "Traumatología", 
+            "Ortopedia",
             "Pago con tarjeta",
             "Pensión",
             "Cirugía",
@@ -30,6 +36,11 @@
         "rating" : "93%",
         "rates" : 36,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 4/5",
+            "Servicio - 3/5",
+            "Precio - $$"
+        ],
         "details" : [
             "Veterinaria",
             "Endoscopía",
@@ -49,6 +60,11 @@
         "rating" : "90%",
         "rates" : 21,
         "privacy" : "Friends",
+        "general" : [
+            "Limpieza - 5/5",
+            "Servicio - 4/5",
+            "Precio - $$$"
+        ],
         "details" : [
             "Veterinaria",
             "Rayos X",
@@ -74,6 +90,11 @@
         "rating" : "96%",
         "rates" : 118,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 4/5",
+            "Servicio - 5/5",
+            "Precio - $$"
+        ],
         "details" : [
             "Pensión",
             "Guardería",
@@ -90,6 +111,11 @@
         "rating" : "79%",
         "rates" : 32,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 4/5",
+            "Servicio - 4/5",
+            "Precio - $$$"
+        ],
         "details" : [
             "Pensión",
             "Guardería",
@@ -108,6 +134,11 @@
         "rating" : "88%",
         "rates" : 57,
         "privacy" : "Friends",
+        "general" : [
+            "Limpieza - 5/5",
+            "Servicio - 4/5",
+            "Precio - $$"
+        ],
         "details" : [
             "Pet friendly",
             "Café"
@@ -121,6 +152,11 @@
         "rating" : "90%",
         "rates" : 253,
         "parivacy" : "Public",
+        "general" : [
+            "Limpieza - 5/5",
+            "Servicio - 5/5",
+            "Precio - $$"
+        ],
         "details" : [
             "Pet friendly",
             "Burgers"
@@ -134,11 +170,15 @@
         "rating" : "79%",
         "rates" : 17,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 5/5",
+            "Servicio - 4/5",
+            "Precio - $$$"
+        ],
         "details" : [
             "Internacional",
             "Estética",
             "Venta de alimento",
-            "Entrenamiento",
             "Entrenamiento Positivo",
             "Adopción de mascotas"
         ]
@@ -151,6 +191,11 @@
         "rating" : "87%",
         "rates" : 151,
         "privacy" : "Friends",
+        "general" : [
+            "Limpieza - 3/5",
+            "Servicio - 4/5",
+            "Precio - $$"
+        ],
         "details" : [
             "Veterinaria",
             "Cirugía",
@@ -166,6 +211,11 @@
         "rating" : "63%",
         "rates" : 6,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 3/5",
+            "Servicio - 4/5",
+            "Precio - $$$"
+        ],
         "details" : [
             "Entrenamiento",
             "Agility",
@@ -181,8 +231,14 @@
         "rating" : "85%",
         "rates" : 68,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 4/5",
+            "Servicio - 5/5",
+            "Precio - $$$"
+        ],
         "details" : [
             "Entrenamiento",
+            "Conferencias",
             "Entrenamiento Positivo",
             "Pet Sitter",
             "Pensión",
