@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>GDL002-social-network</title>
+    <title>POOGLE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css"  href="styles/main.css">
@@ -78,10 +78,22 @@
                     <div id="heart"><i class="far fa-heart"></i></div>
                 </div>
 
-                <div id="rateform">
-                <textarea class="textinput" placeholder="Escribe aquí tu opinión..."></textarea>
-                <div id="btnsend"></div>
-                </div>
+                <form id="rateform" method="get">
+
+                    <div id="ratetitle">Tu calificación: </div>
+                    <div id="ratebar">
+                        <div id="onestar"><i class="far fa-star"></i></div>
+                        <div id="twostar"><i class="far fa-star"></i></div>
+                        <div id="threestar"><i class="far fa-star"></i></div>
+                        <div id="fourstar"><i class="far fa-star"></i></div>
+                        <div id="fivestar"><i class="far fa-star"></i></div>
+                    </div>
+                    <div id="opiniontitle">Tu opinión: </div>
+                    <textarea id="opinion" class="textinput" placeholder="Escribe aquí tu opinión..."></textarea>
+                    <div id="veracitycheck" ><input type="checkbox" value="true">Juro que es la verdad y nadamas que la verdad</div> 
+                    <input id="btnsubmit" type="submit" value="Enviar">
+
+                </form>
 
             </div>
 
