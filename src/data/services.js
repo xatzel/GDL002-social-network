@@ -1,4 +1,4 @@
-const services = {
+const SERVICES = {
     "vendors": [{
         "num" : 1,
         "name" : "VeteriAna",

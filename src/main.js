@@ -1,30 +1,19 @@
 'use strict';
 
-const dataObj = SERVICES.providers;
+const dataObj = SERVICES.vendors;
 /* ---------------- FETCHING DATA ---------------- */
 
-fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/src/data/services.json')
-  .then((data) => {
-    // convert data to JSON
-    return data.json();
-  }).then((dataAsJSON) => {
-    // cualquier operación con la data ya procesada
-    console.log(Object.values(dataAsJSON));
-  });
-// FIREBASE esta parte se puede agregar a otro documento y se esconde en git ignore 
-// por que mi apikey tiene informacion confidencial
-/* <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA5jzcQM6exq5aZR2l5JlN77KYV_in4WGw",
-    authDomain: "poogle-31818.firebaseapp.com",
-    databaseURL: "https://poogle-31818.firebaseio.com",
-    projectId: "poogle-31818",
-    storageBucket: "",
-    messagingSenderId: "521015399717"
-  };
-  firebase.initializeApp(config);
-</script> */
+// fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/src/data/services.json')
+//   .then((data) => {
+//     // convert data to JSON
+//     return data.json();
+//   }).then((dataAsJSON) => {
+//     // cualquier operación con la data ya procesada
+//     console.log(Object.values(dataAsJSON));
+//   });
+
+///
+
 //----------------------------------------
 let servicesList = [];
 let servicesInfo = "";
@@ -57,9 +46,9 @@ const showRateForm = () => {
     rateForm.style.display = 'grid';
 }
 
-let givenProvidersList = dataObj;
+let givenVendorsList = dataObj;
 
-const cardInfoLayout = (givenProvidersList) => {
+const cardInfoLayout = (givenVendorsList) => {
 
     feed.innerHTML = "";
 
@@ -80,7 +69,7 @@ const cardInfoLayout = (givenProvidersList) => {
 
 	};
 
-	givenProvidersList.forEach((element) => {
+	givenVendorsList.forEach((element) => {
 
         cardInfo =
 
