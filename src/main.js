@@ -1,8 +1,8 @@
 'use strict';
 
-const dataObj = SERVICES.providers;
+const dataObj = SERVICES.vendors;
 /* ---------------- FETCHING DATA ---------------- */
-
+/*
 fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/src/data/services.json')
   .then((data) => {
     // convert data to JSON
@@ -11,7 +11,7 @@ fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/s
     // cualquier operación con la data ya procesada
     console.log(Object.values(dataAsJSON));
   });
-
+*/
 ///
 
 //----------------------------------------
@@ -46,9 +46,9 @@ const showRateForm = () => {
     rateForm.style.display = 'grid';
 }
 
-let givenProvidersList = dataObj;
+let givenVendorsList = dataObj;
 
-const cardInfoLayout = (givenProvidersList) => {
+const cardInfoLayout = (givenVendorsList) => {
 
     feed.innerHTML = "";
 
@@ -69,8 +69,8 @@ const cardInfoLayout = (givenProvidersList) => {
 
 	};
 
-	givenProvidersList.forEach((element) => {
-
+	givenVendorsList.forEach((element) => {
+        console.log(element);
         cardInfo =
 
             `
@@ -91,7 +91,7 @@ const cardInfoLayout = (givenProvidersList) => {
 
                         <div id="secondaryleftbar"></div>
                         <div id="pricerange"><i class="fas fa-dollar-sign"></i></div>
-                        <div id="pricerangeinfo">$$$</div>
+                        <div id="pricerangeinfo">${element.pricerangeinfo}</div>
                         <div id="schedule"><i class="fas fa-clock"></i></div>
                         <div id="scheduleinfo">${element.scheduleinfo}</div>
                         <div id="telephone"><i class="fas fa-phone"></i></div>
@@ -151,7 +151,8 @@ const cardInfoLayout = (givenProvidersList) => {
 
 
 //---------------------- BUTTONS ---------------------------------
-btnSearch.addEventListener('click', validateSearchInput);
+healthBtn.addEventListener('click',cardInfoLayout(givenVendorsList));
+//btnSearch.addEventListener('click', validateSearchInput);
 //Botón para mostrar opiniones
-btnShowReviews.addEventListener('click', showReviews);
-btnRate.addEventListener('click', showRateForm);
+//btnShowReviews.addEventListener('click', showReviews);
+//btnRate.addEventListener('click', showRateForm);

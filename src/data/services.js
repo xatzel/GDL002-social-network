@@ -1,4 +1,4 @@
-const services = {
+const SERVICES = {
     "vendors": [{
         "num" : 1,
         "name" : "VeteriAna",
@@ -8,17 +8,24 @@ const services = {
         "rating" : "94%",
         "rates" : 41,
         "privacy" : "Friends",
+        "general" : [
+            "Limpieza - 4/5",
+            "Servicio -5/5",
+            "Precio - $$"
+        ],
         "perks" : [
             "Veterianaria",
             "Fisioterapia",
-            "Traumatología & Ortopedia",
+            "Traumatologia",
+            "Ortopedia",
             "Pago con tarjeta",
             "Pensión",
-            "Cirugía",
-            "Estética",
+            "Cirugia",
+            "Estetica",
             "Profilaxis dental",
             "Farmacia",
-            "Venta de alimento"
+            "Venta de alimento",
+            "Estacionamiento"
         ]
     }, {
         "num" : 2,
@@ -29,14 +36,20 @@ const services = {
         "rating" : "93%",
         "rates" : 36,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 4/5",
+            "Servicio - 3/5",
+            "Precio - $$"
+        ],
         "perks" : [
             "Veterinaria",
-            "Endoscopía",
+            "Endoscopia",
             "Pago con tarjeta",
-            "Cirugía",
-            "Pensión",
+            "Cirugia",
+            "Pension",
             "Farmacia",
-            "Venta de alimento"
+            "Venta de alimento",
+            "Estacionamiento"
         ]
     }, {
         "num": 3,
@@ -47,6 +60,11 @@ const services = {
         "rating" : "90%",
         "rates" : 21,
         "privacy" : "Friends",
+        "general" : [
+            "Limpieza - 5/5",
+            "Servicio - 4/5",
+            "Precio - $$$"
+        ],
         "perks" : [
             "Veterinaria",
             "Rayos X",
@@ -56,11 +74,12 @@ const services = {
             "Fisioterapia",
             "Inseminación artificial",
             "Laboratorio",
-            "Pensión",
+            "Pensión", 
             "Estética",
             "Farmacia",
             "Venta de alimento",
-            "Transporte"
+            "Transporte",
+            "Estacionamiento"
         ]
     }, {
         "num" : 4,
@@ -71,12 +90,17 @@ const services = {
         "rating" : "96%",
         "rates" : 118,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 4/5",
+            "Servicio - 5/5",
+            "Precio - $$"
+        ],
         "perks" : [
-            "Pensión",
-            "Guardería",
-            "Estética",
+            "Pension",
+            "Guarderia",
+            "Estetica",
             "Transporte",
-            "Venta de alimento"
+            "Venta de alimento"        
         ]
     }, {
         "num" : 5,
@@ -87,12 +111,17 @@ const services = {
         "rating" : "79%",
         "rates" : 32,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 4/5",
+            "Servicio - 4/5",
+            "Precio - $$$"
+        ],
         "perks" : [
-            "Pensión",
-            "Guardería",
+            "Pension",
+            "Guarderia",
             "Entrenamiento",
             "Entrenamiento Positivo",
-            "Estética",
+            "Estetica",
             "Deportes Caninos",
             "Transporte"
         ]
@@ -105,6 +134,11 @@ const services = {
         "rating" : "88%",
         "rates" : 57,
         "privacy" : "Friends",
+        "general" : [
+            "Limpieza - 5/5",
+            "Servicio - 4/5",
+            "Precio - $$"
+        ],
         "perks" : [
             "Pet friendly",
             "Café"
@@ -118,6 +152,11 @@ const services = {
         "rating" : "90%",
         "rates" : 253,
         "parivacy" : "Public",
+        "general" : [
+            "Limpieza - 5/5",
+            "Servicio - 5/5",
+            "Precio - $$"
+        ],
         "perks" : [
             "Pet friendly",
             "Burgers"
@@ -131,11 +170,15 @@ const services = {
         "rating" : "79%",
         "rates" : 17,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 5/5",
+            "Servicio - 4/5",
+            "Precio - $$$"
+        ],
         "perks" : [
             "Internacional",
             "Estética",
             "Venta de alimento",
-            "Entrenamiento",
             "Entrenamiento Positivo",
             "Adopción de mascotas"
         ]
@@ -148,6 +191,11 @@ const services = {
         "rating" : "87%",
         "rates" : 151,
         "privacy" : "Friends",
+        "general" : [
+            "Limpieza - 3/5",
+            "Servicio - 4/5",
+            "Precio - $$"
+        ],
         "perks" : [
             "Veterinaria",
             "Cirugía",
@@ -163,6 +211,11 @@ const services = {
         "rating" : "63%",
         "rates" : 6,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 3/5",
+            "Servicio - 4/5",
+            "Precio - $$$"
+        ],
         "perks" : [
             "Entrenamiento",
             "Agility",
@@ -178,8 +231,14 @@ const services = {
         "rating" : "85%",
         "rates" : 68,
         "privacy" : "Public",
+        "general" : [
+            "Limpieza - 4/5",
+            "Servicio - 5/5",
+            "Precio - $$$"
+        ],
         "perks" : [
             "Entrenamiento",
+            "Conferencias",
             "Entrenamiento Positivo",
             "Pet Sitter",
             "Pensión",
