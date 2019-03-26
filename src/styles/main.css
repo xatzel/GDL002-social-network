@@ -99,6 +99,7 @@ header {
     grid-template-areas:
         "health . accommodation . places . shopping . education . nonprofit";
     border-bottom: solid 1px;
+    cursor: pointer;
 }
 
 #health {

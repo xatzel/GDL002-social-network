@@ -1,18 +1,18 @@
-.infocard {
+.cardinfolayout {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-        "primaryinfo"
-        "secondaryinfo"
+        "primaryinfolayout"
+        "secondaryinfolayout"
         "ratesandreviews";
     cursor: pointer;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
     border-radius: 0.15rem;
 }
 
-#primaryinfo {
-	grid-area: primaryinfo;
+.primaryinfolayout {
+	grid-area: primaryinfolayout;
 	display: grid;
     grid-template-columns: 1rem 4rem 1fr 3rem;
     grid-template-rows: 4rem 3rem 2rem;
@@ -119,18 +119,18 @@
 
 }
 
-#secondaryinfo {
-	grid-area: secondaryinfo;
-	display: grid;
+.secondaryinfolayout {
+	grid-area: secondaryinfolayout;
+	display: none;
     grid-template-columns: 1rem 3rem 1fr 3rem;
     grid-template-rows: 3rem 3rem auto 3rem auto 3rem;
     grid-template-areas:
-    "secondaryleftbar pricerange pricerangeinfo ."
-    "secondaryleftbar schedule scheduleinfo scheduleinfo"
-    "secondaryleftbar telephone telephoneinfo telephoneinfo"
-    "secondaryleftbar website websiteinfo websiteinfo"
-    "secondaryleftbar address addressinfo addressinfo"
-    "secondaryleftbar reviewgrid reviewgrid reviewgrid";
+        "secondaryleftbar pricerange pricerangeinfo ."
+        "secondaryleftbar schedule scheduleinfo scheduleinfo"
+        "secondaryleftbar telephone telephoneinfo telephoneinfo"
+        "secondaryleftbar website websiteinfo websiteinfo"
+        "secondaryleftbar address addressinfo addressinfo"
+        "secondaryleftbar reviewgrid reviewgrid reviewgrid";
 }
 
 #secondaryleftbar {
