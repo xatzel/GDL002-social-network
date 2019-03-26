@@ -5,11 +5,11 @@ const dataObj = SERVICES.vendors;
 /*
 fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/src/data/services.json')
   .then((data) => {
-    // convert data to JSON
-    return data.json();
+	// convert data to JSON
+	return data.json();
   }).then((dataAsJSON) => {
-    // cualquier operación con la data ya procesada
-    console.log(Object.values(dataAsJSON));
+	// cualquier operación con la data ya procesada
+	console.log(Object.values(dataAsJSON));
   });
 */
 ///
@@ -30,27 +30,12 @@ const shoppingBtn = document.querySelector('#shopping');
 const educationBtn = document.querySelector('#education');
 const nonprofitBtn = document.querySelector('nonprofit');
 //-------------------Review Elements------------------------------
-const btnShowReviews = document.querySelector('#btnshowreviews');
-const reviewContainer = document.querySelector('#reviewcontainer');
-const btnRate = document.querySelector('#btnrate');
-const rateForm = document.querySelector('#rateform');
-
-
-//Función que aparece div donde se muestran las opiniones
-const showReviews = () => {
-    reviewContainer.style.display = 'grid';
-}
-
-//Funcion para mostrar div para ingresar opinión
-const showRateForm = () => {
-    rateForm.style.display = 'grid';
-}
 
 let givenVendorsList = dataObj;
 
 const cardInfoLayout = (givenVendorsList) => {
 
-    feed.innerHTML = "";
+	feed.innerHTML = "";
 
 	let cardInfo = "";
 
@@ -69,72 +54,96 @@ const cardInfoLayout = (givenVendorsList) => {
 
 	};
 
+	//Función que aparece div donde se muestran las opiniones
+	const showReviews = () => {
+
+		let reviewContainer = document.querySelector("[id^='reviewcontainer']");
+
+		if (reviewContainer.style.display === "grid") {
+			reviewContainer.style.display = "none";
+		} else {
+			reviewContainer.style.display = "grid";
+		}
+
+	};
+
+	//Funcion para mostrar div para ingresar opinión
+	const showRateForm = () => {
+		rateForm = document.querySelector('#rateform');
+		rateForm.style.display = 'grid';
+	};
+
 	givenVendorsList.forEach((element) => {
-        console.log(element);
-        cardInfo =
 
-            `
-                <div id="cardinfoid${cardInfoId}" class="cardinfolayout">
+		cardInfo =
 
-                    <div id="primaryinfoid${cardInfoId}" class="primaryinfolayout">
+			`<div id="cardinfoid${cardInfoId}" class="cardinfolayout">
 
-                        <div id="leftbar"></div>
-                        <div id="rating">${element.rating}</div>
-                        <div id="name">${element.name}</div>
-                        <div id="btnfavorite"><i class="far fa-star"></i></div>
-                        <div id="basicservices"></div>
-                        <div id="specialfeatures"></div>
+					<div id="primaryinfoid${cardInfoId}" class="primaryinfolayout">
 
-                    </div>
+						<div id="leftbar"></div>
+						<div id="rating">${element.rating}</div>
+						<div id="name">${element.name}</div>
+						<div id="btnfavorite"><i class="far fa-star"></i></div>
+						<div id="generals">${element.general}</div>
 
-                    <div id="secondaryinfoid${cardInfoId}" class="secondaryinfolayout">
+					</div>
 
-                        <div id="secondaryleftbar"></div>
-                        <div id="pricerange"><i class="fas fa-dollar-sign"></i></div>
-                        <div id="pricerangeinfo">${element.pricerangeinfo}</div>
-                        <div id="schedule"><i class="fas fa-clock"></i></div>
-                        <div id="scheduleinfo">${element.hours}</div>
-                        <div id="telephone"><i class="fas fa-phone"></i></div>
-                        <div id="telephoneinfo">${element.phone}</div>
-                        <div id="website"><i class="fas fa-globe"></i></div>
-                        <div id="websiteinfo">${element.website}</div>
-                        <div id="address"><i class="fas fa-map-marker"></i></div>
-                        <div id="addressinfo">${element.address}</div>
-                        <div id="reviewgrid">
-                            <div id="btnshowreviews">Opiniones</div>
-                            <div id="btnrate">Calificar</div>
-                        </div>
+					<div id="secondaryinfoid${cardInfoId}" class="secondaryinfolayout">
 
-                    </div>
+						<div id="secondaryleftbar"></div>
 
-                    <div id="reviewcontainer">
-                        <div id="btnedit"><i class="far fa-edit fa-xs"></i></div>
-                        <div id="authorinfo">Fulanita escribió:</div>
-                        <div id="writtenreview">"Fido se enfermó de la panza y el veterinario lo apapachó y lo curó."</div>
-                        <div id="heartcount">3</div>
-                        <div id="heart"><i class="far fa-heart"></i></div>
-                    </div>
+						<div id="contactinfo">
+							<div id="schedule"><i class="fas fa-clock"></i></div>
+							<div id="scheduleinfo">${element.hours}</div>
+							<div id="telephone"><i class="fas fa-phone"></i></div>
+							<div id="telephoneinfo">${element.phone}</div>
+							<div id="website"><i class="fas fa-globe"></i></div>
+							<div id="websiteinfo">${element.website}</div>
+							<div id="address"><i class="fas fa-map-marker"></i></div>
+							<div id="addressinfo">${element.address}</div>
+						</div>
 
-                    <form id="rateform" method="get">
+						<div id="perks">${element.perks}</div>
 
-                        <div id="ratetitle">Tu calificación: </div>
-                        <div id="ratebar">
-                            <div id="onestar"><i class="far fa-star"></i></div>
-                            <div id="twostar"><i class="far fa-star"></i></div>
-                            <div id="threestar"><i class="far fa-star"></i></div>
-                            <div id="fourstar"><i class="far fa-star"></i></div>
-                            <div id="fivestar"><i class="far fa-star"></i></div>
-                        </div>
-                        <div id="opiniontitle">Tu opinión: </div>
-                        <textarea id="opinion" class="textinput" placeholder="Escribe aquí tu opinión..."></textarea>
-                        <div id="veracitycheck" ><input type="checkbox" value="true">Juro que es la verdad y nadamas que la verdad</div> 
-                        <input id="btnsubmit" type="submit" value="Enviar">
+						<div id="reviewgrid">
+							<div id="btnshowreviews${cardInfoId}" class="btnshowreviewsstyle">Opiniones</div>
+							<div id="btnrate">Calificar</div>
+						</div>
 
-                    </form>
+					</div>
 
-                </div>
-            `
-        ;
+					<div id="reviewcontainer${cardInfoId}" class="reviewcontainerstyle">
+
+						<div id="btnedit"><i class="far fa-edit fa-xs"></i></div>
+						<div id="authorinfo">Fulanita escribió:</div>
+						<div id="writtenreview">"Fido se enfermó de la panza y el veterinario lo apapachó y lo curó."</div>
+						<div id="heartcount">3</div>
+						<div id="heart"><i class="far fa-heart"></i></div>
+
+					</div>
+
+					<form id="rateform">
+
+						<div id="ratetitle">Tu calificación:</div>
+
+						<div id="ratebar">
+							<div id="onestar"><i class="far fa-star"></i></div>
+							<div id="twostar"><i class="far fa-star"></i></div>
+							<div id="threestar"><i class="far fa-star"></i></div>
+							<div id="fourstar"><i class="far fa-star"></i></div>
+							<div id="fivestar"><i class="far fa-star"></i></div>
+						</div>
+
+						<div id="opiniontitle">Tu opinión: </div>
+						<textarea id="opinion" class="textinput" placeholder="Escribe aquí tu opinión..."></textarea>
+						<div id="veracitycheck" ><input type="checkbox" value="true">Juro que es la verdad y nadamas que la verdad</div> 
+						<input id="btnsubmit" type="button" value="Enviar">
+
+					</form>
+
+				</div>`
+		;
 
 		cardInfoId++;
 		feed.innerHTML += cardInfo;
@@ -147,12 +156,13 @@ const cardInfoLayout = (givenVendorsList) => {
 		element.addEventListener('click', showSecondaryInfo);
 	});
 
-};
+	let btnShowReviews = document.querySelector("[id^='btnshowreviews']");
 
+	btnShowReviews.addEventListener('click', showReviews);
+
+	document.querySelector('#btnrate').addEventListener('click', showRateForm);
+
+};
 
 //---------------------- BUTTONS ---------------------------------
 healthBtn.addEventListener('click',cardInfoLayout(givenVendorsList));
-//btnSearch.addEventListener('click', validateSearchInput);
-//Botón para mostrar opiniones
-//btnShowReviews.addEventListener('click', showReviews);
-//btnRate.addEventListener('click', showRateForm);

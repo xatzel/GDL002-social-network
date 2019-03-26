@@ -8,18 +8,19 @@
         "ratesandreviews";
     cursor: pointer;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
+    margin-bottom: 0.5rem;
     border-radius: 0.15rem;
 }
+
 
 .primaryinfolayout {
 	grid-area: primaryinfolayout;
 	display: grid;
     grid-template-columns: 1rem 4rem 1fr 3rem;
-    grid-template-rows: 4rem 3rem 2rem;
+    grid-template-rows: 4rem 3rem;
 	grid-template-areas:
         "leftbar rating name btnfavorite"
-        "leftbar basicservices basicservices basicservices"
-        "leftbar specialfeatures specialfeatures specialfeatures";
+        "leftbar generals generals generals";
 }
 
 #leftbar {
@@ -56,81 +57,21 @@
     justify-content: center;
 }
 
-#basicservices{
-    grid-area: basicservices;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "creditcard cashonly openallday transport parking lab"
-}
-
-#creditcard {
-    grid-area: creditcard;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.5rem;
-}
-
-#cashonly {
-    grid-area: cashonly;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.25rem;
-}
-
-#openallday {
-    grid-area: openallday;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.25rem;
-}
-
-#transport {
-    grid-area: transport;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.25rem;
-}
-
-#parking {
-    grid-area: parking;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.25rem;
-}
-
-#lab {
-    grid-area: lab;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.25rem;
-}
-
-#specialfeatures {
-    grid-area: specialfeatures;
-    display: flex;
-    padding: 0.5rem;
-    align-items: flex-start;
-
+#generals{
+    grid-area: generals;
+    display: inline-block;
+    padding: 1rem;
 }
 
 .secondaryinfolayout {
 	grid-area: secondaryinfolayout;
 	display: none;
-    grid-template-columns: 1rem 3rem 1fr 3rem;
-    grid-template-rows: 3rem 3rem auto 3rem auto 3rem;
+    grid-template-columns: 1rem 1fr 0.5rem 1fr ;
+    grid-template-rows: auto auto 3rem;
     grid-template-areas:
-        "secondaryleftbar pricerange pricerangeinfo ."
-        "secondaryleftbar schedule scheduleinfo scheduleinfo"
-        "secondaryleftbar telephone telephoneinfo telephoneinfo"
-        "secondaryleftbar website websiteinfo websiteinfo"
-        "secondaryleftbar address addressinfo addressinfo"
-        "secondaryleftbar reviewgrid reviewgrid reviewgrid";
+        "secondaryleftbar contactinfo . perks"
+        "secondaryleftbar contactinfo . perks"
+        "secondaryleftbar reviewgrid reviewgrid reviewgrid"
 }
 
 #secondaryleftbar {
@@ -139,19 +80,28 @@
     border-radius: 0.15rem 0 0 0.15rem;
 }
 
-#pricerange {
-    grid-area: pricerange;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+#contactinfo {
+    grid-area: contactinfo;
+    display: grid;
+    grid-template-columns:  3rem auto;
+    grid-template-rows: 3rem 3rem auto 4rem;
+    grid-template-areas:
+        "schedule scheduleinfo "
+        "telephone telephoneinfo "
+        "website websiteinfo "
+        "address addressinfo ";
+    border-right: solid 1px;
 }
 
-#pricerangeinfo {
-    grid-area: pricerangeinfo;
-    display: flex;
-    padding: 0.25rem;
-    align-items: center;
+
+#perks {
+    grid-area: perks;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
 }
+
 
 #schedule {
     grid-area: schedule;
@@ -224,12 +174,13 @@
     padding: 0.5rem;
 }
 
-#btnshowreviews {
+.btnshowreviewsstyle {
     grid-area: btnshowreviews;
     display: flex;
     background-color:rgb(210, 226, 228);
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     border-radius: 0.15rem;
 }
 
@@ -240,4 +191,16 @@
     align-items: center;
     justify-content: center;
     border-radius: 0.15rem;
+}
+
+.reviewcontainerstyle {
+    grid-area: ratesandreviews;
+    display: none;
+    grid-template-columns:1rem auto 3rem 3rem ;
+    grid-template-rows: 1rem 2rem auto 2rem;
+    grid-template-areas:
+        ". . . btnedit"
+        ". authorinfo . ."
+        ". writtenreview . ."
+        ". . heartcount heart";
 }
