@@ -1,5 +1,5 @@
-const perks = {
-    "providers": [{
+const services = {
+    "vendors": [{
         "num" : 1,
         "name" : "VeteriAna",
         "address" : "Av Rafael Sanzio 400, La Estancia, 45030, Zapopan",
