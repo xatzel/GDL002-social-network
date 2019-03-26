@@ -93,13 +93,13 @@ const cardInfoLayout = (givenVendorsList) => {
                         <div id="pricerange"><i class="fas fa-dollar-sign"></i></div>
                         <div id="pricerangeinfo">${element.pricerangeinfo}</div>
                         <div id="schedule"><i class="fas fa-clock"></i></div>
-                        <div id="scheduleinfo">${element.scheduleinfo}</div>
+                        <div id="scheduleinfo">${element.hours}</div>
                         <div id="telephone"><i class="fas fa-phone"></i></div>
-                        <div id="telephoneinfo">${element.telephoneinfo}</div>
+                        <div id="telephoneinfo">${element.phone}</div>
                         <div id="website"><i class="fas fa-globe"></i></div>
-                        <div id="websiteinfo">${element.websiteinfo}</div>
+                        <div id="websiteinfo">${element.website}</div>
                         <div id="address"><i class="fas fa-map-marker"></i></div>
-                        <div id="addressinfo">${element.addressinfo}</div>
+                        <div id="addressinfo">${element.address}</div>
                         <div id="reviewgrid">
                             <div id="btnshowreviews">Opiniones</div>
                             <div id="btnrate">Calificar</div>
