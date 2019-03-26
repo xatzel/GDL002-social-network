@@ -1,5 +1,5 @@
 {
-    "services": [{
+    "vendors": [{
         "num" : 1,
         "name" : "VeteriAna",
         "address" : "Av Rafael Sanzio 400, La Estancia, 45030, Zapopan",
@@ -13,15 +13,15 @@
             "Servicio -5/5",
             "Precio - $$"
         ],
-        "details" : [
+        "perks" : [
             "Veterianaria",
             "Fisioterapia",
-            "Traumatología", 
+            "Traumatologia", 
             "Ortopedia",
             "Pago con tarjeta",
             "Pensión",
-            "Cirugía",
-            "Estética",
+            "Cirugia",
+            "Estetica",
             "Profilaxis dental",
             "Farmacia",
             "Venta de alimento",
@@ -41,12 +41,12 @@
             "Servicio - 3/5",
             "Precio - $$"
         ],
-        "details" : [
+        "perks" : [
             "Veterinaria",
-            "Endoscopía",
+            "Endoscopia",
             "Pago con tarjeta",
-            "Cirugía",
-            "Pensión",
+            "Cirugia",
+            "Pension",
             "Farmacia",
             "Venta de alimento",
             "Estacionamiento"
@@ -65,7 +65,7 @@
             "Servicio - 4/5",
             "Precio - $$$"
         ],
-        "details" : [
+        "perks" : [
             "Veterinaria",
             "Rayos X",
             "Ultrasonido",
@@ -95,10 +95,10 @@
             "Servicio - 5/5",
             "Precio - $$"
         ],
-        "details" : [
-            "Pensión",
-            "Guardería",
-            "Estética",
+        "perks" : [
+            "Pension",
+            "Guarderia",
+            "Estetica",
             "Transporte",
             "Venta de alimento"        
         ]
@@ -116,12 +116,12 @@
             "Servicio - 4/5",
             "Precio - $$$"
         ],
-        "details" : [
-            "Pensión",
-            "Guardería",
+        "perks" : [
+            "Pension",
+            "Guarderia",
             "Entrenamiento",
             "Entrenamiento Positivo",
-            "Estética",
+            "Estetica",
             "Deportes Caninos",
             "Transporte"
         ]
@@ -139,7 +139,7 @@
             "Servicio - 4/5",
             "Precio - $$"
         ],
-        "details" : [
+        "perks" : [
             "Pet friendly",
             "Café"
         ]
@@ -157,7 +157,7 @@
             "Servicio - 5/5",
             "Precio - $$"
         ],
-        "details" : [
+        "perks" : [
             "Pet friendly",
             "Burgers"
         ]
@@ -175,7 +175,7 @@
             "Servicio - 4/5",
             "Precio - $$$"
         ],
-        "details" : [
+        "perks" : [
             "Internacional",
             "Estética",
             "Venta de alimento",
@@ -196,7 +196,7 @@
             "Servicio - 4/5",
             "Precio - $$"
         ],
-        "details" : [
+        "perks" : [
             "Veterinaria",
             "Cirugía",
             "Estética",
@@ -216,7 +216,7 @@
             "Servicio - 4/5",
             "Precio - $$$"
         ],
-        "details" : [
+        "perks" : [
             "Entrenamiento",
             "Agility",
             "Pensión",
@@ -236,7 +236,7 @@
             "Servicio - 5/5",
             "Precio - $$$"
         ],
-        "details" : [
+        "perks" : [
             "Entrenamiento",
             "Conferencias",
             "Entrenamiento Positivo",
