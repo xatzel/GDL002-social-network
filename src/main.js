@@ -21,9 +21,11 @@ const showRateForm = () => {
 
 let givenProvidersList = dataObj;
 
+
+
 const cardInfoLayout = (givenProvidersList) => {
-    console.log(givenProvidersList);
-	feed.innerHTML = "";
+
+    feed.innerHTML = "";
 
 	let cardInfo = "";
 
@@ -123,13 +125,12 @@ const cardInfoLayout = (givenProvidersList) => {
 };
 
 
-
-
+healthCategory.addEventListener('click', cardInfoLayout(givenProvidersList));
 
 
 //Botón para mostrar opiniones
 healthCategory.addEventListener('click', cardInfoLayout(givenProvidersList));
-btnShowReviews.addEventListener('click', showReviews);
-btnRate.addEventListener('click', showRateForm);
+//btnShowReviews.addEventListener('click', showReviews);
+//btnRate.addEventListener('click', showRateForm);
 
 
