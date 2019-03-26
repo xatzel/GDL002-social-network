@@ -81,7 +81,7 @@ const showRateForm = () => {
 
 
 //---------------------- BUTTONS ---------------------------------
-searchBtn.addEventListener('click', validateSearchInput);
+btnSearch.addEventListener('click', validateSearchInput);
 //Botón para mostrar opiniones
 btnShowReviews.addEventListener('click', showReviews);
 btnRate.addEventListener('click', showRateForm);
