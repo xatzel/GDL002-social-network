@@ -161,8 +161,7 @@ const cardInfoLayout = (givenVendorsList) => {
 
 					</form>
 
-				</div>`
-		;
+				</div>`;
 
 		cardInfoId++;
 		feed.innerHTML += cardInfo;
@@ -178,10 +177,24 @@ const cardInfoLayout = (givenVendorsList) => {
 
 	btnShowReviews.addEventListener('click', showReviews);
 
-document.querySelector('#btnrate').addEventListener('click', showRateForm);
+	document.querySelector('#btnrate').addEventListener('click', showRateForm);
 
 };
 
 
 //---------------------- BUTTONS ---------------------------------
-healthBtn.addEventListener('click',cardInfoLayout(givenVendorsList));
+healthBtn.addEventListener('click', cardInfoLayout(givenVendorsList));
+
+//OPEN & CLOSE SIDENAV MENU
+//OPEN & CLOSE SIDENAV MENU
+document.getElementById("btnmenu").addEventListener('click', () => {
+	document.getElementById("sidenavMenu").style.width = '12.5rem';
+});
+document.getElementById("menuCloseBtn").addEventListener('click', () => {
+	document.getElementById("sidenavMenu").style.width = '0rem';
+});
+
+//OPEN SIDEMENU DROPDOWN
+document.getElementById("dropdownBtn").addEventListener('click', () => {
+	document.getElementById("menuDropdown").classList.toggle('showDropdownMenu');
+});
