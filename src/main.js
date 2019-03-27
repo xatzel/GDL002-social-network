@@ -91,7 +91,7 @@ const cardInfoLayout = (givenVendorsList) => {
 
                         <div id="secondaryleftbar"></div>
                         <div id="pricerange"><i class="fas fa-dollar-sign"></i></div>
-                        <div id="pricerangeinfo">$$$</div>
+                        <div id="pricerangeinfo"></div>
                         <div id="schedule"><i class="fas fa-clock"></i></div>
                         <div id="scheduleinfo">${element.scheduleinfo}</div>
                         <div id="telephone"><i class="fas fa-phone"></i></div>
@@ -150,8 +150,23 @@ const cardInfoLayout = (givenVendorsList) => {
 };
 
 
+
 //---------------------- BUTTONS ---------------------------------
-btnSearch.addEventListener('click', validateSearchInput);
+healthBtn.addEventListener('click', cardInfoLayout(givenVendorsList));
+//btnSearch.addEventListener('click', validateSearchInput);
 //Botón para mostrar opiniones
-btnShowReviews.addEventListener('click', showReviews);
-btnRate.addEventListener('click', showRateForm);
+//btnShowReviews.addEventListener('click', showReviews);
+//btnRate.addEventListener('click', showRateForm);
+
+//OPEN & CLOSE SIDENAV MENU
+document.getElementById("btnmenu").addEventListener('click', () => {
+    document.getElementById("sidenavMenu").style.width = '12.5rem';
+});
+document.getElementById("menuCloseBtn").addEventListener('click', () => {
+    document.getElementById("sidenavMenu").style.width = '0rem';
+});
+
+//OPEN SIDEMENU DROPDOWN
+document.getElementById("dropdownBtn").addEventListener('click', () => {
+    document.getElementById("menuDropdown").classList.toggle('showDropdownMenu');
+});

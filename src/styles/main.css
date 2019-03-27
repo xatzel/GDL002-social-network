@@ -49,7 +49,7 @@ header {
     display: block;
 }
 
-.dropdown {
+/*.dropdown {
     display: none;
     min-width: 30vw;
     position: absolute;
@@ -68,8 +68,103 @@ header {
 
   .menuoption:hover {
     border-right: solid 0.5rem rgb(190, 33, 108);
-  }
+  }*/
 
+.sidenav {
+    height: 100%;
+    width: 0rem;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #181818;
+    overflow-x: hidden;
+    padding-top: 1.25rem;
+    transition: 0.5s;
+}
+
+/* Open sidenav menu button */
+.btnmenu {
+    text-decoration:none;
+    border: none;
+    background: none;
+}
+
+/* Close sidenav menu button */
+.sidenav a {
+    color: #818181;
+    top: 0;
+    right: 1.5rem;
+    font-size: 2.25rem;
+    margin-right: 0.5rem;
+    float: right;
+    text-decoration: none;
+}
+
+/*Elements within sidenavBar*/ 
+.sidenavItem, .dropdown-btn, .subm { 
+    padding: 1.5rem 0.5rem 1.5rem 1rem;
+    font-size: 1.125rem;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+    text-decoration: none;
+} 
+
+#logIn {
+    background-color: #BE216C;
+    color: #f1f1f1;
+    font-weight: bold;
+
+}
+
+.sidenavItem:hover, .dropdown-btn:hover {
+    color: #706b6b;
+    background-color: #C1D93A;
+}
+
+.subm:hover {
+    background-color: #E19B38;
+    color: white;
+}
+
+/* Sidenav Menu Dropdown */
+.dropdown-container {
+    display: none;
+    padding-left: 0.5rem;
+    float: right;
+    margin-right: 1.5rem;
+}
+
+.showDropdownMenu {
+    display: block;
+    padding-left: 0.5rem;
+    float: right;
+    margin-right: 1.5rem;
+}
+
+
+
+.fa-caret-down {
+    float: right;
+    padding-right: 0.5rem;
+}
+
+
+
+
+
+/* @media only screen and (max-width: 450px) {
+    .sidenav {padding: 0.9rem;}
+    .sidenavItem {font-size: 1.1rem;}
+    .sidenav a {margin-left: 1rem;}
+} */
 
 #searchbar {
     grid-area: searchbar;
