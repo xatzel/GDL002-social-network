@@ -1,17 +1,17 @@
 'use strict';
 
-
+const dataObj = SERVICES.vendors;
 /* ---------------- FETCHING DATA ---------------- */
-/*
-fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/src/data/services.json')
-  .then((data) => {
-	// convert data to JSON
-	return data.json();
-  }).then((dataAsJSON) => {
-	// cualquier operación con la data ya procesada
-	console.log(Object.values(dataAsJSON));
-  });
-*/
+
+// fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/src/data/services.json')
+//   .then((data) => {
+//     // convert data to JSON
+//     return data.json();
+//   }).then((dataAsJSON) => {
+//     // cualquier operación con la data ya procesada
+//     console.log(Object.values(dataAsJSON));
+//   });
+
 ///
 const dataObj = SERVICES.vendors;
 //----------------------------------------
@@ -164,6 +164,7 @@ const cardInfoLayout = (givenVendorsList) => {
 document.querySelector('#btnrate').addEventListener('click', showRateForm);
 
 };
+
 
 //---------------------- BUTTONS ---------------------------------
 healthBtn.addEventListener('click',cardInfoLayout(givenVendorsList));

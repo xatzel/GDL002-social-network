@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/card.css">
     <link rel="stylesheet" type="text/css" href="styles/reviews-rate.css">
-   
+
 </head>
 
 
@@ -19,7 +19,7 @@
     <main>
         <header>
 
-            <div id="btnmenu" class="headerelements">
+            <!-- <div id="btnmenu" class="headerelements">
                 <i class="fas fa-bars"></i>
                 <div class="dropdown">
                     <div id="home" class="menuoption">INICIO</div>
@@ -27,24 +27,52 @@
                     <div id="suggestaplace" class="menuoption">SUGIERE UN LUGAR</div>
                     <div id="aboutus" class="menuoption">QUIENES SOMOS</div>
                 </div>
-            </div>
+            </div> -->
+            <!-- Searchbar & Sidenav Menu Button -->
+            <button class="headerelements btnmenu" id="btnmenu">
+                <i class="fas fa-bars"></i>
+            </button>
             <input id="searchbar" class="headerelements" placeholder="Busca aquí lo que necesites">
             <div id="btnsearch" class="headerelements"><i class="fas fa-search"></i></div>
 
         </header>
 
+        <!-- Sidenav Menu -->
+        <div id="sidenavMenu" class="sidenav">
+                <a href="javascript:void(0)" class="menuCloseBtn" id="menuCloseBtn"> &times; </a>
+                <button class="sidenavItem" id="logIn"> Iniciar Sesión </button>
+                <button class="sidenavItem dropdown-btn" id="dropdownBtn">Categorías 
+                    <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container" id="menuDropdown">
+                    <input type="button" value="Salud" class="subm" id="subHealth">
+                    <input type="button" value="Hospedaje" class="subm" id="subAccomodation">
+                    <input type="button" value="Pet-Friendly" class="subm" id="subPlaces">
+                    <input type="button" value="Autoservicios" class="subm" id="subShopping">
+                    <input type="button" value="Entrenamiento" class="subm" id="subEducation">
+                    <input type="button" value="Non-Profit" class="subm" id="subNonProfit">
+                </div>
+                <button class="sidenavItem" id="suggestVendor">Sugiere un lugar</button>
+                <button class="sidenavItem" id="aboutUs">Quiénes somos</button>
+            </div>
+
         <div id="mainimage"></div>
 
         <section id="categories">
-                <div id="health"><img class="categoryimg" src="images/icons/009-red-cross.svg" width="100%" height="100%"></div>
-                <div id="accommodation"><img class="categoryimg" src="images/icons/006-dog-house.svg" width="100%" height="100%"></div>
-                <div id="places"><img class="categoryimg" src="images/icons/007-pet.svg" width="100%" height="100%"></div>
-                <div id="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg" width="100%" height="100%"></div>
-                <div id="education"><img class="categoryimg" src="images/icons/011-graduation-cap.svg" width="100%" height="100%"></div>
-                <div id="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg" width="100%" height="100%"></div>
-            </section>
+            <div id="health"><img class="categoryimg" src="images/icons/009-red-cross.svg" width="100%" height="100%">
+            </div>
+            <div id="accommodation"><img class="categoryimg" src="images/icons/006-dog-house.svg" width="100%"
+                    height="100%"></div>
+            <div id="places"><img class="categoryimg" src="images/icons/007-pet.svg" width="100%" height="100%"></div>
+            <div id="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg" width="100%" height="100%">
+            </div>
+            <div id="education"><img class="categoryimg" src="images/icons/011-graduation-cap.svg" width="100%"
+                    height="100%"></div>
+            <div id="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg" width="100%" height="100%">
+            </div>
+        </section>
 
-            <section id="feed"></section>
+        <section id="feed"></section>
 
 
         <footer></footer>
