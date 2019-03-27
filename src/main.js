@@ -1,6 +1,6 @@
 'use strict';
 
-const dataObj = SERVICES.vendors;
+
 /* ---------------- FETCHING DATA ---------------- */
 /*
 fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/src/data/services.json')
@@ -13,7 +13,7 @@ fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/s
   });
 */
 ///
-
+const dataObj = SERVICES.vendors;
 //----------------------------------------
 let servicesList = [];
 let servicesInfo = "";
@@ -39,14 +39,12 @@ const rateForm = document.querySelector('#rateform');
 //Función que aparece div donde se muestran las opiniones
 const showReviews = () => {
     reviewContainer.style.display = 'grid';
-}
+};
 
 //Funcion para mostrar div para ingresar opinión
 const showRateForm = () => {
     rateForm.style.display = 'grid';
-}
-
-let givenVendorsList = dataObj;
+};
 
 const cardInfoLayout = (givenVendorsList) => {
 
@@ -149,10 +147,22 @@ const cardInfoLayout = (givenVendorsList) => {
 
 };
 
+/*
+
+const printFilteredVendors = (category) => {
+
+    let vendorsList = window.poogle.filterData(dataObj, category);
+
+    cardInfoLayout(vendorsList);
+
+};
+
+*/
 
 //---------------------- BUTTONS ---------------------------------
-healthBtn.addEventListener('click',cardInfoLayout(givenVendorsList));
+healthBtn.addEventListener('click', window.poogle.filterData(dataObj, "accommodation"));
 //btnSearch.addEventListener('click', validateSearchInput);
 //Botón para mostrar opiniones
 //btnShowReviews.addEventListener('click', showReviews);
 //btnRate.addEventListener('click', showRateForm);
+
