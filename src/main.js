@@ -13,7 +13,7 @@ const dataObj = SERVICES.vendors;
 //   });
 
 ///
-const dataObj = SERVICES.vendors;
+
 //----------------------------------------
 let servicesList = [];
 let servicesInfo = "";
