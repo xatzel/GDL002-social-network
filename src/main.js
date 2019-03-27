@@ -16,11 +16,31 @@ const dataObj = SERVICES.vendors;
 
 //----------------------------------------
 let servicesList = [];
-let servicesInfo = "";
+let servicesInfo = '';
 /* ------------------ SELECT DIVS AS ELEMENTS ----------------- */
+
 //--------------Searchbar & Menu --------------------------------
-const searchBtn = document.querySelector('#btnsearch');
-const searchInput = document.querySelector('#searchbar');
+/*filterCards:(vendors,name) => {
+    /*esta funcion debe recibir un arreglo de objetos (lo que devuelve un arreglo nuevo) y recibe un string
+    de id  asimismo retorna un arreglo de objetos filtrados por id
+
+    const newArray = vendors.filterCards(vendors =>  (vendors.name == name)); 
+    //cuando el usuario ingresa un id igual al id que hay en data lo devuelve en  un array 
+  
+    return newArray;
+}
+document.getElementById("btnsearch").addEventListener("click", function (){
+  //esto imprime en pantalla una sola tarjeta filtrada por nombre
+  let textInputFilter = document.getElementById("searchbar").value;
+  let filterData = filterCards(dataObj,textInputFilter);
+  showCards(filterData);
+  document.getElementById("searchbar").value = "";
+  // esta es solo para limpiar el valor de input type text
+  
+});*/
+const searchBtn = document.querySelector('#btnsearch').value;
+const searchInput = document.querySelector('#searchbar').value;
+
 const menuBtn = document.querySelector('#btnmenu');
 //------------------Categories-------------------------------------
 const healthBtn = document.querySelector('#health');
@@ -35,45 +55,38 @@ const reviewContainer = document.querySelector('#reviewcontainer');
 const btnRate = document.querySelector('#btnrate');
 const rateForm = document.querySelector('#rateform');
 
-
 //Función que aparece div donde se muestran las opiniones
 const showReviews = () => {
-    reviewContainer.style.display = 'grid';
-}
+	reviewContainer.style.display = 'grid';
+};
 
 //Funcion para mostrar div para ingresar opinión
 const showRateForm = () => {
-    rateForm.style.display = 'grid';
-}
+	rateForm.style.display = 'grid';
+};
 
 let givenVendorsList = dataObj;
 
 const cardInfoLayout = (givenVendorsList) => {
+	feed.innerHTML = '';
 
-    feed.innerHTML = "";
+	let cardInfo = '';
 
-    let cardInfo = "";
+	let cardInfoId = 1;
 
-    let cardInfoId = 1;
+	const showSecondaryInfo = (event) => {
+		let cardInfoIdDiv = event.currentTarget;
+		let clickedElement = cardInfoIdDiv.querySelector("[id^='secondaryinfoid']");
 
-    const showSecondaryInfo = (event) => {
+		if (clickedElement.style.display === 'grid') {
+			clickedElement.style.display = 'none';
+		} else {
+			clickedElement.style.display = 'grid';
+		}
+	};
 
-        let cardInfoIdDiv = event.currentTarget;
-        let clickedElement = cardInfoIdDiv.querySelector("[id^='secondaryinfoid']");
-
-        if (clickedElement.style.display === "grid") {
-            clickedElement.style.display = "none";
-        } else {
-            clickedElement.style.display = "grid";
-        }
-
-    };
-
-    givenVendorsList.forEach((element) => {
-
-        cardInfo =
-
-            `
+	givenVendorsList.forEach((element) => {
+		cardInfo = `
                 <div id="cardinfoid${cardInfoId}" class="cardinfolayout">
 
                     <div id="primaryinfoid${cardInfoId}" class="primaryinfolayout">
@@ -133,40 +146,42 @@ const cardInfoLayout = (givenVendorsList) => {
                     </form>
 
                 </div>
-            `
-            ;
+            `;
 
-        cardInfoId++;
-        feed.innerHTML += cardInfo;
+		cardInfoId++;
+		feed.innerHTML += cardInfo;
+	});
 
-    });
+	let cardInfoIds = document.querySelectorAll("[id^='cardinfoid']");
 
-    let cardInfoIds = document.querySelectorAll("[id^='cardinfoid']");
-
-    cardInfoIds.forEach((element) => {
-        element.addEventListener('click', showSecondaryInfo);
-    });
-
+	cardInfoIds.forEach((element) => {
+		element.addEventListener('click', showSecondaryInfo);
+	});
 };
-
-
 
 //---------------------- BUTTONS ---------------------------------
 healthBtn.addEventListener('click', cardInfoLayout(givenVendorsList));
 //btnSearch.addEventListener('click', validateSearchInput);
 //Botón para mostrar opiniones
-//btnShowReviews.addEventListener('click', showReviews);
-//btnRate.addEventListener('click', showRateForm);
+
+function loginScreen() {
+	document.getElementById('categories').style.display = 'none';
+	document.getElementById('feed').style.display = 'none';
+	document.getElementById('login').style.display = 'block';
+}
+document.getElementById('showReviews').addEventListener('click', loginScreen);
+
+//////////
 
 //OPEN & CLOSE SIDENAV MENU
-document.getElementById("btnmenu").addEventListener('click', () => {
-    document.getElementById("sidenavMenu").style.width = '12.5rem';
+document.getElementById('btnmenu').addEventListener('click', () => {
+	document.getElementById('sidenavMenu').style.width = '12.5rem';
 });
-document.getElementById("menuCloseBtn").addEventListener('click', () => {
-    document.getElementById("sidenavMenu").style.width = '0rem';
+document.getElementById('menuCloseBtn').addEventListener('click', () => {
+	document.getElementById('sidenavMenu').style.width = '0rem';
 });
 
 //OPEN SIDEMENU DROPDOWN
-document.getElementById("dropdownBtn").addEventListener('click', () => {
-    document.getElementById("menuDropdown").classList.toggle('showDropdownMenu');
+document.getElementById('dropdownBtn').addEventListener('click', () => {
+	document.getElementById('menuDropdown').classList.toggle('showDropdownMenu');
 });
