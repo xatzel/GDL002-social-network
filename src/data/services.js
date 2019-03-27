@@ -2,6 +2,7 @@ const SERVICES = {
     "vendors": [{
         "num" : 1,
         "name" : "VeteriAna",
+        "type" : ["health", "accommodation"],
         "address" : "Av Rafael Sanzio 400, La Estancia, 45030, Zapopan",
         "phone" : "(33) 3110 6256",
         "hours" : "L - S (10:00 AM - 20:00 PM)",
@@ -30,6 +31,7 @@ const SERVICES = {
     }, {
         "num" : 2,
         "name" : "Hospital Veterinario de Occidente",
+        "type" : ["health", "accommodation"],
         "address" : "Av Clouthier 2246, Colli Urbano, 45070, Zapopan",
         "phone" : "(33) 3125 5543",
         "hours" : "L - S (09:00 AM - 8:00 PM) D (11:00 AM - 06:00 PM)",
@@ -54,6 +56,7 @@ const SERVICES = {
     }, {
         "num": 3,
         "name" : "Centro Veterinario Terranova",
+        "type" : ["health", "accommodation"],
         "address" : "Av Guadalupe 5233, Jardines de Guadalupe, 45030, Zapopan",
         "phone" : "(33) 1204 0772",
         "hours" : "24 HRS",
@@ -74,7 +77,7 @@ const SERVICES = {
             "Fisioterapia",
             "Inseminación artificial",
             "Laboratorio",
-            "Pensión", 
+            "Pensión",
             "Estética",
             "Farmacia",
             "Venta de alimento",
@@ -84,6 +87,7 @@ const SERVICES = {
     }, {
         "num" : 4,
         "name" : "Dogtown Hotel & Spa",
+        "type" : ["accommodation", "shopping"],
         "address" : "Calle Puerto Yavaros 40, Col Miramar, 45060, Zapopan",
         "phone" : "(044)(33) 2795 1952",
         "hours" : "L - S (8:00 AM - 8:00 PM) D (8:00 AM - 7:00 PM)",
@@ -100,11 +104,12 @@ const SERVICES = {
             "Guarderia",
             "Estetica",
             "Transporte",
-            "Venta de alimento"        
+            "Venta de alimento"
         ]
     }, {
         "num" : 5,
         "name" : "Pet Camp",
+        "type" : ["accommodation", "education"],
         "address" : "Calz José Guadalupe Gallo 1818, Agua Blanca Habitacional, 45235, Zapopan",
         "phone" : "(33) 1279 3779",
         "hours" : "L - D (8:00 AM - 7:00 PM)",
@@ -128,6 +133,7 @@ const SERVICES = {
     }, {
         "num" : 6,
         "name" : "Coffee & Pets Deli",
+        "type" : ["places", "cafe"],
         "address" : "Independencia 5785, Arcos de Guadalupe, 45037, Zapopan",
         "phone" : "(33) 1186 7656",
         "hours" : "M - V (3:00 PM - 10:00 PM) S (11:00 AM - 10:00 PM) D (10:00 AM - 7:00 PM)",
@@ -146,6 +152,7 @@ const SERVICES = {
     }, {
         "num" : 7,
         "name" : "Poi Poi Kings Burgers",
+        "type" : ["places", "restaurant"],
         "address" : "Ingenieros Sur 1099, Chapalita Las Fuentes, 45030, Zapopan",
         "phone" : "(33) 2304 8075",
         "hours" : "L - D (1:00 PM - 11:00 PM)",
@@ -161,9 +168,10 @@ const SERVICES = {
             "Pet friendly",
             "Burgers"
         ]
-    }, { 
+    }, {
         "num" : 8,
         "name" : "Petco Cordilleras",
+        "type" : ["shopping", "education"],
         "address" : "Av Patria 888, Jardines de Guadalupe, 45030, Zapopan",
         "phone" : "(33) 1652 3075",
         "hours" : "L - D (9:00 AM - 9:00 PM)",
@@ -185,6 +193,7 @@ const SERVICES = {
     }, {
         "num" : 9,
         "name" : "Mascottchen",
+        "type" : ["health", "shopping"],
         "address" : "Av Manuel J. Clouthier 888, Mirador del Sol, 45054, Zapopan",
         "phone" : "(33) 3563 8175",
         "hours" : "L - S (8:30 AM - 8:30 PM) D (10:30 AM - 8:30 PM)",
@@ -205,6 +214,7 @@ const SERVICES = {
     }, {
         "num" : 10,
         "name" : "Club de Agility Delta",
+        "type" : ["education", "accommodation"],
         "address" : "Av Volcán del Colli 1195, Colli Urbano, 45070, Zapopan",
         "phone" : "(33) 3587 2964",
         "hours" : "L - S (09:00 AM - 6:00 PM) D (09:00 AM - 02:00 PM)",
@@ -225,6 +235,7 @@ const SERVICES = {
     }, {
         "num" : 11,
         "name" : "Clicker Pets México",
+        "type" : ["health", "accommodation"],
         "address" : "Privada Juan Partí 377, El Triángulo, 45138, Zapopan",
         "phone" : "(33) 1543 9383",
         "hours" : "L - S (8:00 AM - 7:00 PM) D (8:00 AM - 5:00 PM)",

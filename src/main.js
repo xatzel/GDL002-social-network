@@ -1,6 +1,6 @@
 'use strict';
 
-const dataObj = SERVICES.vendors;
+
 /* ---------------- FETCHING DATA ---------------- */
 /*
 fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/src/data/services.json')
@@ -13,7 +13,7 @@ fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/s
   });
 */
 ///
-
+const dataObj = SERVICES.vendors;
 //----------------------------------------
 let servicesList = [];
 let servicesInfo = "";
@@ -32,6 +32,7 @@ const nonprofitBtn = document.querySelector('nonprofit');
 //-------------------Review Elements------------------------------
 
 let givenVendorsList = dataObj;
+
 
 const cardInfoLayout = (givenVendorsList) => {
 
@@ -160,7 +161,7 @@ const cardInfoLayout = (givenVendorsList) => {
 
 	btnShowReviews.addEventListener('click', showReviews);
 
-	document.querySelector('#btnrate').addEventListener('click', showRateForm);
+document.querySelector('#btnrate').addEventListener('click', showRateForm);
 
 };
 
