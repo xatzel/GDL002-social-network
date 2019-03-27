@@ -52,24 +52,24 @@ const cardInfoLayout = (givenVendorsList) => {
 
     feed.innerHTML = "";
 
-	let cardInfo = "";
+    let cardInfo = "";
 
-	let cardInfoId = 1;
+    let cardInfoId = 1;
 
-	const showSecondaryInfo = (event) => {
+    const showSecondaryInfo = (event) => {
 
-		let cardInfoIdDiv = event.currentTarget;
-		let clickedElement = cardInfoIdDiv.querySelector("[id^='secondaryinfoid']");
+        let cardInfoIdDiv = event.currentTarget;
+        let clickedElement = cardInfoIdDiv.querySelector("[id^='secondaryinfoid']");
 
-		if (clickedElement.style.display === "grid") {
-			clickedElement.style.display = "none";
-		} else {
-			clickedElement.style.display = "grid";
-		}
+        if (clickedElement.style.display === "grid") {
+            clickedElement.style.display = "none";
+        } else {
+            clickedElement.style.display = "grid";
+        }
 
-	};
+    };
 
-	givenVendorsList.forEach((element) => {
+    givenVendorsList.forEach((element) => {
 
         cardInfo =
 
@@ -134,18 +134,18 @@ const cardInfoLayout = (givenVendorsList) => {
 
                 </div>
             `
-        ;
+            ;
 
-		cardInfoId++;
-		feed.innerHTML += cardInfo;
+        cardInfoId++;
+        feed.innerHTML += cardInfo;
 
-	});
+    });
 
-	let cardInfoIds = document.querySelectorAll("[id^='cardinfoid']");
+    let cardInfoIds = document.querySelectorAll("[id^='cardinfoid']");
 
-	cardInfoIds.forEach((element) => {
-		element.addEventListener('click', showSecondaryInfo);
-	});
+    cardInfoIds.forEach((element) => {
+        element.addEventListener('click', showSecondaryInfo);
+    });
 
 };
 
