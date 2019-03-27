@@ -16,11 +16,31 @@ const dataObj = SERVICES.vendors;
 
 //----------------------------------------
 let servicesList = [];
-let servicesInfo = "";
+let servicesInfo = '';
 /* ------------------ SELECT DIVS AS ELEMENTS ----------------- */
+
 //--------------Searchbar & Menu --------------------------------
-const searchBtn = document.querySelector('#btnsearch');
-const searchInput = document.querySelector('#searchbar');
+/*filterCards:(vendors,name) => {
+    /*esta funcion debe recibir un arreglo de objetos (lo que devuelve un arreglo nuevo) y recibe un string
+    de id  asimismo retorna un arreglo de objetos filtrados por id
+
+    const newArray = vendors.filterCards(vendors =>  (vendors.name == name)); 
+    //cuando el usuario ingresa un id igual al id que hay en data lo devuelve en  un array 
+
+    return newArray;
+}
+document.getElementById("btnsearch").addEventListener("click", function (){
+  //esto imprime en pantalla una sola tarjeta filtrada por nombre
+  let textInputFilter = document.getElementById("searchbar").value;
+  let filterData = filterCards(dataObj,textInputFilter);
+  showCards(filterData);
+  document.getElementById("searchbar").value = "";
+  // esta es solo para limpiar el valor de input type text
+
+});*/
+const searchBtn = document.querySelector('#btnsearch').value;
+const searchInput = document.querySelector('#searchbar').value;
+
 const menuBtn = document.querySelector('#btnmenu');
 //------------------Categories-------------------------------------
 const healthBtn = document.querySelector('#health');
@@ -36,23 +56,21 @@ let givenVendorsList = dataObj;
 
 const cardInfoLayout = (givenVendorsList) => {
 
-	feed.innerHTML = "";
+	feed.innerHTML = '';
 
 	let cardInfo = "";
 
 	let cardInfoId = 1;
 
 	const showSecondaryInfo = (event) => {
-
 		let cardInfoIdDiv = event.currentTarget;
 		let clickedElement = cardInfoIdDiv.querySelector("[id^='secondaryinfoid']");
 
-		if (clickedElement.style.display === "grid") {
-			clickedElement.style.display = "none";
+		if (clickedElement.style.display === 'grid') {
+			clickedElement.style.display = 'none';
 		} else {
-			clickedElement.style.display = "grid";
+			clickedElement.style.display = 'grid';
 		}
-
 	};
 
 	//Función que aparece div donde se muestran las opiniones
@@ -148,7 +166,6 @@ const cardInfoLayout = (givenVendorsList) => {
 
 		cardInfoId++;
 		feed.innerHTML += cardInfo;
-
 	});
 
 	let cardInfoIds = document.querySelectorAll("[id^='cardinfoid']");
