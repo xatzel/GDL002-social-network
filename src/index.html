@@ -14,7 +14,8 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/card.css">
     <link rel="stylesheet" type="text/css" href="styles/reviews-rate.css">
-    <link rel="stylesheet" type="text/css" href="styles/login.css">
+    <link rel="stylesheet" type="text/css" href="styles/register.css">
+    <link rel="stylesheet" type="text/css" href="styles/userlogin.css">
 
 </head>
 
@@ -25,28 +26,28 @@
 
         <!----------SIDENAV MENU---------->
 
-            <div id="sidenavMenu" class="sidenav">
-                        <a href="javascript:void(0)" class="menuCloseBtn" id="menuCloseBtn"> &times; </a>
-                        <button class="sidenavItem" id="logIn"> Iniciar Sesión </button>
-                        <button class="sidenavItem dropdown-btn" id="dropdownBtn">Categorías
-                            <i class="fas fa-caret-down"></i>
-                        </button>
 
-                        <div class="dropdown-container" id="menuDropdown">
-                            <input type="button" value="Salud" class="subm" id="subHealth">
-                            <input type="button" value="Hospedaje" class="subm" id="subAccomodation">
-                            <input type="button" value="Pet-Friendly" class="subm" id="subPlaces">
-                            <input type="button" value="Autoservicios" class="subm" id="subShopping">
-                            <input type="button" value="Entrenamiento" class="subm" id="subEducation">
-                            <input type="button" value="Non-Profit" class="subm" id="subNonProfit">
-                        </div>
+        <div id="sidenavMenu" class="sidenav">
+                    <a href="javascript:void(0)" class="menuCloseBtn" id="menuCloseBtn"> &times; </a>
+                    <button class="sidenavItem" id="logIn"> Iniciar Sesión </button>
+                    <button class="sidenavItem dropdown-btn" id="dropdownBtn">Categorías
+                        <i class="fas fa-caret-down"></i>
+                    </button>
 
-                        <button class="sidenavItem" id="suggestVendor">Sugiere un lugar</button>
-                        <button class="sidenavItem" id="aboutUs">Quiénes somos</button>
-                        <button class="sidenavItem" id="suggestVendor">Sugiere un lugar</button>
-                        <button class="sidenavItem" id="aboutUs">Quiénes somos</button>
-            </div>
-            
+                    <div class="dropdown-container" id="menuDropdown">
+                        <input type="button" value="Salud" class="subm" id="subHealth">
+                        <input type="button" value="Hospedaje" class="subm" id="subAccomodation">
+                        <input type="button" value="Pet-Friendly" class="subm" id="subPlaces">
+                        <input type="button" value="Autoservicios" class="subm" id="subShopping">
+                        <input type="button" value="Entrenamiento" class="subm" id="subEducation">
+                        <input type="button" value="Non-Profit" class="subm" id="subNonProfit">
+                    </div>
+
+                    <button class="sidenavItem" id="suggestVendor">Sugiere un lugar</button>
+                    <button class="sidenavItem" id="aboutUs">Quiénes somos</button>
+
+        </div>
+
 
             <!---------- PANTALLA HOME---------->
 
@@ -79,9 +80,9 @@
 
             </div>
 
-            <!---------- PANTALLA  INICIAR SESION---------->
+            <!---------- PANTALLA REGISTRO USUARIOS---------->
 
-            <div id="login">
+            <div id="register">
                 <div id="loginimage"></div>
                 <input id = "username" placeholder="Elige un nombre de usuario">
 
@@ -106,6 +107,12 @@
                 <div id="orloginwith">o regístrate con:</div>
                 <div id="facebooklogin">FACEBOOK</div>
                 <button id="googlelogin">Google</button>
+            </div>
+
+            <!---------- PANTALLA INICIO DE SESION---------->
+
+            <div id="userlogin">
+
             </div>
 
         </main>
