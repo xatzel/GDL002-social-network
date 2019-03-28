@@ -23,24 +23,15 @@
 
         <main>
 
-        <!----------HEADER ELEMENTS---------->
-
-            <header>
-
-                    <button class="headerelements btnmenu" id="btnmenu"><i class="fas fa-bars"></i></button>
-                    <input id="searchbar" class="headerelements" placeholder="Busca aquí lo que necesites">
-                    <div id="btnsearch" class="headerelements"><i class="fas fa-search"></i></div>
-
-            </header>
-
         <!----------SIDENAV MENU---------->
 
             <div id="sidenavMenu" class="sidenav">
                         <a href="javascript:void(0)" class="menuCloseBtn" id="menuCloseBtn"> &times; </a>
                         <button class="sidenavItem" id="logIn"> Iniciar Sesión </button>
-                        <button class="sidenavItem dropdown-btn" id="dropdownBtn">Categorías 
+                        <button class="sidenavItem dropdown-btn" id="dropdownBtn">Categorías
                             <i class="fas fa-caret-down"></i>
                         </button>
+
                         <div class="dropdown-container" id="menuDropdown">
                             <input type="button" value="Salud" class="subm" id="subHealth">
                             <input type="button" value="Hospedaje" class="subm" id="subAccomodation">
@@ -49,16 +40,26 @@
                             <input type="button" value="Entrenamiento" class="subm" id="subEducation">
                             <input type="button" value="Non-Profit" class="subm" id="subNonProfit">
                         </div>
+
                         <button class="sidenavItem" id="suggestVendor">Sugiere un lugar</button>
                         <button class="sidenavItem" id="aboutUs">Quiénes somos</button>
             </div>
 
-        <!---------- PANTALLA HOME---------->
+            <!---------- PANTALLA HOME---------->
 
             <div id="homescreen">
-                    <div id="mainimage"></div>
 
-                    <section id="categories">
+                <header>
+
+                    <button class="headerelements btnmenu" id="btnmenu"><i class="fas fa-bars"></i></button>
+                    <input id="searchbar" class="headerelements" placeholder="Busca aquí lo que necesites">
+                    <div id="btnsearch" class="headerelements"><i class="fas fa-search"></i></div>
+
+                </header>
+
+                <div id="mainimage"></div>
+
+                <section id="categories">
 
                             <div id="health"><img class="categoryimg" src="images/icons/009-red-cross.svg" width="100%" height="100%"></div>
                             <div id="accommodation"><img class="categoryimg" src="images/icons/006-dog-house.svg" width="100%" height="100%"></div>
@@ -66,38 +67,47 @@
                             <div id="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg" width="100%" height="100%"></div>
                             <div id="education"><img class="categoryimg" src="images/icons/011-graduation-cap.svg" width="100%" height="100%"></div>
                             <div id="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg" width="100%" height="100%"></div>
-                    </section>
 
-                    <section id="feed"></section>
+                </section>
+
+                <section id="feed"></section>
+
+                <footer></footer>
 
             </div>
 
-        <!---------- PANTALLA  INICIAR SESION---------->
+            <!---------- PANTALLA  INICIAR SESION---------->
 
             <div id="login">
-                    <div id="loginimage"></div>
-                    <input id = "username" placeholder="Elige un nombre de usuario">
-                    <div id="emailandpassword">
-                        <input id = "email" type="email" placeholder="Ingresa tu e-mail" class= "e-mail">
-                        <div id= "emailerror"></div>
-                        <input id = "password" type="password" placeholder = "Crea tu contraseña con al menos 6 caractéres" class="e-mail">
-                        <div id= "passworderror"></div>
-                    </div>
-                    <button id = "createuserbtn" class="register" >¡Registrate!</button>
-                    <div id="registeredusers">
-                        <div id= "textlogin">¿Ya tienes una cuenta?</div>
-                        <div id="loginbtn">Inicia sesión</div>
-                    </div>
-                    <div id="orloginwith">o regístrate con:</div>
-                    <div id="facebooklogin"></div>
-                    <button  id="googlelogin">Google</button>
-            </div>
+                <div id="loginimage"></div>
+                <input id = "username" placeholder="Elige un nombre de usuario">
 
-            <footer></footer>
+                <div id="emailandpassword">
+
+                    <input id = "email" type="email" placeholder="Ingresa tu e-mail" class= "e-mail">
+                    <div id= "emailerror"></div>
+                    <input id = "password" type="password" placeholder = "Crea tu contraseña con al menos 6 caractéres" class="e-mail">
+                    <div id= "passworderror"></div>
+
+                </div>
+
+                <button id = "createuserbtn" class="register" >¡Registrate!</button>
+
+                <div id="registeredusers">
+
+                    <div id= "textlogin">¿Ya tienes una cuenta?</div>
+                    <div id="loginbtn">Inicia sesión</div>
+
+                </div>
+
+                <div id="orloginwith">o regístrate con:</div>
+                <div id="facebooklogin">FACEBOOK</div>
+                <button  id="googlelogin">Google</button>
+            </div>
 
         </main>
 
-    <!---------- JS SCRIPTS---------->
+        <!------------- JS SCRIPTS------------->
 
         <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
         <script src="data/services.js"></script>

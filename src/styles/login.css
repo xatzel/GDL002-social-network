@@ -1,8 +1,8 @@
 #login {
-    grid-area: feed;
-    display: grid;
+    grid-area: content;
+    display: none;
     grid-template-columns: 1rem 1fr 1rem;
-    grid-template-rows: 1rem 30% 0.5rem 3rem 0.5rem 10rem 4rem 0.5rem 2rem 2rem 4rem 0.5rem 4rem 1rem;
+    grid-template-rows: 1rem 25% 0.5rem 3rem 0.5rem 10rem 4rem 0.5rem 2rem 2rem 4rem 0.5rem 4rem 1rem;
     grid-template-areas:    ". . ."
                             ". loginimage ."
                             ". . ."
@@ -16,14 +16,12 @@
                             ". facebooklogin ."
                             ". . ."
                             " . googlelogin .";
-
 }
 
 #loginimage {
     grid-area: loginimage;
     display: flex;
     background-color: black;
-
 }
 
 #username {
@@ -49,7 +47,6 @@
     display: flex;
     border: 1px solid;
     border-radius: 0.25rem;
-
 }
 
 #emailerror {
