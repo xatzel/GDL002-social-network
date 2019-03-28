@@ -18,9 +18,7 @@ main {
     overflow: auto;
     grid-template-columns: auto;
     grid-template-rows: 0.5rem auto 0.5rem;
-    grid-template-areas:"."
-                        "content"
-                        ".";
+    grid-template-areas: "." "content" ".";
 }
 
 #homescreen {
@@ -28,13 +26,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
     grid-template-rows: 3rem 4rem 3rem 0.5rem auto 0.5rem 3rem;
-    grid-template-areas:"header header header header header header header header"
-                        ". mainimage mainimage mainimage mainimage mainimage mainimage ."
-                        ". categories categories categories categories categories categories ."
-                        ". . . . . . . ."
-                        ". feed feed feed feed feed feed ."
-                        ". . . . . . . ."
-                        "footer footer footer footer footer footer footer footer";
+    grid-template-areas: "header header header header header header header header" ". mainimage mainimage mainimage mainimage mainimage mainimage ." ". categories categories categories categories categories categories ." ". . . . . . . ." ". feed feed feed feed feed feed ." ". . . . . . . ." "footer footer footer footer footer footer footer footer";
 }
 
 header {
