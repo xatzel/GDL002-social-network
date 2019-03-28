@@ -1,10 +1,10 @@
 #register {
     grid-area: content;
-    display: none;
+    display: grid;
     grid-template-columns: 1rem 1fr 1rem;
     grid-template-rows: 1rem 25% 0.5rem 3rem 0.5rem 10rem 4rem 0.5rem 2rem 2rem 4rem 0.5rem 4rem 1rem;
     grid-template-areas:    ". . ."
-                            ". loginimage ."
+                            ". registerimage ."
                             ". . ."
                             ". username ."
                             ". . ."
@@ -12,14 +12,14 @@
                             ". createuserbtn ."
                             ". . ."
                             ". registeredusers ."
-                            ". orloginwith ."
-                            ". facebooklogin ."
+                            ". orregisterwith ."
+                            ". facebookregister ."
                             ". . ."
-                            " . googlelogin .";
+                            " . googleregister .";
 }
 
-#loginimage {
-    grid-area: loginimage;
+#registerimage {
+    grid-area: registerimage;
     display: flex;
     background-color: black;
 }
@@ -82,34 +82,34 @@
     grid-area: registeredusers;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "textlogin loginbtn";
+    grid-template-areas: "textregister registerbtn";
 }
 
-#textlogin {
-    grid-area: textlogin;
+#textregister {
+    grid-area: textregister;
     display: flex;
     padding: 0.25rem;
     align-items: center;
     justify-content: flex-end
 }
 
-#loginbtn {
-    grid-area: loginbtn;
+#registerbtn {
+    grid-area: registerbtn;
     display: flex;
     padding: 0.25rem;
     align-items: center;
     cursor: pointer;
 }
 
-#orloginwith {
-    grid-area: orloginwith;
+#orregisterwith {
+    grid-area: orregisterwith;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#facebooklogin {
-    grid-area: facebooklogin;
+#facebookregister {
+    grid-area: facebookregister;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,8 +118,8 @@
     cursor: pointer;
 }
 
-#googlelogin {
-    grid-area: googlelogin;
+#googleregister {
+    grid-area: googleregister;
     display: flex;
     align-items: center;
     justify-content: center;

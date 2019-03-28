@@ -1,0 +1,20 @@
+#userlogin {
+    grid-area: content;
+    display: none;
+    grid-template-columns: 3rem 1fr 3rem;
+    grid-row-gap: 1rem;
+    grid-template-rows: 5rem 3rem 3rem 3rem 4rem 2rem 2rem 3rem;
+    grid-template-areas:    ". . ."
+                            ". loginimage ."
+                            ". . ."
+                            ". username ."
+                            ". . ."
+                            ". emailandpassword ."
+                            ". createuserbtn ."
+                            ". . ."
+                            ". registeredusers ."
+                            ". orregisterwith ."
+                            ". facebooklogin ."
+                            ". . ."
+                            " . googlelogin .";
+}
