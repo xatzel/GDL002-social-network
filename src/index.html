@@ -38,55 +38,59 @@
 
         <!-- Sidenav Menu -->
         <div id="sidenavMenu" class="sidenav">
-                <a href="javascript:void(0)" class="menuCloseBtn" id="menuCloseBtn"> &times; </a>
-                <button class="sidenavItem" id="logIn"> Iniciar Sesión </button>
-                <button class="sidenavItem dropdown-btn" id="dropdownBtn">Categorías 
-                    <i class="fas fa-caret-down"></i>
-                </button>
-                <div class="dropdown-container" id="menuDropdown">
-                    <input type="button" value="Salud" class="subm" id="subHealth">
-                    <input type="button" value="Hospedaje" class="subm" id="subAccomodation">
-                    <input type="button" value="Pet-Friendly" class="subm" id="subPlaces">
-                    <input type="button" value="Autoservicios" class="subm" id="subShopping">
-                    <input type="button" value="Entrenamiento" class="subm" id="subEducation">
-                    <input type="button" value="Non-Profit" class="subm" id="subNonProfit">
-                </div>
-                <button class="sidenavItem" id="suggestVendor">Sugiere un lugar</button>
-                <button class="sidenavItem" id="aboutUs">Quiénes somos</button>
+            <a href="javascript:void(0)" class="menuCloseBtn" id="menuCloseBtn"> &times; </a>
+            <button class="sidenavItem" id="logIn"> Iniciar Sesión </button>
+            <button class="sidenavItem dropdown-btn" id="dropdownBtn">Categorías
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container" id="menuDropdown">
+                <input type="button" value="Salud" class="subm" id="subHealth">
+                <input type="button" value="Hospedaje" class="subm" id="subAccomodation">
+                <input type="button" value="Pet-Friendly" class="subm" id="subPlaces">
+                <input type="button" value="Autoservicios" class="subm" id="subShopping">
+                <input type="button" value="Entrenamiento" class="subm" id="subEducation">
+                <input type="button" value="Non-Profit" class="subm" id="subNonProfit">
             </div>
+            <button class="sidenavItem" id="suggestVendor">Sugiere un lugar</button>
+            <button class="sidenavItem" id="aboutUs">Quiénes somos</button>
+        </div>
 
         <div id="mainimage"></div>
 
         <section id="categories">
 
-                <div id="health"><img class="categoryimg" src="images/icons/009-red-cross.svg" width="100%" height="100%"></div>
-                <div id="accommodation"><img class="categoryimg" src="images/icons/006-dog-house.svg" width="100%" height="100%"></div>
-                <div id="places"><img class="categoryimg" src="images/icons/007-pet.svg" width="100%" height="100%"></div>
-                <div id="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg" width="100%" height="100%"></div>
-                <div id="education"><img class="categoryimg" src="images/icons/011-graduation-cap.svg" width="100%" height="100%"></div>
-                <div id="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg" width="100%" height="100%"></div>
-            </section>
-        </main>
-            <section id="feed"></section>
-<!---------- PANTALLA  INICIAR SESION---------->
-<h4>¡Unete es Gratis!</h4>
-<section id="login">
-    <input id = "email" type="email" placeholder="Ingresa tu e-mail" class= "e-mail">
-    <input id = "password" type="password" placeholder = "crea tu contraseña" class="e-mail">
-    <br>
-    <button id = "submit" class="register" >Enviar</button>
-</section>
+            <div id="health"><img class="categoryimg" src="images/icons/009-red-cross.svg" width="100%" height="100%">
+            </div>
+            <div id="accommodation"><img class="categoryimg" src="images/icons/006-dog-house.svg" width="100%"
+                    height="100%"></div>
+            <div id="places"><img class="categoryimg" src="images/icons/007-pet.svg" width="100%" height="100%"></div>
+            <div id="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg" width="100%" height="100%">
+            </div>
+            <div id="education"><img class="categoryimg" src="images/icons/011-graduation-cap.svg" width="100%"
+                    height="100%"></div>
+            <div id="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg" width="100%" height="100%">
+            </div>
+        </section>
+    </main>
+    <section id="feed"></section>
+    <!---------- PANTALLA  INICIAR SESION---------->
+    <h4>¡Unete es Gratis!</h4>
+    <section id="login">
+        <input id="email" type="email" placeholder="Ingresa tu e-mail" class="e-mail">
+        <input id="password" type="password" placeholder="crea tu contraseña" class="e-mail">
+        <br>
+        <button id="submit" class="register">Enviar</button>
+    </section>
 
-        <footer></footer>
+    <footer></footer>
 
     </main>
 
 
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
     <script src="data/services.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-    <script src ="categories-buttons.js"></script>
+    <script src="categories-buttons.js"></script>
 
 </body>
 
