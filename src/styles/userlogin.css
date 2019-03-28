@@ -1,20 +1,93 @@
 #userlogin {
     grid-area: content;
-    display: none;
+    display: grid;
     grid-template-columns: 3rem 1fr 3rem;
+    grid-template-rows: 1rem 5rem 3rem 3rem 3rem 4rem 2rem 2rem 3rem;
     grid-row-gap: 1rem;
-    grid-template-rows: 5rem 3rem 3rem 3rem 4rem 2rem 2rem 3rem;
     grid-template-areas:    ". . ."
                             ". loginimage ."
-                            ". . ."
-                            ". username ."
-                            ". . ."
-                            ". emailandpassword ."
-                            ". createuserbtn ."
-                            ". . ."
-                            ". registeredusers ."
-                            ". orregisterwith ."
-                            ". facebooklogin ."
-                            ". . ."
-                            " . googlelogin .";
+                            ". continuefacebook ."
+                            ". continuegoogle ."
+                            ". continueemail ."
+                            ". loginbtn ."
+                            ". forgotpassword ."
+                            ". toregisterscreen ."
+                            ". useragreement .";
+}
+
+#loginimage{
+    grid-area: loginimage;
+    display: block;
+    background-color: black;
+    cursor: pointer;
+
+}
+
+#continuefacebook{
+    grid-area: continuefacebook;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.15rem;
+    border: solid 1px;
+    cursor: pointer;
+
+}
+
+#continuegoogle {
+    grid-area: continuegoogle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.15rem;
+    border: solid 1px;
+    cursor: pointer;
+
+}
+
+#continueemail{
+    grid-area: continueemail;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.15rem;
+    border: solid 1px;
+    cursor: pointer;
+
+}
+
+#loginbtn{
+    grid-area: loginbtn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.15rem;
+    border: solid 1px;
+    cursor: pointer;
+
+}
+
+#forgotpassword{
+    grid-area: forgotpassword;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#toregisterscreen{
+    grid-area: toregisterscreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#useragreement{
+    grid-area: useragreement;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 8pt;
+
 }

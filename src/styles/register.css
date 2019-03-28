@@ -1,6 +1,6 @@
 #register {
     grid-area: content;
-    display: grid;
+    display: none;
     grid-template-columns: 1rem 1fr 1rem;
     grid-template-rows: 1rem 25% 0.5rem 3rem 0.5rem 10rem 4rem 0.5rem 2rem 2rem 4rem 0.5rem 4rem 1rem;
     grid-template-areas:    ". . ."

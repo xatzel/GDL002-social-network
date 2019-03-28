@@ -25,7 +25,7 @@ main {
 
 #homescreen {
     grid-area: content;
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
     grid-template-rows: 3rem 4rem 3rem 0.5rem auto 0.5rem 3rem;
     grid-template-areas:"header header header header header header header header"
