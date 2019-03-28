@@ -1,4 +1,4 @@
-#login {
+#register {
     grid-area: content;
     display: none;
     grid-template-columns: 1rem 1fr 1rem;
