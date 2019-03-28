@@ -11,26 +11,16 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/card.css">
     <link rel="stylesheet" type="text/css" href="styles/reviews-rate.css">
+    <link rel="stylesheet" type="text/css" href="styles/login.css">
 </head>
 
 
 <body>
+
     <main>
         <header>
 
-            <!-- <div id="btnmenu" class="headerelements">
-                <i class="fas fa-bars"></i>
-                <div class="dropdown">
-                    <div id="home" class="menuoption">INICIO</div>
-                    <div id="profile" class="menuoption">MI PERFIL</div>
-                    <div id="suggestaplace" class="menuoption">SUGIERE UN LUGAR</div>
-                    <div id="aboutus" class="menuoption">QUIENES SOMOS</div>
-                </div>
-            </div> -->
-            <!-- Searchbar & Sidenav Menu Button -->
-            <button class="headerelements btnmenu" id="btnmenu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="headerelements btnmenu" id="btnmenu"><i class="fas fa-bars"></i></button>
             <input id="searchbar" class="headerelements" placeholder="Busca aquí lo que necesites">
             <div id="btnsearch" class="headerelements"><i class="fas fa-search"></i></div>
 
@@ -53,29 +43,43 @@
                 </div>
                 <button class="sidenavItem" id="suggestVendor">Sugiere un lugar</button>
                 <button class="sidenavItem" id="aboutUs">Quiénes somos</button>
-            </div>
+        </div>
 
-        <div id="mainimage"></div>
+        
+            <div id="mainimage"></div>
 
-        <section id="categories">
+            <section id="categories">
 
-                <div id="health"><img class="categoryimg" src="images/icons/009-red-cross.svg" width="100%" height="100%"></div>
-                <div id="accommodation"><img class="categoryimg" src="images/icons/006-dog-house.svg" width="100%" height="100%"></div>
-                <div id="places"><img class="categoryimg" src="images/icons/007-pet.svg" width="100%" height="100%"></div>
-                <div id="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg" width="100%" height="100%"></div>
-                <div id="education"><img class="categoryimg" src="images/icons/011-graduation-cap.svg" width="100%" height="100%"></div>
-                <div id="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg" width="100%" height="100%"></div>
+                    <div id="health"><img class="categoryimg" src="images/icons/009-red-cross.svg" width="100%" height="100%"></div>
+                    <div id="accommodation"><img class="categoryimg" src="images/icons/006-dog-house.svg" width="100%" height="100%"></div>
+                    <div id="places"><img class="categoryimg" src="images/icons/007-pet.svg" width="100%" height="100%"></div>
+                    <div id="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg" width="100%" height="100%"></div>
+                    <div id="education"><img class="categoryimg" src="images/icons/011-graduation-cap.svg" width="100%" height="100%"></div>
+                    <div id="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg" width="100%" height="100%"></div>
             </section>
-        </main>
+
             <section id="feed"></section>
+
 <!---------- PANTALLA  INICIAR SESION---------->
-<h4>¡Unete es Gratis!</h4>
-<section id="login">
-    <input id = "email" type="email" placeholder="Ingresa tu e-mail" class= "e-mail">
-    <input id = "password" type="password" placeholder = "crea tu contraseña" class="e-mail">
-    <br>
-    <button id = "submit" class="register" >Enviar</button>
-</section>
+
+        <section id="login">
+            <div id="loginimage"></div>
+            <input id = "username" placeholder="Elige un nombre de usuario">
+            <div id="emailandpassword">
+                <input id = "email" type="email" placeholder="Ingresa tu e-mail" class= "e-mail">
+                <div id= "emailerror"></div>
+                <input id = "password" type="password" placeholder = "Crea tu contraseña con al menos 6 caractéres" class="e-mail">
+                <div id= "passworderror"></div>
+            </div>
+            <button id = "createuserbtn" class="register" >¡Registrate!</button>
+            <div id="registeredusers">
+                <div id= "textlogin">¿Ya tienes una cuenta?</div>
+                <div id="loginbtn">Inicia sesión</div>
+            </div>
+            <div id="orloginwith">o regístrate con:</div>
+            <div id="facebooklogin"></div>
+            <button  id="googlelogin">Google</button>
+        </section>
 
         <footer></footer>
 
@@ -86,7 +90,7 @@
     <script src="data/services.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-    <script src ="categories-buttons.js"></script>
+
 
 </body>
 
