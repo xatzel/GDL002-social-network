@@ -1,0 +1,129 @@
+#login {
+    grid-area: content;
+    display: none;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-rows: 1rem 25% 0.5rem 3rem 0.5rem 10rem 4rem 0.5rem 2rem 2rem 4rem 0.5rem 4rem 1rem;
+    grid-template-areas:    ". . ."
+                            ". loginimage ."
+                            ". . ."
+                            ". username ."
+                            ". . ."
+                            ". emailandpassword ."
+                            ". createuserbtn ."
+                            ". . ."
+                            ". registeredusers ."
+                            ". orloginwith ."
+                            ". facebooklogin ."
+                            ". . ."
+                            " . googlelogin .";
+}
+
+#loginimage {
+    grid-area: loginimage;
+    display: flex;
+    background-color: black;
+}
+
+#username {
+    grid-area: username;
+    display: flex;
+    padding: 0.25rem;
+    border: 1px solid;
+    border-radius: 0.25rem;
+}
+
+#emailandpassword {
+    grid-area: emailandpassword;
+    display: grid;
+    grid-template-rows: 3rem 1.5rem 3rem 1.5rem;
+    grid-template-areas:    "email"
+                            "emailerror"
+                            "password"
+                            "passworderror";
+}
+
+#email {
+    grid-area: email;
+    display: flex;
+    border: 1px solid;
+    border-radius: 0.25rem;
+}
+
+#emailerror {
+    grid-area: emailerror;
+    display: flex;
+    font-size: 10pt;
+}
+
+#password {
+    grid-area: password;
+    display: flex;
+    border: 1px solid;
+    border-radius: 0.25rem;
+}
+
+#passworderror {
+    grid-area: passworderror;
+    display: flex;
+    font-size: 10pt;
+}
+
+#createuserbtn {
+    grid-area: createuserbtn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+#registeredusers {
+    grid-area: registeredusers;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "textlogin loginbtn";
+}
+
+#textlogin {
+    grid-area: textlogin;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: flex-end
+}
+
+#loginbtn {
+    grid-area: loginbtn;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+#orloginwith {
+    grid-area: orloginwith;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#facebooklogin {
+    grid-area: facebooklogin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+#googlelogin {
+    grid-area: googlelogin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
