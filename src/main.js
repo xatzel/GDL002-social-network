@@ -12,7 +12,51 @@ const dataObj = SERVICES.vendors;
 //     console.log(Object.values(dataAsJSON));
 //   });
 
-///
+/// FIREBASE LOGIN
+
+//homescreen logged in
+//register log in screen
+
+firebase.auth().onAuthStateChanged(function (user) {
+	if (user) {
+		// User is signed in.
+		document.getElementById("homescreen").style.display = "block";
+		document.getElementById("register").style.display = "none";
+
+	} else {
+		// No user is signed in.
+		document.getElementById("homescreen").style.display = "none";
+		document.getElementById("register").style.display = "block";
+	}
+});
+
+//Log In user
+document.querySelector("#createuserbtn").addEventListener('click', () => {
+	//let userName = document.querySelector("#username").value;
+	let userEmail = document.querySelector("#email").value;
+	let userPass = document.querySelector("#password").value;
+
+	firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+		// Handle Errors here.
+		var errorCode = error.code;
+		var errorMessage = error.message;
+
+		window.alert("Error Message : " +
+			errorMessage);
+		// ...
+	});
+});
+
+//Log Out User
+document.querySelector("#logOut").addEventListener('click', () => {
+	document.getElementById("sidenavMenu").style.width = '0rem';
+	firebase.auth().signOut().then(function () {
+		// Sign-out successful.
+	}).catch(function (error) {
+		// An error happened.
+	});
+});
+
 
 //----------------------------------------
 let servicesList = [];
@@ -185,7 +229,7 @@ const cardInfoLayout = (givenVendorsList) => {
 //---------------------- BUTTONS ---------------------------------
 healthBtn.addEventListener('click', cardInfoLayout(givenVendorsList));
 
-//OPEN & CLOSE SIDENAV MENU
+
 //OPEN & CLOSE SIDENAV MENU
 document.getElementById("btnmenu").addEventListener('click', () => {
 	document.getElementById("sidenavMenu").style.width = '12.5rem';
