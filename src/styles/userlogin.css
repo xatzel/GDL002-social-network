@@ -1,5 +1,5 @@
 #userloginscreen {
-    display: grid;
+    display: none;
     grid-area: content;
     grid-template-columns: auto;
     grid-template-rows: 0.5rem 10rem 1rem auto 0.5rem 2rem 0.5rem;
@@ -29,7 +29,7 @@
 
 #continuewith {
     grid-area: loginalternatives;
-    display: grid;
+    display: none;
     grid-template-columns: 3rem 1fr 3rem;
     grid-template-rows: 3rem 3rem 3rem 4rem;
     grid-row-gap: 1rem;
@@ -76,7 +76,7 @@
 
 #useremailandpassword {
     grid-area: loginalternatives;
-    display: none;
+    display: grid;
     grid-template-columns: 1rem 1fr 1rem;
     grid-template-rows: 3rem 0.5rem 3rem 0.5rem 4rem 2rem 2rem;
     grid-row-gap: 0.5rem;
