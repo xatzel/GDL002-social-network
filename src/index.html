@@ -83,6 +83,7 @@
             <!---------- PANTALLA REGISTRO USUARIOS---------->
 
             <div id="register">
+
                 <div id="registerimage"></div>
                 <input id = "username" placeholder="Elige un nombre de usuario">
 
@@ -111,16 +112,32 @@
 
             <!---------- PANTALLA INICIO DE SESION---------->
 
-            <div id="userlogin">
+            <div id="userloginscreen">
 
-                    <button id="loginimage"></button>
+                <div id="loginimage"></div>
+
+                <div id="continuewith">
+
                     <button id="continuefacebook">continua con FACEBOOK</button>
                     <button id="continuegoogle">continua con GOOGLE</button>
                     <button id="continueemail">continua con tu correo</button>
-                    <button id="loginbtn">INICIA SESIÓN</button>
+                    <div id="toregisterscreen">¿Aún no tienes cuenta? ¡Registrate!</div>
+
+                </div>
+
+                <div id="useremailandpassword">
+
+                    <input id = "useremail" type="email" placeholder="Ingresa tu e-mail" class= "e-mail">
+                    <div id= "useremailerror"></div>
+                    <input id = "userpassword" type="password" placeholder = "Ingresa tu contraseña" class="e-mail">
+                    <div id= "userpassworderror"></div>
+                    <button id="emailloginbtn">INICIA SESIÓN</button>
                     <div id="forgotpassword">¿Olvidaste tu contraseña?</div>
                     <div id="toregisterscreen">¿Aún no tienes cuenta? ¡Registrate!</div>
-                    <div id="useragreement">Al iniciar sesión estarás de acuerdo con nuestras políticas de privacidad.</div>
+
+                </div>
+
+                <div id="useragreement">Al iniciar sesión estarás de acuerdo con nuestras políticas de privacidad.</div>
 
             </div>
 

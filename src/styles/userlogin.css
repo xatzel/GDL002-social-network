@@ -1,26 +1,43 @@
-#userlogin {
+#userloginscreen {
+    display: grid;
     grid-area: content;
+    grid-template-columns: auto;
+    grid-template-rows: 0.5rem 10rem 1rem auto 0.5rem 2rem 0.5rem;
+    grid-template-areas:    "."
+                            "loginimage"
+                            "."
+                            "loginalternatives"
+                            "."
+                            "useragreement"
+                            ".";
+}
+
+#loginimage {
+    grid-area: loginimage;
+    display: flex;
+    background-color: black;
+}
+
+#useragreement{
+    grid-area: useragreement;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 8pt;
+    padding: 1rem;
+}
+
+#continuewith {
+    grid-area: loginalternatives;
     display: grid;
     grid-template-columns: 3rem 1fr 3rem;
-    grid-template-rows: 1rem 5rem 3rem 3rem 3rem 4rem 2rem 2rem 3rem;
+    grid-template-rows: 3rem 3rem 3rem 4rem;
     grid-row-gap: 1rem;
-    grid-template-areas:    ". . ."
-                            ". loginimage ."
+    grid-template-areas:
                             ". continuefacebook ."
                             ". continuegoogle ."
                             ". continueemail ."
-                            ". loginbtn ."
-                            ". forgotpassword ."
-                            ". toregisterscreen ."
-                            ". useragreement .";
-}
-
-#loginimage{
-    grid-area: loginimage;
-    display: block;
-    background-color: black;
-    cursor: pointer;
-
+                            ". toregisterscreen .";
 }
 
 #continuefacebook{
@@ -56,15 +73,48 @@
 
 }
 
-#loginbtn{
-    grid-area: loginbtn;
+
+#useremailandpassword {
+    grid-area: loginalternatives;
+    display: none;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-rows: 3rem 0.5rem 3rem 0.5rem 4rem 2rem 2rem;
+    grid-row-gap: 0.5rem;
+    grid-template-areas:    ". useremail ."
+                            ". . ."
+                            ". userpassword . "
+                            ". . ."
+                            ". emailloginbtn ."
+                            ". forgotpassword ."
+                            ". toregisterscreen .";
+}
+
+#useremail {
+    grid-area: useremail;
     display: flex;
+    border: 1px solid;
+    border-radius: 0.15rem;
+    padding: 0.25rem;
+
+}
+
+#userpassword {
+    grid-area: userpassword;
+    display: flex;
+    border: 1px solid;
+    border-radius: 0.15rem;
+    padding: 0.25rem;
+}
+
+
+#emailloginbtn {
+    grid-area: emailloginbtn;
+    display: flex;
+    border: 1px solid;
+    border-radius: 0.15rem;
     align-items: center;
     justify-content: center;
-    border-radius: 0.15rem;
-    border: solid 1px;
     cursor: pointer;
-
 }
 
 #forgotpassword{
@@ -81,13 +131,4 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
-
-#useragreement{
-    grid-area: useragreement;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 8pt;
-
 }
