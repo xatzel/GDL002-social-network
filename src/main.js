@@ -53,12 +53,10 @@ const nonprofitBtn = document.querySelector('nonprofit');
 
 let givenVendorsList = dataObj;
 
-
 const cardInfoLayout = (givenVendorsList) => {
-
 	feed.innerHTML = '';
 
-	let cardInfo = "";
+	let cardInfo = '';
 
 	let cardInfoId = 1;
 
@@ -75,15 +73,13 @@ const cardInfoLayout = (givenVendorsList) => {
 
 	//Función que aparece div donde se muestran las opiniones
 	const showReviews = () => {
-
 		let reviewContainer = document.querySelector("[id^='reviewcontainer']");
 
-		if (reviewContainer.style.display === "grid") {
-			reviewContainer.style.display = "none";
+		if (reviewContainer.style.display === 'grid') {
+			reviewContainer.style.display = 'none';
 		} else {
-			reviewContainer.style.display = "grid";
+			reviewContainer.style.display = 'grid';
 		}
-
 	};
 
 	//Funcion para mostrar div para ingresar opinión
@@ -93,10 +89,7 @@ const cardInfoLayout = (givenVendorsList) => {
 	};
 
 	givenVendorsList.forEach((element) => {
-
-		cardInfo =
-
-			`<div id="cardinfoid${cardInfoId}" class="cardinfolayout">
+		cardInfo = `<div id="cardinfoid${cardInfoId}" class="cardinfolayout">
 
 					<div id="primaryinfoid${cardInfoId}" class="primaryinfolayout">
 
@@ -157,7 +150,7 @@ const cardInfoLayout = (givenVendorsList) => {
 						<div id="opiniontitle">Tu opinión: </div>
 						<textarea id="opinion" class="textinput" placeholder="Escribe aquí tu opinión..."></textarea>
 						<div id="veracitycheck" ><input type="checkbox" value="true">Juro que es la verdad y nadamas que la verdad</div> 
-						<input id="btnsubmit" type="button" value="Enviar">
+						<input id="btnsubmit" t uype="button" value="Enviar">
 
 					</form>
 
@@ -178,23 +171,21 @@ const cardInfoLayout = (givenVendorsList) => {
 	btnShowReviews.addEventListener('click', showReviews);
 
 	document.querySelector('#btnrate').addEventListener('click', showRateForm);
-
 };
-
 
 //---------------------- BUTTONS ---------------------------------
 healthBtn.addEventListener('click', cardInfoLayout(givenVendorsList));
 
 //OPEN & CLOSE SIDENAV MENU
 //OPEN & CLOSE SIDENAV MENU
-document.getElementById("btnmenu").addEventListener('click', () => {
-	document.getElementById("sidenavMenu").style.width = '12.5rem';
+document.getElementById('btnmenu').addEventListener('click', () => {
+	document.getElementById('sidenavMenu').style.width = '12.5rem';
 });
-document.getElementById("menuCloseBtn").addEventListener('click', () => {
-	document.getElementById("sidenavMenu").style.width = '0rem';
+document.getElementById('menuCloseBtn').addEventListener('click', () => {
+	document.getElementById('sidenavMenu').style.width = '0rem';
 });
 
 //OPEN SIDEMENU DROPDOWN
-document.getElementById("dropdownBtn").addEventListener('click', () => {
-	document.getElementById("menuDropdown").classList.toggle('showDropdownMenu');
+document.getElementById('dropdownBtn').addEventListener('click', () => {
+	document.getElementById('menuDropdown').classList.toggle('showDropdownMenu');
 });

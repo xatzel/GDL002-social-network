@@ -70,12 +70,22 @@
             <section id="feed"></section>
 <!---------- PANTALLA  INICIAR SESION---------->
 <h4>¡Unete es Gratis!</h4>
-<section id="login">
-    <input id = "email" type="email" placeholder="Ingresa tu e-mail" class= "e-mail">
-    <input id = "password" type="password" placeholder = "crea tu contraseña" class="e-mail">
+<p>Registro</p>
+<form id="formContacto">
+    <input id = "txtEmail" type="email" placeholder="Ingresa tu e-mail" class= "e-mail">
+    <input id = "txtName" type="name" placeholder="Ingresa  tu Nombre" class= "e-mail">
+    <input id = "txtPassword" type="password" placeholder = "crea tu contraseña" class="e-mail">
     <br>
     <button id = "submit" class="register" >Enviar</button>
-</section>
+</form>
+<h4>¡Unete es Gratis!</h4>
+<p>inicio de sesion</p>
+<form id="formLogIn">
+    <input id = "logEmail" type="email" placeholder="Ingresa tu e-mail" class= "e-mail">
+    <input id = "logPassword" type="password" placeholder = "crea tu contraseña" class="e-mail">
+    <br>
+    <button id = "submit" class="registrar" >Entrar</button>
+</form>
 
         <footer></footer>
 
@@ -84,6 +94,8 @@
 
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
     <script src="data/services.js"></script>
+    <script src="ConfigFireB.js"></script>
+    <script src="fireBase.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
     <script src ="categories-buttons.js"></script>
