@@ -29,7 +29,8 @@
 
         <div id="sidenavMenu" class="sidenav">
                     <a href="javascript:void(0)" class="menuCloseBtn" id="menuCloseBtn"> &times; </a>
-                    <button class="sidenavItem" id="logIn"> Iniciar Sesión </button>
+                    <button class="sidenavItem" id="logIn"><a href="#" data-target="register">¡Regístrate!</a></button>
+                    <button class="sidenavItem" id="logIn"><a href="#" data-target="userlogin">Inicia Sesión</a></button>
                     <button class="sidenavItem dropdown-btn" id="dropdownBtn">Categorías
                         <i class="fas fa-caret-down"></i>
                     </button>
@@ -51,7 +52,7 @@
 
             <!---------- PANTALLA HOME---------->
 
-            <div id="homescreen">
+            <div class="page" id="homescreen">
 
                 <header>
 
@@ -82,9 +83,9 @@
 
             <!---------- PANTALLA REGISTRO USUARIOS---------->
 
-            <div id="register">
 
-                <div id="registerimage"></div>
+            <div class="page active" id="register">
+                <div id="loginimage"></div>
                 <input id = "username" placeholder="Elige un nombre de usuario">
 
                 <div id="emailandpassword">
@@ -135,6 +136,8 @@
                 </div>
 
                 <div id="useragreement">Al iniciar sesión estarás de acuerdo con nuestras políticas de privacidad.</div>
+
+
 
             </div>
 
