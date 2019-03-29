@@ -20,13 +20,13 @@ const dataObj = SERVICES.vendors;
 firebase.auth().onAuthStateChanged(function (user) {
 	if (user) {
 		// User is signed in.
-		document.getElementById("homescreen").style.display = "block";
+		document.getElementById("homescreen").style.display = "grid";
 		document.getElementById("register").style.display = "none";
 
 	} else {
 		// No user is signed in.
 		document.getElementById("homescreen").style.display = "none";
-		document.getElementById("register").style.display = "block";
+		document.getElementById("register").style.display = "grid";
 	}
 });
 
