@@ -83,6 +83,7 @@
 
             <!---------- PANTALLA REGISTRO USUARIOS---------->
 
+
             <div class="page active" id="register">
                 <div id="loginimage"></div>
                 <input id = "username" placeholder="Elige un nombre de usuario">
@@ -90,9 +91,7 @@
                 <div id="emailandpassword">
 
                     <input id = "email" type="email" placeholder="Ingresa tu e-mail" class= "e-mail">
-                    <div id= "emailerror"></div>
                     <input id = "password" type="password" placeholder = "Crea tu contraseña con al menos 6 caractéres" class="e-mail">
-                    <div id= "passworderror"></div>
 
                 </div>
 
@@ -100,19 +99,45 @@
 
                 <div id="registeredusers">
 
-                    <div id= "textlogin">¿Ya tienes una cuenta?</div>
-                    <div id="loginbtn">Inicia sesión</div>
+                    <div id= "textregister">¿Ya tienes una cuenta?</div>
+                    <div id="registerbtn">Inicia sesión</div>
 
                 </div>
 
-                <div id="orloginwith">o regístrate con:</div>
-                <div id="facebooklogin">FACEBOOK</div>
-                <button id="googlelogin">Google</button>
+                <div id="ortext"> o regístrate con: </div>
+                <button id="facebookregister">FACEBOOK</button>
+                <button id="googleregister">GOOGLE</button>
+
             </div>
 
             <!---------- PANTALLA INICIO DE SESION---------->
 
-            <div class="page" id="userlogin">
+            <div id="userloginscreen">
+
+                <div id="loginimage"></div>
+
+                <div id="continuewith">
+
+                    <button id="continuefacebook">continua con FACEBOOK</button>
+                    <button id="continuegoogle">continua con GOOGLE</button>
+                    <button id="continueemail">continua con tu correo</button>
+                    <div id="toregisterscreen">¿Aún no tienes cuenta? ¡Registrate!</div>
+
+                </div>
+
+                <div id="useremailandpassword">
+
+                    <input id = "useremail" type="email" placeholder="Ingresa tu e-mail" class= "e-mail">  <div id= "useremailerror"></div>
+                    <input id = "userpassword" type="password" placeholder = "Ingresa tu contraseña" class="e-mail"><div id= "userpassworderror"></div>
+                    <button id="emailloginbtn">INICIA SESIÓN</button>
+                    <div id="forgotpassword">¿Olvidaste tu contraseña?</div>
+                    <div id="toregisterscreen">¿Aún no tienes cuenta? ¡Registrate!</div>
+
+                </div>
+
+                <div id="useragreement">Al iniciar sesión estarás de acuerdo con nuestras políticas de privacidad.</div>
+
+
 
             </div>
 

@@ -1,10 +1,10 @@
 #register {
     grid-area: content;
-    display: none;
+    display: grid;
     grid-template-columns: 1rem 1fr 1rem;
-    grid-template-rows: 1rem 25% 0.5rem 3rem 0.5rem 10rem 4rem 0.5rem 2rem 2rem 4rem 0.5rem 4rem 1rem;
+    grid-template-rows: 1rem 10rem 0.5rem 3rem 0.5rem 10rem 4rem 0.5rem 2rem 2rem 4rem 0.5rem 4rem;
     grid-template-areas:    ". . ."
-                            ". loginimage ."
+                            ". registerimage ."
                             ". . ."
                             ". username ."
                             ". . ."
@@ -12,14 +12,14 @@
                             ". createuserbtn ."
                             ". . ."
                             ". registeredusers ."
-                            ". orloginwith ."
-                            ". facebooklogin ."
+                            ". ortext ."
+                            ". facebookregister ."
                             ". . ."
-                            " . googlelogin .";
+                            " . googleregister .";
 }
 
-#loginimage {
-    grid-area: loginimage;
+#registerimage {
+    grid-area: registerimage;
     display: flex;
     background-color: black;
 }
@@ -35,11 +35,11 @@
 #emailandpassword {
     grid-area: emailandpassword;
     display: grid;
-    grid-template-rows: 3rem 1.5rem 3rem 1.5rem;
+    grid-template-rows: 3rem 0.5rem 3rem 0.5rem;
     grid-template-areas:    "email"
-                            "emailerror"
+                            "."
                             "password"
-                            "passworderror";
+                            ".";
 }
 
 #email {
@@ -49,23 +49,11 @@
     border-radius: 0.25rem;
 }
 
-#emailerror {
-    grid-area: emailerror;
-    display: flex;
-    font-size: 10pt;
-}
-
 #password {
     grid-area: password;
     display: flex;
     border: 1px solid;
     border-radius: 0.25rem;
-}
-
-#passworderror {
-    grid-area: passworderror;
-    display: flex;
-    font-size: 10pt;
 }
 
 #createuserbtn {
@@ -82,34 +70,34 @@
     grid-area: registeredusers;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "textlogin loginbtn";
+    grid-template-areas: "textregister registerbtn";
 }
 
-#textlogin {
-    grid-area: textlogin;
+#textregister {
+    grid-area: textregister;
     display: flex;
     padding: 0.25rem;
     align-items: center;
     justify-content: flex-end
 }
 
-#loginbtn {
-    grid-area: loginbtn;
+#registerbtn {
+    grid-area: registerbtn;
     display: flex;
     padding: 0.25rem;
     align-items: center;
     cursor: pointer;
 }
 
-#orloginwith {
-    grid-area: orloginwith;
+#ortext {
+    grid-area: ortext;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#facebooklogin {
-    grid-area: facebooklogin;
+#facebookregister {
+    grid-area: facebookregister;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,8 +106,8 @@
     cursor: pointer;
 }
 
-#googlelogin {
-    grid-area: googlelogin;
+#googleregister {
+    grid-area: googleregister;
     display: flex;
     align-items: center;
     justify-content: center;
