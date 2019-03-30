@@ -1,209 +1,206 @@
-@media only screen and (min-width: 960px) {
+    @media only screen and (min-width: 960px) {
 
     .cardinfolayout {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            "primaryinfolayout"
-            "secondaryinfolayout"
-            "ratesandreviews";
-        cursor: pointer;
-        margin-bottom: 0.5rem;
-        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
-        margin-bottom: 0.5rem;
-        border-radius: 0.15rem;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "primaryinfolayout"
+        "secondaryinfolayout"
+        "ratesandreviews";
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
+    margin-bottom: 0.5rem;
+    border-radius: 0.15rem;
     }
 
     .primaryinfolayout {
-        grid-area: primaryinfolayout;
-        display: grid;
-        grid-template-columns: 1rem 4rem 1fr 3rem;
-        grid-template-rows: 4rem 3rem;
-        grid-template-areas:
-            "leftbar rating name btnlike"
-            "leftbar generals generals generals";
+    grid-area: primaryinfolayout;
+    display: grid;
+    grid-template-columns: 1rem 4rem 1fr 3rem;
+    grid-template-rows: 4rem 3rem;
+    grid-template-areas:
+        "leftbar rating name btnlike"
+        "leftbar generals generals generals";
     }
 
     #leftbar {
-        grid-area: leftbar;
-        background-color: rgb(234,125,24);
-        border-radius: 0.15rem 0 0 0.15rem;
+    grid-area: leftbar;
+    background-color: rgb(234,125,24);
+    border-radius: 0.15rem 0 0 0.15rem;
     }
 
     #rating {
-        grid-area: rating;
-        display: flex;
-        background-color: rgb(163, 211, 53);
-        margin: 0.1rem;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        font-weight: 900;
+    grid-area: rating;
+    display: flex;
+    background-color: rgb(163, 211, 53);
+    margin: 0.1rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 900;
     }
 
     #name {
-        grid-area: name;
-        display: flex;
-        align-items: center;
-        padding: 1.5rem;
-        font-weight: bold;
-        overflow: hidden;
-        text-overflow: ellipsis;/*falta revisar que tipo de display para que muestre ellipsis y se pueda centrar*/
+    grid-area: name;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;/*falta revisar que tipo de display para que muestre ellipsis y se pueda centrar*/
     }
 
     #btnlike {
-        grid-area: btnlike;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    grid-area: btnlike;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
 
     #generals{
-        grid-area: generals;
-        display: inline-block;
-        padding: 1rem;
+    grid-area: generals;
+    display: inline-block;
+    padding: 1rem;
     }
 
     .secondaryinfolayout {
-        grid-area: secondaryinfolayout;
-        display: none;
-        grid-template-columns: 1rem 1fr 0.5rem 1fr ;
-        grid-template-rows: auto auto 3rem;
-        grid-template-areas:
-            "secondaryleftbar contactinfo . perks"
-            "secondaryleftbar contactinfo . perks"
-            "secondaryleftbar reviewgrid reviewgrid reviewgrid"
+    grid-area: secondaryinfolayout;
+    display: none;
+    grid-template-columns: 1rem 1fr 0.5rem 1fr ;
+    grid-template-rows: auto auto 3rem;
+    grid-template-areas:
+        "secondaryleftbar contactinfo . perks"
+        "secondaryleftbar contactinfo . perks"
+        "secondaryleftbar reviewgrid reviewgrid reviewgrid"
     }
 
     #secondaryleftbar {
-        grid-area: secondaryleftbar;
-        background-color: rgb(234,125,24);
-        border-radius: 0.15rem 0 0 0.15rem;
+    grid-area: secondaryleftbar;
+    background-color: rgb(234,125,24);
+    border-radius: 0.15rem 0 0 0.15rem;
     }
 
     #contactinfo {
-        grid-area: contactinfo;
-        display: grid;
-        grid-template-columns:  3rem auto;
-        grid-template-rows: 3rem 3rem auto 4rem;
-        grid-template-areas:
-            "schedule scheduleinfo "
-            "telephone telephoneinfo "
-            "website websiteinfo "
-            "address addressinfo ";
-        border-right: solid 1px;
+    grid-area: contactinfo;
+    display: grid;
+    grid-template-columns:  3rem auto;
+    grid-template-rows: 3rem 3rem auto 4rem;
+    grid-template-areas:
+        "schedule scheduleinfo "
+        "telephone telephoneinfo "
+        "website websiteinfo "
+        "address addressinfo ";
+    border-right: solid 1px;
     }
 
     #perks {
-        grid-area: perks;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-
+    grid-area: perks;
+    display: none;
     }
 
 
     #schedule {
-        grid-area: schedule;
-        display: flex;
-        padding: 0.25rem;
-        align-items: center;
-        justify-content: center;
+    grid-area: schedule;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: center;
     }
 
     #scheduleinfo {
-        grid-area: scheduleinfo;
-        display: flex;
-        padding: 0.25rem;
-        align-items: center;
-        overflow: hidden;
+    grid-area: scheduleinfo;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    overflow: hidden;
     }
 
     #telephone {
-        grid-area: telephone;
-        display: flex;
-        padding: 0.25rem;
-        align-items: center;
-        justify-content: center;
+    grid-area: telephone;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: center;
     }
 
     #telephoneinfo {
-        grid-area: telephoneinfo;
-        padding: 0.25rem;
-        align-items: center;
-        overflow: hidden;
+    grid-area: telephoneinfo;
+    padding: 0.25rem;
+    align-items: center;
+    overflow: hidden;
     }
 
     #address {
-        grid-area: address;
-        display: flex;
-        padding: 0.25rem;
-        align-items: center;
-        justify-content: center;
+    grid-area: address;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: center;
     }
 
     #addressinfo {
-        grid-area: addressinfo;
-        padding: 0.25rem;
-        align-items: center;
-        overflow: hidden;
+    grid-area: addressinfo;
+    padding: 0.25rem;
+    align-items: center;
+    overflow: hidden;
     }
 
     #website {
-        grid-area: website;
-        display: flex;
-        padding: 0.25rem;
-        align-items: center;
-        justify-content: center;
+    grid-area: website;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: center;
     }
 
     #websiteinfo {
-        grid-area: websiteinfo;
-        display: flex;
-        padding: 0.25rem;
-        align-items: center;
+    grid-area: websiteinfo;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
     /*    text-overflow: ellipsis; preguntar como hacer para display flex y overflow ellipsis*/
-        overflow: hidden;
+    overflow: hidden;
     }
 
     #reviewgrid {
-        grid-area: reviewgrid;
-        display: grid;
-        grid-template-columns: 1fr 0.5rem 1fr;
-        grid-template-areas: "btnshowreviews . btnrate";
-        padding: 0.5rem;
+    grid-area: reviewgrid;
+    display: grid;
+    grid-template-columns: 1fr 0.5rem 1fr;
+    grid-template-areas: "btnshowreviews . btnrate";
+    padding: 0.5rem;
     }
 
     .btnshowreviewsstyle {
-        grid-area: btnshowreviews;
-        display: flex;
-        background-color:rgb(210, 226, 228);
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 0.15rem;
+    grid-area: btnshowreviews;
+    display: flex;
+    background-color:rgb(210, 226, 228);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0.15rem;
     }
 
     #btnrate {
-        grid-area: btnrate;
-        display: flex;
-        background-color:rgb(210, 226, 228);
-        align-items: center;
-        justify-content: center;
-        border-radius: 0.15rem;
+    grid-area: btnrate;
+    display: flex;
+    background-color:rgb(210, 226, 228);
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.15rem;
     }
 
     .reviewcontainerstyle {
-        grid-area: ratesandreviews;
-        display: none;
-        grid-template-columns:1rem auto 3rem 3rem ;
-        grid-template-rows: 1rem 2rem auto 2rem;
-        grid-template-areas:
-            ". . . btnedit"
-            ". authorinfo . ."
-            ". writtenreview . ."
-            ". . heartcount heart";
+    grid-area: ratesandreviews;
+    display: none;
+    grid-template-columns:1rem auto 3rem 3rem ;
+    grid-template-rows: 1rem 2rem auto 2rem;
+    grid-template-areas:
+        ". . . btnedit"
+        ". authorinfo . ."
+        ". writtenreview . ."
+        ". . heartcount heart";
     }
 
-}
+    }

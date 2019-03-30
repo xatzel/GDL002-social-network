@@ -167,8 +167,6 @@ const cardInfoLayout = (givenVendorsList) => {
 							<div id="addressinfo">${element.address}</div>
 						</div>
 
-						
-
 						<div id="reviewgrid">
 							<div id="btnshowreviews${cardInfoId}" class="btnshowreviewsstyle">Opiniones</div>
 							<div id="btnrate">Calificar</div>
