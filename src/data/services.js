@@ -1,49 +1,47 @@
 const SERVICES = {
     "vendors": [{
-        "num" : 1,
-        "name" : "VeteriAna",
-        "type" : ["health", "accommodation"],
-        "address" : "Av Rafael Sanzio 400, La Estancia, 45030, Zapopan",
-        "phone" : "(33) 3110 6256",
-        "hours" : "L - S (10:00 AM - 20:00 PM)",
-        "rating" : "94%",
-        "rates" : 41,
-        "privacy" : "Friends",
-        "general" : [
-            "Limpieza - 4/5",
+        "num": 1,
+        "name": "VeteriAna",
+        "address": "Av Rafael Sanzio 400, La Estancia, 45030, Zapopan",
+        "phone": "(33) 3110 6256",
+        "hours": "L - S (10:00 AM - 20:00 PM)",
+        "websiteinfo": "https://www.facebook.com/Veteriana/",
+        "likes": "",
+        "privacy": "Friends",
+        "general": [
+            "Limpieza - 4/5 ",
             "Servicio -5/5",
             "Precio - $$"
         ],
-        "perks" : [
-            "Veterianaria",
-            "Fisioterapia",
-            "Traumatologia",
-            "Ortopedia",
-            "Pago con tarjeta",
-            "Pensión",
-            "Cirugia",
-            "Estetica",
-            "Profilaxis dental",
-            "Farmacia",
-            "Venta de alimento",
+        "perks": [
+            "Veterianaria ",
+            "  Fisioterapia",
+            " Traumatologia",
+            " Ortopedia",
+            " Pago con tarjeta",
+            " Pensión",
+            " Cirugia",
+            " Estetica",
+            " Profilaxis dental",
+            " Farmacia",
+            " Venta de alimento",
             "Estacionamiento"
         ]
     }, {
-        "num" : 2,
-        "name" : "Hospital Veterinario de Occidente",
-        "type" : ["health", "accommodation"],
-        "address" : "Av Clouthier 2246, Colli Urbano, 45070, Zapopan",
-        "phone" : "(33) 3125 5543",
-        "hours" : "L - S (09:00 AM - 8:00 PM) D (11:00 AM - 06:00 PM)",
-        "rating" : "93%",
-        "rates" : 36,
-        "privacy" : "Public",
-        "general" : [
+        "num": 2,
+        "name": "Hospital Veterinario de Occidente",
+        "address": "Av Clouthier 2246, Colli Urbano, 45070, Zapopan",
+        "phone": "(33) 3125 5543",
+        "hours": "L - S (09:00 AM - 8:00 PM) D (11:00 AM - 06:00 PM)",
+        "websiteinfo": "https://www.facebook.com/Hospitalveterinariodeoccidente/",
+        "likes": "",
+        "privacy": "Public",
+        "general": [
             "Limpieza - 4/5",
             "Servicio - 3/5",
             "Precio - $$"
         ],
-        "perks" : [
+        "perks": [
             "Veterinaria",
             "Endoscopia",
             "Pago con tarjeta",
@@ -55,20 +53,19 @@ const SERVICES = {
         ]
     }, {
         "num": 3,
-        "name" : "Centro Veterinario Terranova",
-        "type" : ["health", "accommodation"],
-        "address" : "Av Guadalupe 5233, Jardines de Guadalupe, 45030, Zapopan",
-        "phone" : "(33) 1204 0772",
-        "hours" : "24 HRS",
-        "rating" : "90%",
-        "rates" : 21,
-        "privacy" : "Friends",
-        "general" : [
+        "name": "Centro Veterinario Terranova",
+        "address": "Av Guadalupe 5233, Jardines de Guadalupe, 45030, Zapopan",
+        "phone": "(33) 1204 0772",
+        "websiteinfo": "https://www.facebook.com/Centro-Veterinario-Terranova-132734614073867/",
+        "hours": "24 HRS",
+        "likes": "",
+        "privacy": "Friends",
+        "general": [
             "Limpieza - 5/5",
             "Servicio - 4/5",
             "Precio - $$$"
         ],
-        "perks" : [
+        "perks": [
             "Veterinaria",
             "Rayos X",
             "Ultrasonido",
@@ -85,21 +82,20 @@ const SERVICES = {
             "Estacionamiento"
         ]
     }, {
-        "num" : 4,
-        "name" : "Dogtown Hotel & Spa",
-        "type" : ["accommodation", "shopping"],
-        "address" : "Calle Puerto Yavaros 40, Col Miramar, 45060, Zapopan",
-        "phone" : "(044)(33) 2795 1952",
-        "hours" : "L - S (8:00 AM - 8:00 PM) D (8:00 AM - 7:00 PM)",
-        "rating" : "96%",
-        "rates" : 118,
-        "privacy" : "Public",
-        "general" : [
+        "num": 4,
+        "name": "Dogtown Hotel & Spa",
+        "address": "Calle Puerto Yavaros 40, Col Miramar, 45060, Zapopan",
+        "phone": "(044)(33) 2795 1952",
+        "hours": "L - S (8:00 AM - 8:00 PM) D (8:00 AM - 7:00 PM)",
+        "websiteinfo": "https://www.facebook.com/dogtowngdl/",
+        "likes": "",
+        "privacy": "Public",
+        "general": [
             "Limpieza - 4/5",
             "Servicio - 5/5",
             "Precio - $$"
         ],
-        "perks" : [
+        "perks": [
             "Pension",
             "Guarderia",
             "Estetica",
@@ -107,21 +103,20 @@ const SERVICES = {
             "Venta de alimento"
         ]
     }, {
-        "num" : 5,
-        "name" : "Pet Camp",
-        "type" : ["accommodation", "education"],
-        "address" : "Calz José Guadalupe Gallo 1818, Agua Blanca Habitacional, 45235, Zapopan",
-        "phone" : "(33) 1279 3779",
-        "hours" : "L - D (8:00 AM - 7:00 PM)",
-        "rating" : "79%",
-        "rates" : 32,
-        "privacy" : "Public",
-        "general" : [
+        "num": 5,
+        "name": "Pet Camp",
+        "address": "Calz José Guadalupe Gallo 1818, Agua Blanca Habitacional, 45235, Zapopan",
+        "phone": "(33) 1279 3779",
+        "hours": "L - D (8:00 AM - 7:00 PM)",
+        "websiteinfo": "https://www.facebook.com/PetCampMX/",
+        "likes": "",
+        "privacy": "Public",
+        "general": [
             "Limpieza - 4/5",
             "Servicio - 4/5",
             "Precio - $$$"
         ],
-        "perks" : [
+        "perks": [
             "Pension",
             "Guarderia",
             "Entrenamiento",
@@ -131,59 +126,56 @@ const SERVICES = {
             "Transporte"
         ]
     }, {
-        "num" : 6,
-        "name" : "Coffee & Pets Deli",
-        "type" : ["places", "cafe"],
-        "address" : "Independencia 5785, Arcos de Guadalupe, 45037, Zapopan",
-        "phone" : "(33) 1186 7656",
-        "hours" : "M - V (3:00 PM - 10:00 PM) S (11:00 AM - 10:00 PM) D (10:00 AM - 7:00 PM)",
-        "rating" : "88%",
-        "rates" : 57,
-        "privacy" : "Friends",
-        "general" : [
+        "num": 6,
+        "name": "Coffee & Pets Deli",
+        "address": "Independencia 5785, Arcos de Guadalupe, 45037, Zapopan",
+        "phone": "(33) 1186 7656",
+        "hours": "M - V (3:00 PM - 10:00 PM) S (11:00 AM - 10:00 PM) D (10:00 AM - 7:00 PM)",
+        "websiteinfo": "https://www.facebook.com/coffeeandpets/",
+        "likes": "",
+        "privacy": "Friends",
+        "general": [
             "Limpieza - 5/5",
             "Servicio - 4/5",
             "Precio - $$"
         ],
-        "perks" : [
+        "perks": [
             "Pet friendly",
             "Café"
         ]
     }, {
-        "num" : 7,
-        "name" : "Poi Poi Kings Burgers",
-        "type" : ["places", "restaurant"],
-        "address" : "Ingenieros Sur 1099, Chapalita Las Fuentes, 45030, Zapopan",
-        "phone" : "(33) 2304 8075",
-        "hours" : "L - D (1:00 PM - 11:00 PM)",
-        "rating" : "90%",
-        "rates" : 253,
-        "parivacy" : "Public",
-        "general" : [
+        "num": 7,
+        "name": "Poi Poi Kings Burgers",
+        "address": "Ingenieros Sur 1099, Chapalita Las Fuentes, 45030, Zapopan",
+        "phone": "(33) 2304 8075",
+        "hours": "L - D (1:00 PM - 11:00 PM)",
+        "websiteinfo": "https://www.facebook.com/poipoikings/",
+        "likes": "",
+        "parivacy": "Public",
+        "general": [
             "Limpieza - 5/5",
             "Servicio - 5/5",
             "Precio - $$"
         ],
-        "perks" : [
+        "perks": [
             "Pet friendly",
             "Burgers"
         ]
     }, {
-        "num" : 8,
-        "name" : "Petco Cordilleras",
-        "type" : ["shopping", "education"],
-        "address" : "Av Patria 888, Jardines de Guadalupe, 45030, Zapopan",
-        "phone" : "(33) 1652 3075",
-        "hours" : "L - D (9:00 AM - 9:00 PM)",
-        "rating" : "79%",
-        "rates" : 17,
-        "privacy" : "Public",
-        "general" : [
+        "num": 8,
+        "name": "Petco Cordilleras",
+        "address": "Av Patria 888, Jardines de Guadalupe, 45030, Zapopan",
+        "phone": "(33) 1652 3075",
+        "hours": "L - D (9:00 AM - 9:00 PM)",
+        "websiteinfo": "https://www.facebook.com/Petco.Mexico/",
+        "likes": "",
+        "privacy": "Public",
+        "general": [
             "Limpieza - 5/5",
             "Servicio - 4/5",
             "Precio - $$$"
         ],
-        "perks" : [
+        "perks": [
             "Internacional",
             "Estética",
             "Venta de alimento",
@@ -191,72 +183,68 @@ const SERVICES = {
             "Adopción de mascotas"
         ]
     }, {
-        "num" : 9,
-        "name" : "Mascottchen",
-        "type" : ["health", "shopping"],
-        "address" : "Av Manuel J. Clouthier 888, Mirador del Sol, 45054, Zapopan",
-        "phone" : "(33) 3563 8175",
-        "hours" : "L - S (8:30 AM - 8:30 PM) D (10:30 AM - 8:30 PM)",
-        "rating" : "87%",
-        "rates" : 151,
-        "privacy" : "Friends",
-        "general" : [
+        "num": 9,
+        "name": "Mascottchen",
+        "address": "Av Manuel J. Clouthier 888, Mirador del Sol, 45054, Zapopan",
+        "phone": "(33) 3563 8175",
+        "hours": "L - S (8:30 AM - 8:30 PM) D (10:30 AM - 8:30 PM)",
+        "websiteinfo": "https://www.facebook.com/MaskottchenMx/",
+        "likes": "",
+        "privacy": "Friends",
+        "general": [
             "Limpieza - 3/5",
             "Servicio - 4/5",
             "Precio - $$"
         ],
-        "perks" : [
+        "perks": [
             "Veterinaria",
             "Cirugía",
             "Estética",
             "Venta de alimento"
         ]
     }, {
-        "num" : 10,
-        "name" : "Club de Agility Delta",
-        "type" : ["education", "accommodation"],
-        "address" : "Av Volcán del Colli 1195, Colli Urbano, 45070, Zapopan",
-        "phone" : "(33) 3587 2964",
-        "hours" : "L - S (09:00 AM - 6:00 PM) D (09:00 AM - 02:00 PM)",
-        "rating" : "63%",
-        "rates" : 6,
-        "privacy" : "Public",
-        "general" : [
+        "num": 10,
+        "name": "Club de Agility Delta",
+        "address": "Av Volcán del Colli 1195, Colli Urbano, 45070, Zapopan",
+        "phone": "(33) 3587 2964",
+        "hours": "L - S (09:00 AM - 6:00 PM) D (09:00 AM - 02:00 PM)",
+        "websiteinfo": "https://www.facebook.com/pages/Delta-Club-Agility/293239524058922",
+        "likes": "",
+        "privacy": "Public",
+        "general": [
             "Limpieza - 3/5",
             "Servicio - 4/5",
             "Precio - $$$"
         ],
-        "perks" : [
+        "perks": [
             "Entrenamiento",
             "Agility",
             "Pensión",
             "Criadero"
         ]
     }, {
-        "num" : 11,
-        "name" : "Clicker Pets México",
-        "type" : ["health", "accommodation"],
-        "address" : "Privada Juan Partí 377, El Triángulo, 45138, Zapopan",
-        "phone" : "(33) 1543 9383",
-        "hours" : "L - S (8:00 AM - 7:00 PM) D (8:00 AM - 5:00 PM)",
-        "rating" : "85%",
-        "rates" : 68,
-        "privacy" : "Public",
-        "general" : [
+        "num": 11,
+        "name": "Clicker Pets México",
+        "address": "Privada Juan Partí 377, El Triángulo, 45138, Zapopan",
+        "phone": "(33) 1543 9383",
+        "hours": "L - S (8:00 AM - 7:00 PM) D (8:00 AM - 5:00 PM)",
+        "websiteinfo": "https://www.facebook.com/clickerpetsmexico/",
+        "likes": "",
+        "privacy": "Public",
+        "general": [
             "Limpieza - 4/5",
             "Servicio - 5/5",
             "Precio - $$$"
         ],
-        "perks" : [
-            "Entrenamiento",
-            "Conferencias",
-            "Entrenamiento Positivo",
-            "Pet Sitter",
-            "Pensión",
-            "Guardería",
-            "Deportes Caninos",
-            "Agility"
+        "perks": [
+            "Entrenamiento ",
+            "Conferencias ",
+            "Entrenamiento Positivo ",
+            "Pet Sitter ",
+            "Pensión ",
+            "Guardería ",
+            "Deportes Caninos ",
+            "Agility "
         ]
-    }
-    ]
+    }]
 }

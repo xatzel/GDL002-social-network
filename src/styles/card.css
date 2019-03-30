@@ -93,7 +93,6 @@
         "telephone telephoneinfo "
         "website websiteinfo "
         "address addressinfo ";
-    border-right: solid 1px;
 }
 
 
@@ -139,8 +138,10 @@
 
 #addressinfo {
     grid-area: addressinfo;
+    display:flex;
     padding: 0.25rem;
     align-items: center;
+    justify-content: flex-start;
     overflow: hidden;
 }
 
@@ -154,11 +155,10 @@
 
 #websiteinfo {
     grid-area: websiteinfo;
-    display: flex;
-    padding: 0.25rem;
-    align-items: center;
-/*    text-overflow: ellipsis; preguntar como hacer para display flex y overflow ellipsis*/
+    display: inline;
     overflow: hidden;
+    overflow-wrap: break-word;
+    font-size: 12pt;
 }
 
 #reviewgrid {

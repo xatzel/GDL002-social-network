@@ -145,7 +145,7 @@ const cardInfoLayout = (givenVendorsList) => {
 					<div id="primaryinfoid${cardInfoId}" class="primaryinfolayout">
 
 						<div id="leftbar"></div>
-						<div id="rating">${element.rating}</div>
+						<div id="rating">${element.likes}</div>
 						<div id="name">${element.name}</div>
 						<div id="btnlike"><i class="far fa-thumbs-up"></i></div>
 						<div id="perks">${element.perks}</div>
@@ -162,7 +162,7 @@ const cardInfoLayout = (givenVendorsList) => {
 							<div id="telephone"><i class="fas fa-phone"></i></div>
 							<div id="telephoneinfo">${element.phone}</div>
 							<div id="website"><i class="fas fa-globe"></i></div>
-							<div id="websiteinfo">${element.website}</div>
+							<div id="websiteinfo">${element.websiteinfo}</div>
 							<div id="address"><i class="fas fa-map-marker"></i></div>
 							<div id="addressinfo">${element.address}</div>
 						</div>
