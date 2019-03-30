@@ -1,26 +1,9 @@
 img {
-	max-width: 100%;
-	height: auto;
-	background: url("images/banners/PoogleLogo.png");
+    max-width: 100%;
+    height: auto;
+    background: url("images/banners/PoogleLogo.png");
 }
 
-<<<<<<< HEAD
-#register {
-	grid-area: content;
-	display: grid;
-	grid-template-columns: 1rem 1fr 1rem;
-	grid-template-rows: 1rem 20rem 0.5rem 3rem 0.5rem 10rem 4rem 0.5rem 2rem 2rem 4rem 0.5rem 4rem;
-	grid-template-areas: ". . ." ". registerimage ." ". . ." ". username ." ". . ." ". emailandpassword ."
-		". createuserbtn ." ". . ." ". registeredusers ." ". ortext ." ". facebookregister ." ". . ."
-		" . googleregister .";
-}
-
-#registerimg {
-	grid-area: registerimage;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-=======
 #registerimg {
     grid-area: registerimage;
     display: flex;
@@ -34,98 +17,96 @@ img {
     max-width: 100%;
     height: 20rem;
 
->>>>>>> c3db5be1643f96ac3dfbc628cbfc37fc08087869
 }
 
 
 #username {
-	grid-area: username;
-	display: flex;
-	padding: 0.25rem;
-	border: 1px solid;
-	border-radius: 0.25rem;
+    grid-area: username;
+    display: flex;
+    padding: 0.25rem;
+    border: 1px solid;
+    border-radius: 0.25rem;
 }
 
 #emailandpassword {
-	grid-area: emailandpassword;
-	display: grid;
-	grid-template-rows: 3rem 0.5rem 3rem 0.5rem;
-	grid-template-areas: "email" "." "password" ".";
+    grid-area: emailandpassword;
+    display: grid;
+    grid-template-rows: 3rem 0.5rem 3rem 0.5rem;
+    grid-template-areas: "email"".""password"".";
 }
 
 #email {
-	grid-area: email;
-	display: flex;
-	border: 1px solid;
-	border-radius: 0.25rem;
+    grid-area: email;
+    display: flex;
+    border: 1px solid;
+    border-radius: 0.25rem;
 }
 
 #password {
-	grid-area: password;
-	display: flex;
-	border: 1px solid;
-	border-radius: 0.25rem;
+    grid-area: password;
+    display: flex;
+    border: 1px solid;
+    border-radius: 0.25rem;
 }
 
 #createuserbtn {
-	grid-area: createuserbtn;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 1px solid;
-	border-radius: 0.25rem;
-	cursor: pointer;
+    grid-area: createuserbtn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    cursor: pointer;
 }
 
 #registeredusers {
-	grid-area: registeredusers;
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-	grid-template-areas: "textregister registerbtn";
+    grid-area: registeredusers;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "textregister registerbtn";
 }
 
 #textregister {
-	grid-area: textregister;
-	display: flex;
-	padding: 0.25rem;
-	align-items: center;
-	justify-content: flex-end;
+    grid-area: textregister;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 #registerbtn {
-	grid-area: registerbtn;
-	display: flex;
-	padding: 0.25rem;
-	align-items: center;
-	cursor: pointer;
+    grid-area: registerbtn;
+    display: flex;
+    padding: 0.25rem;
+    align-items: center;
+    cursor: pointer;
 }
 
 #ortext {
-	grid-area: ortext;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    grid-area: ortext;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #facebookregister {
-	grid-area: facebookregister;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 1px solid;
-	border-radius: 0.25rem;
-	cursor: pointer;
+    grid-area: facebookregister;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    cursor: pointer;
 }
 
 #googleregister {
-	grid-area: googleregister;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 1px solid;
-	border-radius: 0.25rem;
-	cursor: pointer;
+    grid-area: googleregister;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    cursor: pointer;
 }
 
-@media (min-width: 700px) {
-}
+@media (min-width: 700px) {}
