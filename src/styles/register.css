@@ -30,7 +30,13 @@
     display: block;
     max-width: 100%;
     height: 20rem;
+}
 
+img {
+    width: 100%;
+
+    /* INVERTIGAR OBJECT FIT PARA QUE LA IMG NO SE DESMADRE */
+    object-fit: scale-down;
 }
 
 
@@ -38,7 +44,11 @@
     grid-area: username;
     display: flex;
     padding: 0.25rem;
-    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-bottom-color: #BE216C;
     border-radius: 0.25rem;
 }
 
@@ -55,14 +65,22 @@
 #email {
     grid-area: email;
     display: flex;
-    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-color: #BE216C;
     border-radius: 0.25rem;
 }
 
 #password {
     grid-area: password;
     display: flex;
-    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-color: #BE216C;
     border-radius: 0.25rem;
 }
 
@@ -71,8 +89,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
-    border-radius: 0.25rem;
+    background-color: #C1D93A;
+    border: none;
+    border-radius: 2rem;
     cursor: pointer;
 }
 
@@ -92,11 +111,15 @@
 }
 
 #registerbtn {
+    color: white;
     grid-area: registerbtn;
     display: flex;
     padding: 0.25rem;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
+    background-color: #E19B38;
+    border-radius: 1rem;
 }
 
 #ortext {
@@ -111,8 +134,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
-    border-radius: 0.25rem;
+    background-color: #3B5998;
+    border: none;
+    border-radius: 2rem;
+    color: white;
     cursor: pointer;
 }
 
@@ -121,7 +146,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
-    border-radius: 0.25rem;
+    border: none;
+    border-radius: 2rem;
     cursor: pointer;
 }

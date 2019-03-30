@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -18,7 +19,8 @@ main {
     overflow: auto;
     grid-template-columns: auto;
     grid-template-rows: 0.5rem auto 0.5rem;
-    grid-template-areas: "." "content" ".";
+    grid-template-areas: ".""content"".";
+    grid-template-areas: ".""content"".";
 }
 
 #homescreen {
@@ -26,11 +28,11 @@ main {
     display: grid;
     grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
     grid-template-rows: 3rem 4rem 3rem 0.5rem auto 0.5rem 3rem;
-    grid-template-areas: "header header header header header header header header" 
-                        ". mainimage mainimage mainimage mainimage mainimage mainimage ." 
-                        ". categories categories categories categories categories categories ." 
-                        ". . . . . . . ." ". feed feed feed feed feed feed ." ". . . . . . . ." 
-                        "footer footer footer footer footer footer footer footer";
+    grid-template-areas: "header header header header header header header header"
+        ". mainimage mainimage mainimage mainimage mainimage mainimage ."
+        ". categories categories categories categories categories categories ."
+        ". . . . . . . ."". feed feed feed feed feed feed ."". . . . . . . ."
+        "footer footer footer footer footer footer footer footer";
 }
 
 header {
@@ -41,6 +43,15 @@ header {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+
+#homescreen {
+    grid-area: content;
+    display: none;
+    grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
+    grid-template-rows: 3rem 4rem 3rem 0.5rem auto 0.5rem 3rem;
+    grid-template-areas: "header header header header header header header header"". mainimage mainimage mainimage mainimage mainimage mainimage ."". categories categories categories categories categories categories ."". . . . . . . ."". feed feed feed feed feed feed ."". . . . . . . .""footer footer footer footer footer footer footer footer";
+}
+
 
 .headerelements {
     display: flex;
@@ -88,7 +99,9 @@ header {
 
 /*Elements within sidenavBar*/
 
-.sidenavItem, .dropdown-btn, .subm {
+.sidenavItem,
+.dropdown-btn,
+.subm {
     padding: 1.5rem 0.5rem 1.5rem 1rem;
     font-size: 1.125rem;
     color: #818181;
@@ -109,7 +122,8 @@ header {
     font-weight: bold;
 }
 
-.sidenavItem:hover, .dropdown-btn:hover {
+.sidenavItem:hover,
+.dropdown-btn:hover {
     color: #706b6b;
     background-color: #C1D93A;
 }
@@ -160,12 +174,12 @@ header {
 
 #mainimg {
     grid-area: mainimage;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    background-image: url("images/banners/PoogleLogo.png");
+    background-size: cover;
 }
  .mainimage {
-     
+
      display: block;
      max-width: 100%;
      height: 4rem;
