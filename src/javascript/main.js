@@ -148,7 +148,7 @@ const cardInfoLayout = (givenVendorsList) => {
 						<div id="rating">${element.rating}</div>
 						<div id="name">${element.name}</div>
 						<div id="btnfavorite"><i class="far fa-star"></i></div>
-						<div id="generals">${element.general}</div>
+						<div id="perks">${element.perks}</div>
 
 					</div>
 
@@ -167,7 +167,7 @@ const cardInfoLayout = (givenVendorsList) => {
 							<div id="addressinfo">${element.address}</div>
 						</div>
 
-						<div id="perks">${element.perks}</div>
+						
 
 						<div id="reviewgrid">
 							<div id="btnshowreviews${cardInfoId}" class="btnshowreviewsstyle">Opiniones</div>

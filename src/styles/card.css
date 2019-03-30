@@ -18,10 +18,10 @@
 	grid-area: primaryinfolayout;
 	display: grid;
     grid-template-columns: 1rem 4rem 1fr 3rem;
-    grid-template-rows: 4rem 3rem;
+    grid-template-rows: 4rem auto;
 	grid-template-areas:
         "leftbar rating name btnfavorite"
-        "leftbar generals generals generals";
+        "leftbar perks perks perks";
 }
 
 #leftbar {
@@ -58,10 +58,12 @@
     justify-content: center;
 }
 
-#generals{
-    grid-area: generals;
+#perks {
+    grid-area: perks;
     display: inline-block;
-    padding: 1rem;
+    align-items: flex-start;
+    overflow-wrap: break-word;
+    padding: 0.5rem;
 }
 
 .secondaryinfolayout {
@@ -94,14 +96,6 @@
     border-right: solid 1px;
 }
 
-
-#perks {
-    grid-area: perks;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-
-}
 
 
 #schedule {
