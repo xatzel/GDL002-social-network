@@ -158,10 +158,18 @@ header {
     grid-area: btnsearch;
 }
 
-#mainimage {
+#mainimg {
     grid-area: mainimage;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+ .mainimage {
+     
+     display: block;
+     max-width: 100%;
+     height: 4rem;
+ }
 
 .categoryimg {
     object-fit: fill;
