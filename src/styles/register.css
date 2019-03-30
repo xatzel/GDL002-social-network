@@ -4,6 +4,7 @@ img {
 	background: url("images/banners/PoogleLogo.png");
 }
 
+<<<<<<< HEAD
 #register {
 	grid-area: content;
 	display: grid;
@@ -19,7 +20,23 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+=======
+#registerimg {
+    grid-area: registerimage;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.registerimage {
+    grid-area: registerimage;
+    display: block;
+    max-width: 100%;
+    height: 20rem;
+
+>>>>>>> c3db5be1643f96ac3dfbc628cbfc37fc08087869
+}
+
 
 #username {
 	grid-area: username;
