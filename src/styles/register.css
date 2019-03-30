@@ -1,3 +1,9 @@
+img {
+    max-width: 100%;
+    height: auto;
+    background: url("images/banners/PoogleLogo.png");
+}
+
 #register {
     grid-area: content;
     display: grid;
@@ -22,11 +28,6 @@
     grid-area: registerimage;
     display: flex;
     /* height: 20rem; */
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
 
 #username {
@@ -120,3 +121,5 @@ img {
     border-radius: 0.25rem;
     cursor: pointer;
 }
+
+@media (min-width: 700px) {}
