@@ -186,7 +186,7 @@ const cardInfoLayout = (givenVendorsList) => {
 
 					</div>
 
-					<form id="rateform">
+					<div id="rateform">
 
 						<div id="ratetitle">Tu calificación:</div>
 
@@ -203,7 +203,7 @@ const cardInfoLayout = (givenVendorsList) => {
 						<div id="veracitycheck" ><input type="checkbox" value="true">Juro que es la verdad y nadamas que la verdad</div> 
 						<input id="btnsubmit" type="button" value="Enviar">
 
-					</form>
+					</div>
 
 				</div>`;
 
