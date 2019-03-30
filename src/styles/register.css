@@ -1,7 +1,21 @@
-img {
-    max-width: 100%;
-    height: auto;
-    background: url("images/banners/PoogleLogo.png");
+#register {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-rows: 1rem 20rem 0.5rem 3rem 0.5rem 10rem 4rem 0.5rem 2rem 2rem 4rem 0.5rem 4rem;
+    grid-template-areas: ". . ."
+        ". registerimage ."
+        ". . ."
+        ". username ."
+        ". . ."
+        ". emailandpassword ."
+        ". createuserbtn ."
+        ". . ."
+        ". registeredusers ."
+        ". ortext ."
+        ". facebookregister ."
+        ". . ."
+        " . googleregister .";
 }
 
 #registerimg {
@@ -32,7 +46,10 @@ img {
     grid-area: emailandpassword;
     display: grid;
     grid-template-rows: 3rem 0.5rem 3rem 0.5rem;
-    grid-template-areas: "email"".""password"".";
+    grid-template-areas: "email"
+        "."
+        "password"
+        ".";
 }
 
 #email {
@@ -71,7 +88,7 @@ img {
     display: flex;
     padding: 0.25rem;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-end
 }
 
 #registerbtn {
@@ -108,5 +125,3 @@ img {
     border-radius: 0.25rem;
     cursor: pointer;
 }
-
-@media (min-width: 700px) {}
