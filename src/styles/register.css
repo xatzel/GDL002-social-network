@@ -18,16 +18,21 @@
         " . googleregister .";
 }
 
-#registerimage {
+#registerimg {
     grid-area: registerimage;
     display: flex;
-    /* height: 20rem; */
+    justify-content: center;
+    align-items: center;
 }
 
-img {
+.registerimage {
+    grid-area: registerimage;
+    display: block;
     max-width: 100%;
-    height: auto;
+    height: 20rem;
+
 }
+
 
 #username {
     grid-area: username;
