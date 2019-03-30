@@ -145,10 +145,10 @@ const cardInfoLayout = (givenVendorsList) => {
 					<div id="primaryinfoid${cardInfoId}" class="primaryinfolayout">
 
 						<div id="leftbar"></div>
-						<div id="rating">${element.rating}</div>
+						<div id="rating">${element.likes}</div>
 						<div id="name">${element.name}</div>
-						<div id="btnfavorite"><i class="far fa-star"></i></div>
-						<div id="generals">${element.general}</div>
+						<div id="btnlike"><i class="far fa-thumbs-up"></i></div>
+						<div id="perks">${element.perks}</div>
 
 					</div>
 
@@ -162,12 +162,10 @@ const cardInfoLayout = (givenVendorsList) => {
 							<div id="telephone"><i class="fas fa-phone"></i></div>
 							<div id="telephoneinfo">${element.phone}</div>
 							<div id="website"><i class="fas fa-globe"></i></div>
-							<div id="websiteinfo">${element.website}</div>
+							<div id="websiteinfo">${element.websiteinfo}</div>
 							<div id="address"><i class="fas fa-map-marker"></i></div>
 							<div id="addressinfo">${element.address}</div>
 						</div>
-
-						<div id="perks">${element.perks}</div>
 
 						<div id="reviewgrid">
 							<div id="btnshowreviews${cardInfoId}" class="btnshowreviewsstyle">Opiniones</div>
@@ -186,7 +184,7 @@ const cardInfoLayout = (givenVendorsList) => {
 
 					</div>
 
-					<form id="rateform">
+					<div id="rateform">
 
 						<div id="ratetitle">Tu calificación:</div>
 
@@ -203,7 +201,7 @@ const cardInfoLayout = (givenVendorsList) => {
 						<div id="veracitycheck" ><input type="checkbox" value="true">Juro que es la verdad y nadamas que la verdad</div> 
 						<input id="btnsubmit" type="button" value="Enviar">
 
-					</form>
+					</div>
 
 				</div>`;
 
