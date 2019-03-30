@@ -60,7 +60,7 @@
 
 #perks {
     grid-area: perks;
-    display: inline-block;
+    display: block;
     align-items: flex-start;
     overflow-wrap: break-word;
     padding: 0.5rem;
@@ -69,12 +69,12 @@
 .secondaryinfolayout {
 	grid-area: secondaryinfolayout;
 	display: none;
-    grid-template-columns: 1rem 1fr 0.5rem 1fr ;
+    grid-template-columns: 1rem 1fr 1fr ;
     grid-template-rows: auto auto 3rem;
     grid-template-areas:
-        "secondaryleftbar contactinfo . perks"
-        "secondaryleftbar contactinfo . perks"
-        "secondaryleftbar reviewgrid reviewgrid reviewgrid"
+        "secondaryleftbar contactinfo contactinfo"
+        "secondaryleftbar contactinfo contactinfo "
+        "secondaryleftbar reviewgrid reviewgrid"
 }
 
 #secondaryleftbar {
