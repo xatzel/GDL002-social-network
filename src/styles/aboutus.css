@@ -1,0 +1,39 @@
+#aboutusscreen {
+    display: none;
+    grid-area: content;
+    grid-template-columns: auto;
+    grid-template-rows: 0.5rem 10rem 1rem 2rem 0.5rem auto 0.5rem;
+    grid-template-areas:    "."
+                            "aboutusimage"
+                            "."
+                            "aboutustitle"
+                            "."
+                            "aboutustext"
+                            ".";
+}
+
+#aboutusimage {
+    grid-area: aboutusimage;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#aboutustitle {
+    grid-area: aboutustitle;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-wrap: break-word;
+    padding: 1rem;
+}
+
+#aboutustext {
+    grid-area: aboutustext;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-wrap: break-word;
+    padding: 1rem;
+}

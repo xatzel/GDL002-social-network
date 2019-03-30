@@ -18,10 +18,10 @@
 	grid-area: primaryinfolayout;
 	display: grid;
     grid-template-columns: 1rem 4rem 1fr 3rem;
-    grid-template-rows: 4rem 3rem;
+    grid-template-rows: 4rem auto;
 	grid-template-areas:
-        "leftbar rating name btnfavorite"
-        "leftbar generals generals generals";
+        "leftbar rating name btnlike"
+        "leftbar perks perks perks";
 }
 
 #leftbar {
@@ -51,28 +51,30 @@
     text-overflow: ellipsis;/*falta revisar que tipo de display para que muestre ellipsis y se pueda centrar*/
 }
 
-#btnfavorite {
-    grid-area: btnfavorite;
+#btnlike {
+    grid-area: btnlike;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#generals{
-    grid-area: generals;
-    display: inline-block;
-    padding: 1rem;
+#perks {
+    grid-area: perks;
+    display: block;
+    align-items: flex-start;
+    overflow-wrap: break-word;
+    padding: 0.5rem;
 }
 
 .secondaryinfolayout {
 	grid-area: secondaryinfolayout;
 	display: none;
-    grid-template-columns: 1rem 1fr 0.5rem 1fr ;
+    grid-template-columns: 1rem 1fr 1fr ;
     grid-template-rows: auto auto 3rem;
     grid-template-areas:
-        "secondaryleftbar contactinfo . perks"
-        "secondaryleftbar contactinfo . perks"
-        "secondaryleftbar reviewgrid reviewgrid reviewgrid"
+        "secondaryleftbar contactinfo contactinfo"
+        "secondaryleftbar contactinfo contactinfo "
+        "secondaryleftbar reviewgrid reviewgrid"
 }
 
 #secondaryleftbar {
@@ -91,17 +93,8 @@
         "telephone telephoneinfo "
         "website websiteinfo "
         "address addressinfo ";
-    border-right: solid 1px;
 }
 
-
-#perks {
-    grid-area: perks;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-
-}
 
 
 #schedule {
@@ -145,8 +138,10 @@
 
 #addressinfo {
     grid-area: addressinfo;
+    display:flex;
     padding: 0.25rem;
     align-items: center;
+    justify-content: flex-start;
     overflow: hidden;
 }
 
@@ -160,11 +155,10 @@
 
 #websiteinfo {
     grid-area: websiteinfo;
-    display: flex;
-    padding: 0.25rem;
-    align-items: center;
-/*    text-overflow: ellipsis; preguntar como hacer para display flex y overflow ellipsis*/
+    display: inline;
     overflow: hidden;
+    overflow-wrap: break-word;
+    font-size: 12pt;
 }
 
 #reviewgrid {
