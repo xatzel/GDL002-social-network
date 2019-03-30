@@ -6,7 +6,8 @@ let config = {
 	authDomain: 'social-network-ef8fe.firebaseapp.com',
 	databaseURL: 'https://social-network-ef8fe.firebaseio.com',
 	projectId: 'social-network-ef8fe',
-	storageBucket: '',
+	storageBucket: 'gs://social-network-ef8fe.appspot.com/',
 	messagingSenderId: '676810242509'
 };
+
 firebase.initializeApp(config);
