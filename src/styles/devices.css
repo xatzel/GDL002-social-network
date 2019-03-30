@@ -21,7 +21,7 @@
         grid-template-columns: 1rem 4rem 1fr 3rem;
         grid-template-rows: 4rem 3rem;
         grid-template-areas:
-            "leftbar rating name btnfavorite"
+            "leftbar rating name btnlike"
             "leftbar generals generals generals";
     }
 
@@ -52,8 +52,8 @@
         text-overflow: ellipsis;/*falta revisar que tipo de display para que muestre ellipsis y se pueda centrar*/
     }
 
-    #btnfavorite {
-        grid-area: btnfavorite;
+    #btnlike {
+        grid-area: btnlike;
         display: flex;
         align-items: center;
         justify-content: center;
