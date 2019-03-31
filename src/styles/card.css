@@ -21,7 +21,7 @@
     grid-template-rows: 4rem auto;
 	grid-template-areas:
         "leftbar likes name btnlike"
-        "leftbar perks perks perks";
+        "leftbar perks perks btnmore";
 }
 
 #leftbar {
@@ -64,6 +64,13 @@
     align-items: flex-start;
     overflow-wrap: break-word;
     padding: 0.5rem;
+}
+
+#btnmore {
+    grid-area: btnmore;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .secondaryinfolayout {

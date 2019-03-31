@@ -43,11 +43,16 @@ const showCategory = (event) => {
             btnLike.setAttribute('id', 'btnlike');
             btnLike.innerHTML = '<i class="far fa-thumbs-up"></i>';
 
+            let btnMore = document.createElement('div');
+            btnMore.setAttribute('id', 'btnmore');
+            btnMore.innerHTML = '<i class="fas fa-caret-down"></i>';
+
             primaryInfo.appendChild(leftbar);
             primaryInfo.appendChild(name);
             primaryInfo.appendChild(likes);
             primaryInfo.appendChild(perks);
             primaryInfo.appendChild(btnLike);
+            primaryInfo.appendChild(btnMore);
 
             cardInfo.appendChild(primaryInfo);
 
