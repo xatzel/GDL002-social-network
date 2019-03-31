@@ -1,10 +1,33 @@
-//Para base de datos
+//------------------Categories-------------------------------------
+
+const healthBtn = document.querySelector('#health');
+const accommodationBtn = document.querySelector('#accommodation');
+const petfriendlyBtn = document.querySelector('#petfriendly');
+const shoppingBtn = document.querySelector('#shopping');
+const educationBtn = document.querySelector('#education');
+
 
 const db = firebase.firestore();
 
-db.collection('users').get().then((snapshot) => {
+//Para base de datos
+const showCategory = (event) => {
 
-    snapshot.docs.forEach(doc => {
-        console.log(doc.data());
+    db.collection(`${event.currentTarget.id}`).get().then((snapshot) => {
+
+        snapshot.docs.forEach((doc) => {
+            console.log(doc.data());
+
+        });
     });
-});
+
+};
+
+healthBtn.addEventListener('click', showCategory);
+
+accommodationBtn.addEventListener('click', showCategory);
+
+petfriendlyBtn.addEventListener('click', showCategory);
+
+shoppingBtn.addEventListener('click', showCategory);
+
+educationBtn.addEventListener('click', showCategory);

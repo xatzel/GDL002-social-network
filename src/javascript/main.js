@@ -86,13 +86,7 @@ const searchBtn = document.querySelector('#btnsearch').value;
 const searchInput = document.querySelector('#searchbar').value;
 
 const menuBtn = document.querySelector('#btnmenu');
-//------------------Categories-------------------------------------
-const healthBtn = document.querySelector('#health');
-const accomodationBtn = document.querySelector('#accomodation');
-const placesBtn = document.querySelector('#places');
-const shoppingBtn = document.querySelector('#shopping');
-const educationBtn = document.querySelector('#education');
-const nonprofitBtn = document.querySelector('nonprofit');
+
 //-------------------Review Elements------------------------------
 
 let givenVendorsList = dataObj;
@@ -225,7 +219,7 @@ const cardInfoLayout = (givenVendorsList) => {
 
 
 //---------------------- BUTTONS ---------------------------------
-healthBtn.addEventListener('click', cardInfoLayout(givenVendorsList));
+
 
 
 //OPEN & CLOSE SIDENAV MENU
