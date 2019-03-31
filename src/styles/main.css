@@ -175,7 +175,7 @@ header {
 #mainimg {
     grid-area: mainimage;
 
-    background-image: url("images/banners/PoogleLogo.png");
+    background-image: url("http://127.0.0.1:5500/src/images/assets/PoogleLogo.png");
     background-size: cover;
 }
  .mainimage {
