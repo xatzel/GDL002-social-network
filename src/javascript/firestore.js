@@ -7,7 +7,7 @@ const shoppingBtn = document.querySelector('#shopping');
 const educationBtn = document.querySelector('#education');
 
 const subHealthbtn = document.querySelector('#subhealth');
-const subAccommodationbtn = document.querySelector('#subhealth');
+const subAccommodationbtn = document.querySelector('#subaccommodation');
 const subPetFriendlybtn = document.querySelector('#subpetfriendly');
 const subShoppingbtn = document.querySelector('#subshopping');
 const subEducationbtn = document.querySelector('#subeducation');
