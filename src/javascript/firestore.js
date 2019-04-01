@@ -47,6 +47,16 @@ const showCategory = (event) => {
 
             };
 
+            const showRateForm = () => {
+
+                if (rateForm.style.display === 'grid') {
+                    rateForm.style.display = 'none';
+                } else {
+                    rateForm.style.display = 'grid';
+                }
+
+            };
+
             let cardInfo = document.createElement('div');
             cardInfo.setAttribute('class', 'cardinfolayout');
 
@@ -135,11 +145,12 @@ const showCategory = (event) => {
             showReviewsBtn.innerHTML = 'Opiniones';
             showReviewsBtn.addEventListener('click', showReviews);
 
-            let showRateForm = document.createElement('div');
-            showRateForm.setAttribute('id', 'btnrate');
-            showRateForm.innerHTML = 'Calificar';
+            let showRateFormBtn = document.createElement('div');
+            showRateFormBtn.setAttribute('id', 'btnrate');
+            showRateFormBtn.innerHTML = 'Calificar';
+            showRateFormBtn.addEventListener('click', showRateForm);
 
-            reviewGrid.appendChild(showRateForm);
+            reviewGrid.appendChild(showRateFormBtn);
             reviewGrid.appendChild(showReviewsBtn);
 
             contactInfo.appendChild(addressInfo);
@@ -156,7 +167,8 @@ const showCategory = (event) => {
             secondaryInfo.appendChild(secondaryLeftBar);
 
             cardInfo.appendChild(secondaryInfo);
-//empieza nuevo grid de opinion
+
+//Elementos de Opiniones
             let reviewContainer = document.createElement('div');
             reviewContainer.setAttribute('class', 'reviewcontainerstyle');
 
@@ -177,6 +189,50 @@ const showCategory = (event) => {
             reviewContainer.appendChild(authorInfo);
             reviewContainer.appendChild(writtenReview);
             cardInfo.appendChild(reviewContainer);
+
+//Elementos de RateForm
+
+            let rateForm = document.createElement('div');
+            rateForm.setAttribute('id', 'rateform');
+
+            let rateTitle = document.createElement('div');
+            rateTitle.setAttribute('id', 'ratetitle');
+            rateTitle.innerHTML = ('¡Comparte tu opinión acerca de este establecimiento!');
+
+            let opinionTitle = document.createElement('div');
+            opinionTitle.setAttribute('id', 'opiniontitle');
+            opinionTitle.innerHTML = ('Tu opinión: ');
+
+            let opinion = document.createElement('textarea');
+            opinion.setAttribute('id', 'opinion');
+            opinion.setAttribute('class', 'textinput');
+            opinion.setAttribute('placeholder', 'Escribe aquí tu opinión...');
+
+            let veracityCheck = document.createElement('div');
+            veracityCheck.setAttribute('id', 'veracitycheck');
+            veracityCheck.innerHTML = ('Juro que es la verdad y nadamas que la verdad');
+
+            let checkbox = document.createElement('input');
+            checkbox.setAttribute('type', 'checkbox');
+            checkbox.setAttribute('value', 'true');
+
+            let checkboxBtn = document.createElement('input');
+            checkboxBtn.setAttribute('type', 'checkbox');
+            checkboxBtn.setAttribute('value', 'true');
+
+            let submitBtn = document.createElement('input');
+            submitBtn.setAttribute('id', 'btnsubmit');
+            submitBtn.setAttribute('type', 'button');
+            submitBtn.setAttribute('value', 'Enviar');
+
+            rateForm.appendChild(submitBtn);
+            veracityCheck.appendChild(checkbox);
+            rateForm.appendChild(veracityCheck);
+            rateForm.appendChild(opinion);
+            rateForm.appendChild(opinionTitle);
+            rateForm.appendChild(rateTitle);
+            cardInfo.appendChild(rateForm);
+
             feed.appendChild(cardInfo);
 
         };
