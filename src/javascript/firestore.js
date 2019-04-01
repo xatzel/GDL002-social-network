@@ -27,6 +27,16 @@ const showCategory = (event) => {
 
         const renderCard = (doc) => {
 
+            const showSecondaryInfo = () => {
+
+                if (secondaryInfo.style.display === 'grid') {
+                    secondaryInfo.style.display = 'none';
+                } else {
+                    secondaryInfo.style.display = 'grid';
+                }
+
+            };
+
             let cardInfo = document.createElement('div');
             cardInfo.setAttribute('class', 'cardinfolayout');
 
@@ -55,6 +65,7 @@ const showCategory = (event) => {
             let btnMore = document.createElement('div');
             btnMore.setAttribute('id', 'btnmore');
             btnMore.innerHTML = '<i class="fas fa-caret-down"></i>';
+            btnMore.addEventListener('click', showSecondaryInfo);
 
             primaryInfo.appendChild(leftbar);
             primaryInfo.appendChild(name);
@@ -64,6 +75,76 @@ const showCategory = (event) => {
             primaryInfo.appendChild(btnMore);
 
             cardInfo.appendChild(primaryInfo);
+
+            let secondaryInfo = document.createElement('div');
+            secondaryInfo.setAttribute('class', "secondaryinfolayout");
+
+            let secondaryLeftBar = document.createElement('div');
+            secondaryLeftBar.setAttribute('id', 'secondaryleftbar');
+
+            let contactInfo = document.createElement('div');
+            contactInfo.setAttribute('id', 'contactinfo');
+
+            let schedule = document.createElement('div');
+            schedule.setAttribute('id', 'schedule');
+            schedule.innerHTML = '<i class="fas fa-clock"></i>';
+
+            let scheduleInfo = document.createElement('div');
+            scheduleInfo.setAttribute('id', 'scheduleinfo');
+            scheduleInfo.innerHTML = doc.data().scheduleinfo;
+
+            let telephone = document.createElement('div');
+            telephone.setAttribute('id', 'telephone');
+            telephone.innerHTML = '<i class="fas fa-phone"></i>';
+
+            let telephoneInfo = document.createElement('div');
+            telephoneInfo.setAttribute('id', 'telephoneinfo');
+            telephoneInfo.innerHTML = doc.data().telephoneinfo;
+
+            let website = document.createElement('div');
+            website.setAttribute('id', 'website');
+            website.innerHTML = '<i class="fas fa-globe"></i>';
+
+            let websiteInfo = document.createElement('div');
+            websiteInfo.setAttribute('id', 'websiteinfo');
+            websiteInfo.innerHTML = doc.data().websiteinfo;
+
+            let address = document.createElement('div');
+            address.setAttribute('id', 'address');
+            address.innerHTML = '<i class="fas fa-map-marker"></i>';
+
+            let addressInfo = document.createElement('div');
+            addressInfo.setAttribute('id', 'addressinfo');
+            addressInfo.innerHTML = doc.data().addressinfo;
+
+            let reviewGrid = document.createElement('div');
+            reviewGrid.setAttribute('id', 'reviewgrid');
+
+            let showReviews = document.createElement('div');
+            showReviews.setAttribute('class', 'btnshowreviewsstyle');
+            showReviews.innerHTML = 'Opiniones';
+
+            let showRateForm = document.createElement('div');
+            showRateForm.setAttribute('id', 'btnrate');
+            showRateForm.innerHTML = 'Calificar';
+
+            reviewGrid.appendChild(showRateForm);
+            reviewGrid.appendChild(showReviews);
+
+            contactInfo.appendChild(addressInfo);
+            contactInfo.appendChild(address);
+            contactInfo.appendChild(websiteInfo);
+            contactInfo.appendChild(website);
+            contactInfo.appendChild(telephoneInfo);
+            contactInfo.appendChild(telephone);
+            contactInfo.appendChild(scheduleInfo);
+            contactInfo.appendChild(schedule);
+
+            secondaryInfo.appendChild(reviewGrid);
+            secondaryInfo.appendChild(contactInfo);
+            secondaryInfo.appendChild(secondaryLeftBar);
+
+            cardInfo.appendChild(secondaryInfo);
 
             feed.appendChild(cardInfo);
 
