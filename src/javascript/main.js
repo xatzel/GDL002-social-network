@@ -1,47 +1,48 @@
 'use strict';
+
 /// FIREBASE LOGIN
 
 //homescreen logged in
 //register log in screen
 
 firebase.auth().onAuthStateChanged(function (user) {
-	if (user) {
-		// User is signed in.
-		document.getElementById("homescreen").style.display = "grid";
-		document.getElementById("register").style.display = "none";
+    if (user) {
+        // User is signed in.
+        document.getElementById("homescreen").style.display = "grid";
+        document.getElementById("register").style.display = "none";
 
-	} else {
-		// No user is signed in.
-		document.getElementById("homescreen").style.display = "none";
-		document.getElementById("register").style.display = "grid";
-	}
+    } else {
+        // No user is signed in.
+        document.getElementById("homescreen").style.display = "none";
+        document.getElementById("register").style.display = "grid";
+    }
 });
 
 //Log In user
 document.querySelector("#createuserbtn").addEventListener('click', () => {
-	//let userName = document.querySelector("#username").value;
-	let userEmail = document.querySelector("#email").value;
-	let userPass = document.querySelector("#password").value;
+    //let userName = document.querySelector("#username").value;
+    let userEmail = document.querySelector("#email").value;
+    let userPass = document.querySelector("#password").value;
 
-	firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
-		// Handle Errors here.
-		var errorCode = error.code;
-		var errorMessage = error.message;
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
 
-		window.alert("Error Message : " +
-			errorMessage);
-		// ...
-	});
+        window.alert("Error Message : " +
+            errorMessage);
+        // ...
+    });
 });
 
 //Log Out User
 document.querySelector("#logOut").addEventListener('click', () => {
-	document.getElementById("sidenavMenu").style.width = '0rem';
-	firebase.auth().signOut().then(function () {
-		// Sign-out successful.
-	}).catch(function (error) {
-		// An error happened.
-	});
+    document.getElementById("sidenavMenu").style.width = '0rem';
+    firebase.auth().signOut().then(function () {
+        // Sign-out successful.
+    }).catch(function (error) {
+        // An error happened.
+    });
 });
 
 //--------------Searchbar & Menu --------------------------------
@@ -71,47 +72,47 @@ let givenVendorsList = dataObj;
 
 const cardInfoLayout = (givenVendorsList) => {
 
-	feed.innerHTML = '';
+    feed.innerHTML = '';
 
-	let cardInfo = "";
+    let cardInfo = "";
 
-	let cardInfoId = 1;
+    let cardInfoId = 1;
 
-	const showSecondaryInfo = (event) => {
-		let cardInfoIdDiv = event.currentTarget;
-		let clickedElement = cardInfoIdDiv.querySelector("[id^='secondaryinfoid']");
+    const showSecondaryInfo = (event) => {
+        let cardInfoIdDiv = event.currentTarget;
+        let clickedElement = cardInfoIdDiv.querySelector("[id^='secondaryinfoid']");
 
-		if (clickedElement.style.display === 'grid') {
-			clickedElement.style.display = 'none';
-		} else {
-			clickedElement.style.display = 'grid';
-		}
-	};
+        if (clickedElement.style.display === 'grid') {
+            clickedElement.style.display = 'none';
+        } else {
+            clickedElement.style.display = 'grid';
+        }
+    };
 
-	//Función que aparece div donde se muestran las opiniones
-	const showReviews = () => {
+    //Función que aparece div donde se muestran las opiniones
+    const showReviews = () => {
 
-		let reviewContainer = document.querySelector("[id^='reviewcontainer']");
+        let reviewContainer = document.querySelector("[id^='reviewcontainer']");
 
-		if (reviewContainer.style.display === "grid") {
-			reviewContainer.style.display = "none";
-		} else {
-			reviewContainer.style.display = "grid";
-		}
+        if (reviewContainer.style.display === "grid") {
+            reviewContainer.style.display = "none";
+        } else {
+            reviewContainer.style.display = "grid";
+        }
 
-	};
+    };
 
-	//Funcion para mostrar div para ingresar opinión
-	const showRateForm = () => {
-		rateForm = document.querySelector('#rateform');
-		rateForm.style.display = 'grid';
-	};
+    //Funcion para mostrar div para ingresar opinión
+    const showRateForm = () => {
+        rateForm = document.querySelector('#rateform');
+        rateForm.style.display = 'grid';
+    };
 
-	givenVendorsList.forEach((element) => {
+    givenVendorsList.forEach((element) => {
 
-		cardInfo =
+        cardInfo =
 
-			`<div id="cardinfoid${cardInfoId}" class="cardinfolayout">
+            `<div id="cardinfoid${cardInfoId}" class="cardinfolayout">
 
 					<div id="primaryinfoid${cardInfoId}" class="primaryinfolayout">
 
@@ -176,21 +177,39 @@ const cardInfoLayout = (givenVendorsList) => {
 
 				</div>`;
 
-		cardInfoId++;
-		feed.innerHTML += cardInfo;
-	});
+        cardInfoId++;
+        feed.innerHTML += cardInfo;
+    });
 
-	let cardInfoIds = document.querySelectorAll("[id^='cardinfoid']");
+    let cardInfoIds = document.querySelectorAll("[id^='cardinfoid']");
 
-	cardInfoIds.forEach((element) => {
-		element.addEventListener('click', showSecondaryInfo);
-	});
+    cardInfoIds.forEach((element) => {
+        element.addEventListener('click', showSecondaryInfo);
+    });
 
-	let btnShowReviews = document.querySelector("[id^='btnshowreviews']");
+    let btnShowReviews = document.querySelector("[id^='btnshowreviews']");
 
-	btnShowReviews.addEventListener('click', showReviews);
+    btnShowReviews.addEventListener('click', showReviews);
 
-	document.querySelector('#btnrate').addEventListener('click', showRateForm);
+    document.querySelector('#btnrate').addEventListener('click', showRateForm);
 
 };
-*/
+
+
+//---------------------- BUTTONS ---------------------------------
+
+
+
+//OPEN & CLOSE SIDENAV MENU
+document.getElementById("btnmenu").addEventListener('click', () => {
+    document.getElementById("sidenavMenu").style.width = '12.5rem';
+});
+document.getElementById("menuCloseBtn").addEventListener('click', () => {
+    document.getElementById("sidenavMenu").style.width = '0rem';
+});
+
+//OPEN SIDEMENU DROPDOWN
+document.getElementById("dropdownBtn").addEventListener('click', () => {
+    document.getElementById("menuDropdown").classList.toggle('showDropdownMenu');
+});
+
