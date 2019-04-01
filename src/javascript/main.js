@@ -1,17 +1,4 @@
 'use strict';
-
-const dataObj = SERVICES.vendors;
-/* ---------------- FETCHING DATA ---------------- */
-
-// fetch('https://raw.githubusercontent.com/shareazc/GDL002-social-network/master/src/data/services.json')
-//   .then((data) => {
-//     // convert data to JSON
-//     return data.json();
-//   }).then((dataAsJSON) => {
-//     // cualquier operación con la data ya procesada
-//     console.log(Object.values(dataAsJSON));
-//   });
-
 /// FIREBASE LOGIN
 
 //homescreen logged in
@@ -57,38 +44,28 @@ document.querySelector("#logOut").addEventListener('click', () => {
 	});
 });
 
-
-//----------------------------------------
-let servicesList = [];
-let servicesInfo = '';
-/* ------------------ SELECT DIVS AS ELEMENTS ----------------- */
-
 //--------------Searchbar & Menu --------------------------------
-/*filterCards:(vendors,name) => {
-    /*esta funcion debe recibir un arreglo de objetos (lo que devuelve un arreglo nuevo) y recibe un string
-    de id  asimismo retorna un arreglo de objetos filtrados por id
 
-    const newArray = vendors.filterCards(vendors =>  (vendors.name == name)); 
-    //cuando el usuario ingresa un id igual al id que hay en data lo devuelve en  un array 
-
-    return newArray;
-}
-document.getElementById("btnsearch").addEventListener("click", function (){
-  //esto imprime en pantalla una sola tarjeta filtrada por nombre
-  let textInputFilter = document.getElementById("searchbar").value;
-  let filterData = filterCards(dataObj,textInputFilter);
-  showCards(filterData);
-  document.getElementById("searchbar").value = "";
-  // esta es solo para limpiar el valor de input type text
-
-});*/
 const searchBtn = document.querySelector('#btnsearch').value;
 const searchInput = document.querySelector('#searchbar').value;
 
 const menuBtn = document.querySelector('#btnmenu');
 
-//-------------------Review Elements------------------------------
+//OPEN & CLOSE SIDENAV MENU
+document.getElementById("btnmenu").addEventListener('click', () => {
+	document.getElementById("sidenavMenu").style.width = '12.5rem';
+});
+document.getElementById("menuCloseBtn").addEventListener('click', () => {
+	document.getElementById("sidenavMenu").style.width = '0rem';
+});
 
+//OPEN SIDEMENU DROPDOWN
+document.getElementById("dropdownBtn").addEventListener('click', () => {
+	document.getElementById("menuDropdown").classList.toggle('showDropdownMenu');
+});
+
+//-------------------Print Card------------------------------
+/*
 let givenVendorsList = dataObj;
 
 
@@ -216,21 +193,4 @@ const cardInfoLayout = (givenVendorsList) => {
 	document.querySelector('#btnrate').addEventListener('click', showRateForm);
 
 };
-
-
-//---------------------- BUTTONS ---------------------------------
-
-
-
-//OPEN & CLOSE SIDENAV MENU
-document.getElementById("btnmenu").addEventListener('click', () => {
-	document.getElementById("sidenavMenu").style.width = '12.5rem';
-});
-document.getElementById("menuCloseBtn").addEventListener('click', () => {
-	document.getElementById("sidenavMenu").style.width = '0rem';
-});
-
-//OPEN SIDEMENU DROPDOWN
-document.getElementById("dropdownBtn").addEventListener('click', () => {
-	document.getElementById("menuDropdown").classList.toggle('showDropdownMenu');
-});
+*/

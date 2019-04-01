@@ -6,13 +6,22 @@ const petfriendlyBtn = document.querySelector('#petfriendly');
 const shoppingBtn = document.querySelector('#shopping');
 const educationBtn = document.querySelector('#education');
 
+const subHealthbtn = document.querySelector('#subhealth');
+const subAccommodationbtn = document.querySelector('#subhealth');
+const subPetFriendlybtn = document.querySelector('#subpetfriendly');
+const subShoppingbtn = document.querySelector('#subshopping');
+const subEducationbtn = document.querySelector('#subeducation');
+const subNonProfitbtn = document.querySelector('#subnonprofit');
+
 //Para almacenar en constante la base de datos de firestore
 const db = firebase.firestore();
 
 //Función que muestra elementos según su categoría
 const showCategory = (event) => {
 
-    db.collection(`${event.currentTarget.id}`).get().then((snapshot) => {
+    let eventTargetCategory = event.currentTarget.dataset.category;
+
+    db.collection(eventTargetCategory).get().then((snapshot) => {
 
         feed.innerHTML = '';
 
@@ -76,3 +85,12 @@ accommodationBtn.addEventListener('click', showCategory);
 petfriendlyBtn.addEventListener('click', showCategory);
 shoppingBtn.addEventListener('click', showCategory);
 educationBtn.addEventListener('click', showCategory);
+
+//Botones de la barra de menú
+subHealthbtn.addEventListener('click', showCategory);
+subAccommodationbtn.addEventListener('click', showCategory);
+subPetFriendlybtn.addEventListener('click', showCategory);
+subShoppingbtn.addEventListener('click', showCategory);
+subEducationbtn.addEventListener('click', showCategory);
+subNonProfitbtn.addEventListener('click', showCategory);
+
