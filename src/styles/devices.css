@@ -21,7 +21,7 @@
     grid-template-columns: 1rem 4rem 1fr 3rem;
     grid-template-rows: 4rem 3rem;
     grid-template-areas:
-        "leftbar rating name btnlike"
+        "leftbar likes name btnlike"
         "leftbar generals generals generals";
     }
 
@@ -31,8 +31,8 @@
     border-radius: 0.15rem 0 0 0.15rem;
     }
 
-    #rating {
-    grid-area: rating;
+    #likes {
+    grid-area: likes;
     display: flex;
     background-color: rgb(163, 211, 53);
     margin: 0.1rem;

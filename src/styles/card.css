@@ -6,7 +6,6 @@
         "primaryinfolayout"
         "secondaryinfolayout"
         "ratesandreviews";
-    cursor: pointer;
     margin-bottom: 0.5rem;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
     margin-bottom: 0.5rem;
@@ -21,7 +20,7 @@
     grid-template-rows: 4rem auto;
 	grid-template-areas:
         "leftbar likes name btnlike"
-        "leftbar perks perks perks";
+        "leftbar perks perks btnmore";
 }
 
 #leftbar {
@@ -56,6 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 #perks {
@@ -64,6 +64,14 @@
     align-items: flex-start;
     overflow-wrap: break-word;
     padding: 0.5rem;
+}
+
+#btnmore {
+    grid-area: btnmore;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .secondaryinfolayout {

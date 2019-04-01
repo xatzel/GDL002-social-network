@@ -39,12 +39,12 @@
             </button>
 
             <div class="dropdown-container" id="menuDropdown">
-                <input type="button" value="Salud" class="subm" id="subHealth">
-                <input type="button" value="Hospedaje" class="subm" id="subAccomodation">
-                <input type="button" value="Pet-Friendly" class="subm" id="subPlaces">
-                <input type="button" value="Autoservicios" class="subm" id="subShopping">
-                <input type="button" value="Entrenamiento" class="subm" id="subEducation">
-                <input type="button" value="Non-Profit" class="subm" id="subNonProfit">
+                <button id="subhealth" data-category="health" class="subm">Salud</button>
+                <button id="subaccommodation" data-category="accommodation" class="subm">Alojamiento</button>
+                <button id="subpetfriendly" data-category="petfriendly" class="subm">Lugares PetFriendly</button>
+                <button id="subshopping" data-category="shopping" class="subm">Autoservicios</button>
+                <button id="subeducation" data-category="education" class="subm">Educación</button>
+                <button id="subnonprofit" data-category="nonprofit" class="subm">Protectoras De Animales</button>
             </div>
 
             <button class="sidenavItem" id="suggestVendor">Sugiere un lugar</button>
@@ -70,18 +70,19 @@
 
             <section id="categories">
 
-                <div id="health"><img class="categoryimg" src="images/icons/009-red-cross.svg" width="100%"
+                <div id="health" data-category="health"><img class="categoryimg" src="images/icons/009-red-cross.svg" width="100%"
                         height="100%"></div>
-                <div id="accommodation"><img class="categoryimg" src="images/icons/006-dog-house.svg" width="100%"
+                <div id="accommodation" data-category="accommodation"><img class="categoryimg" src="images/icons/006-dog-house.svg" width="100%"
                         height="100%"></div>
-                <div id="petfriendly"><img class="categoryimg" src="images/icons/007-pet.svg" width="100%"
-                        height="100%">
+
+                <div id="petfriendly" data-category="petfriendly"><img class="categoryimg" src="images/icons/007-pet.svg" width="100%" height="100%">
+
                 </div>
-                <div id="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg" width="100%"
+                <div id="shopping" data-category="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg" width="100%"
                         height="100%"></div>
-                <div id="education"><img class="categoryimg" src="images/icons/011-graduation-cap.svg" width="100%"
+                <div id="education" data-category="education"><img class="categoryimg" src="images/icons/011-graduation-cap.svg" width="100%"
                         height="100%"></div>
-                <div id="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg" width="100%" height="100%">
+                <div id="nonprofit" data-category="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg" width="100%" height="100%">
                 </div>
 
             </section>
