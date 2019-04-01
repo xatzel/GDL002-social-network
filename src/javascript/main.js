@@ -212,4 +212,4 @@ document.getElementById("menuCloseBtn").addEventListener('click', () => {
 document.getElementById("dropdownBtn").addEventListener('click', () => {
     document.getElementById("menuDropdown").classList.toggle('showDropdownMenu');
 });
-
+*/
