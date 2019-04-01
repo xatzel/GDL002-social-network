@@ -37,6 +37,16 @@ const showCategory = (event) => {
 
             };
 
+            const showReviews = () => {
+
+                if (reviewContainer.style.display === 'grid') {
+                    reviewContainer.style.display = 'none';
+                } else {
+                    reviewContainer.style.display = 'grid';
+                }
+
+            };
+
             let cardInfo = document.createElement('div');
             cardInfo.setAttribute('class', 'cardinfolayout');
 
@@ -120,16 +130,17 @@ const showCategory = (event) => {
             let reviewGrid = document.createElement('div');
             reviewGrid.setAttribute('id', 'reviewgrid');
 
-            let showReviews = document.createElement('div');
-            showReviews.setAttribute('class', 'btnshowreviewsstyle');
-            showReviews.innerHTML = 'Opiniones';
+            let showReviewsBtn = document.createElement('div');
+            showReviewsBtn.setAttribute('class', 'btnshowreviewsstyle');
+            showReviewsBtn.innerHTML = 'Opiniones';
+            showReviewsBtn.addEventListener('click', showReviews);
 
             let showRateForm = document.createElement('div');
             showRateForm.setAttribute('id', 'btnrate');
             showRateForm.innerHTML = 'Calificar';
 
             reviewGrid.appendChild(showRateForm);
-            reviewGrid.appendChild(showReviews);
+            reviewGrid.appendChild(showReviewsBtn);
 
             contactInfo.appendChild(addressInfo);
             contactInfo.appendChild(address);
@@ -145,7 +156,27 @@ const showCategory = (event) => {
             secondaryInfo.appendChild(secondaryLeftBar);
 
             cardInfo.appendChild(secondaryInfo);
+//empieza nuevo grid de opinion
+            let reviewContainer = document.createElement('div');
+            reviewContainer.setAttribute('class', 'reviewcontainerstyle');
 
+            let editBtn = document.createElement('div');
+            editBtn.setAttribute('id', 'btnedit');
+            editBtn.innerHTML = '<i class="far fa-edit fa-xs"></i>';
+
+            let authorInfo = document.createElement('div');
+            authorInfo.setAttribute('id', 'authorinfo');
+            authorInfo.innerHTML = 'Fulanita de tal escribió: ';
+
+            let writtenReview = document.createElement('div');
+            writtenReview.setAttribute('id', 'writtenreview');
+            writtenReview.innerHTML = 'Fido se enfermó de la panza y el veterinario lo apapachó y lo curó.';
+
+
+            reviewContainer.appendChild(editBtn);
+            reviewContainer.appendChild(authorInfo);
+            reviewContainer.appendChild(writtenReview);
+            cardInfo.appendChild(reviewContainer);
             feed.appendChild(cardInfo);
 
         };

@@ -104,7 +104,6 @@
 }
 
 
-
 #schedule {
     grid-area: schedule;
     display: flex;
@@ -200,10 +199,10 @@
     grid-area: ratesandreviews;
     display: none;
     grid-template-columns:1rem auto 3rem 3rem ;
-    grid-template-rows: 1rem 2rem auto 2rem;
+    grid-template-rows: 1rem 2rem auto 0.5rem;
     grid-template-areas:
         ". . . btnedit"
         ". authorinfo . ."
         ". writtenreview . ."
-        ". . heartcount heart";
+        ". . . .";
 }

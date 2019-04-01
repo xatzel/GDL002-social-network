@@ -1,6 +1,6 @@
 #btnedit {
     grid-area: btnedit;
-    display: none;
+    display: flex;
 }
 
 #authorinfo {
@@ -8,23 +8,9 @@
     display: flex;
 }
 
-#heartcount {
-    grid-area: heartcount;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#heart {
-    grid-area: heart;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #writtenreview {
     grid-area: writtenreview;
-    display: block;
+    display: flex;
 }
 
 #rateform {
