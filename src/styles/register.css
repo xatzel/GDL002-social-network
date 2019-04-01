@@ -34,7 +34,6 @@
 
 img {
     width: 100%;
-    /* INVERTIGAR OBJECT FIT PARA QUE LA IMG NO SE DESMADRE */
     object-fit: cover;
 }
 

@@ -45,6 +45,11 @@ document.querySelector("#logOut").addEventListener('click', () => {
     });
 });
 
+
+//------------------ Slideshow ------------------//
+
+
+
 //--------------Searchbar & Menu --------------------------------
 
 const searchBtn = document.querySelector('#btnsearch').value;
@@ -54,15 +59,15 @@ const menuBtn = document.querySelector('#btnmenu');
 
 //OPEN & CLOSE SIDENAV MENU
 document.getElementById("btnmenu").addEventListener('click', () => {
-	document.getElementById("sidenavMenu").style.width = '12.5rem';
+    document.getElementById("sidenavMenu").style.width = '12.5rem';
 });
 document.getElementById("menuCloseBtn").addEventListener('click', () => {
-	document.getElementById("sidenavMenu").style.width = '0rem';
+    document.getElementById("sidenavMenu").style.width = '0rem';
 });
 
 //OPEN SIDEMENU DROPDOWN
 document.getElementById("dropdownBtn").addEventListener('click', () => {
-	document.getElementById("menuDropdown").classList.toggle('showDropdownMenu');
+    document.getElementById("menuDropdown").classList.toggle('showDropdownMenu');
 });
 
 //-------------------Print Card------------------------------
@@ -194,7 +199,7 @@ const cardInfoLayout = (givenVendorsList) => {
     document.querySelector('#btnrate').addEventListener('click', showRateForm);
 
 };
-
+*/
 
 //---------------------- BUTTONS ---------------------------------
 
@@ -212,4 +217,3 @@ document.getElementById("menuCloseBtn").addEventListener('click', () => {
 document.getElementById("dropdownBtn").addEventListener('click', () => {
     document.getElementById("menuDropdown").classList.toggle('showDropdownMenu');
 });
-

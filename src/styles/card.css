@@ -7,25 +7,25 @@
         "secondaryinfolayout"
         "ratesandreviews";
     margin-bottom: 0.5rem;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 0.5rem;
     border-radius: 0.15rem;
 }
 
 
 .primaryinfolayout {
-	grid-area: primaryinfolayout;
-	display: grid;
+    grid-area: primaryinfolayout;
+    display: grid;
     grid-template-columns: 1rem 4rem 1fr 3rem;
     grid-template-rows: 4rem auto;
-	grid-template-areas:
+    grid-template-areas:
         "leftbar likes name btnlike"
         "leftbar perks perks btnmore";
 }
 
 #leftbar {
     grid-area: leftbar;
-    background-color: rgb(234,125,24);
+    background-color: rgb(234, 125, 24);
     border-radius: 0.15rem 0 0 0.15rem;
 }
 
@@ -47,7 +47,8 @@
     padding: 1.5rem;
     font-weight: bold;
     overflow: hidden;
-    text-overflow: ellipsis;/*falta revisar que tipo de display para que muestre ellipsis y se pueda centrar*/
+    text-overflow: ellipsis;
+    /*falta revisar que tipo de display para que muestre ellipsis y se pueda centrar*/
 }
 
 #btnlike {
@@ -75,9 +76,9 @@
 }
 
 .secondaryinfolayout {
-	grid-area: secondaryinfolayout;
-	display: none;
-    grid-template-columns: 1rem 1fr 1fr ;
+    grid-area: secondaryinfolayout;
+    display: none;
+    grid-template-columns: 1rem 1fr 1fr;
     grid-template-rows: auto auto 3rem;
     grid-template-areas:
         "secondaryleftbar contactinfo contactinfo"
@@ -87,14 +88,14 @@
 
 #secondaryleftbar {
     grid-area: secondaryleftbar;
-    background-color: rgb(234,125,24);
+    background-color: rgb(234, 125, 24);
     border-radius: 0.15rem 0 0 0.15rem;
 }
 
 #contactinfo {
     grid-area: contactinfo;
     display: grid;
-    grid-template-columns:  3rem auto;
+    grid-template-columns: 3rem auto;
     grid-template-rows: 3rem 3rem auto 4rem;
     grid-template-areas:
         "schedule scheduleinfo "
@@ -146,7 +147,7 @@
 
 #addressinfo {
     grid-area: addressinfo;
-    display:flex;
+    display: flex;
     padding: 0.25rem;
     align-items: center;
     justify-content: flex-start;
@@ -180,7 +181,7 @@
 .btnshowreviewsstyle {
     grid-area: btnshowreviews;
     display: flex;
-    background-color:rgb(210, 226, 228);
+    background-color: rgb(210, 226, 228);
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -190,7 +191,7 @@
 #btnrate {
     grid-area: btnrate;
     display: flex;
-    background-color:rgb(210, 226, 228);
+    background-color: rgb(210, 226, 228);
     align-items: center;
     justify-content: center;
     border-radius: 0.15rem;
@@ -199,7 +200,7 @@
 .reviewcontainerstyle {
     grid-area: ratesandreviews;
     display: none;
-    grid-template-columns:1rem auto 3rem 3rem ;
+    grid-template-columns: 1rem auto 3rem 3rem;
     grid-template-rows: 1rem 2rem auto 2rem;
     grid-template-areas:
         ". . . btnedit"
