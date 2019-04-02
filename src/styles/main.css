@@ -27,11 +27,10 @@ main {
     grid-area: content;
     display: grid;
     grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
-    grid-template-rows: 3rem 4rem 3rem 0.5rem auto 0.5rem 3rem;
-    grid-template-areas: "header header header header header header header header"
+    grid-template-rows: 3rem 0.5rem auto 3rem 0.5rem auto 0.5rem 3rem;
+    grid-template-areas: "header header header header header header header header"". . . . . . . ."
         ". mainimage mainimage mainimage mainimage mainimage mainimage ."
-        ". categories categories categories categories categories categories ."
-        ". . . . . . . ."". feed feed feed feed feed feed ."". . . . . . . ."
+        ". categories categories categories categories categories categories ."". . . . . . . ."". feed feed feed feed feed feed ."". . . . . . . ."
         "footer footer footer footer footer footer footer footer";
 }
 
@@ -44,14 +43,13 @@ header {
     margin-bottom: 0.5rem;
 }
 
-#homescreen {
+/* #homescreen {
     grid-area: content;
     display: none;
     grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
-    grid-template-rows: 3rem 4rem 3rem 0.5rem auto 0.5rem 3rem;
+    grid-template-rows: 3rem auto 3rem 0.5rem auto 0.5rem 3rem;
     grid-template-areas: "header header header header header header header header"". mainimage mainimage mainimage mainimage mainimage mainimage ."". categories categories categories categories categories categories ."". . . . . . . ."". feed feed feed feed feed feed ."". . . . . . . .""footer footer footer footer footer footer footer footer";
-}
-
+} */
 
 .headerelements {
     display: flex;
@@ -87,12 +85,22 @@ header {
 
 /* Close sidenav menu button */
 
-.sidenav a {
+.menuCloseBtn {
     color: #818181;
     top: 0;
     right: 1.5rem;
     font-size: 2.25rem;
     margin-right: 0.5rem;
+    float: right;
+    text-decoration: none;
+}
+
+.sidenavItem {
+    color: #818181;
+    top: 0;
+    right: 1.5rem;
+    font-size: 15pt;
+    margin-left: 0.5rem;
     float: right;
     text-decoration: none;
 }
@@ -117,7 +125,7 @@ header {
 }
 
 #logIn {
-    background-color: #BE216C;
+    background-color: #be216c;
     color: #f1f1f1;
     font-weight: bold;
 }
@@ -125,11 +133,11 @@ header {
 .sidenavItem:hover,
 .dropdown-btn:hover {
     color: #706b6b;
-    background-color: #C1D93A;
+    background-color: #c1d93a;
 }
 
 .subm:hover {
-    background-color: #E19B38;
+    background-color: #e19b38;
     color: white;
 }
 
@@ -154,11 +162,6 @@ header {
     padding-right: 0.5rem;
 }
 
-/* @media only screen and (max-width: 450px) {
-    .sidenav {padding: 0.9rem;}
-    .sidenavItem {font-size: 1.1rem;}
-    .sidenav a {margin-left: 1rem;}
-} */
 
 #searchbar {
     grid-area: searchbar;
@@ -172,18 +175,72 @@ header {
     grid-area: btnsearch;
 }
 
+/* Slideshow */
 #mainimg {
     grid-area: mainimage;
-
-    background-image: url("http://127.0.0.1:5500/src/images/assets/PoogleLogo.png");
     background-size: cover;
+    align-self: center;
 }
 
-.mainimage {
+.introSlides {
+    display: none;
+}
 
-    display: block;
-    max-width: 100%;
-    height: 4rem;
+.prev,
+.next {
+    cursor: pointer;
+    position: inherit;
+    top: 20%;
+    /* justify-content: center;
+    align-items: center; */
+    width: auto;
+    /* margin-top: -10px; */
+    padding: 0.2rem;
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.6s ease;
+    /* border-radius: 0 3px 3px 0; */
+    user-select: none;
+    text-decoration: none;
+}
+
+.next {
+    right: 1rem;
+    float: right;
+    /* border-radius: 3px 0 0 3px; */
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .categoryimg {
@@ -273,4 +330,19 @@ header {
 
 #feed {
     grid-area: feed;
+}
+
+/* Nav toggle */
+
+.page {
+    display: none;
+    width: 100%;
+    min-height: 100%;
+    /* allow for content off the bottom of the page */
+    position: absolute;
+    /* or absolute if the user needs to scroll for more content */
+}
+
+.active {
+    display: block;
 }

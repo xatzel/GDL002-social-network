@@ -1,27 +1,27 @@
-#aboutusscreen {
+#faqscreen {
     display: none;
     grid-area: content;
     grid-template-columns: auto;
     grid-template-rows: 0.5rem 10rem 1rem 2rem 0.5rem auto 0.5rem;
-    grid-template-areas:    "."
-                            "aboutusimage"
-                            "."
-                            "aboutustitle"
-                            "."
-                            "aboutustext"
-                            ".";
+    grid-template-areas: "."
+        "faqimage"
+        "."
+        "faqtitle"
+        "."
+        "faqtext"
+        ".";
 }
 
-#aboutusimage {
-    grid-area: aboutusimage;
+#faqimage {
+    grid-area: faqimage;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-#aboutustitle {
-    grid-area: aboutustitle;
+#faqtitle {
+    grid-area: faqtitle;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -29,8 +29,8 @@
     padding: 1rem;
 }
 
-#aboutustext {
-    grid-area: aboutustext;
+#faqtext {
+    grid-area: faqtext;
     display: flex;
     align-items: center;
     justify-content: flex-start;
