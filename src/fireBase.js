@@ -1,4 +1,3 @@
-
 document.getElementById('formContacto').addEventListener('submit', register);
 
 function register() {
@@ -61,3 +60,4 @@ function logOut(){
   contenido.innerHTML = 
   } 
 */
+}
