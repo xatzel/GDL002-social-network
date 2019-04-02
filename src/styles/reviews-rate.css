@@ -1,6 +1,6 @@
 #btnedit {
     grid-area: btnedit;
-    display: none;
+    display: flex;
 }
 
 #authorinfo {
@@ -8,38 +8,26 @@
     display: flex;
 }
 
-#heartcount {
-    grid-area: heartcount;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#heart {
-    grid-area: heart;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #writtenreview {
     grid-area: writtenreview;
-    display: block;
+    display: flex;
 }
 
 #rateform {
     display: none;
     grid-template-columns: 1rem auto 1rem;
-    grid-template-rows: 2rem 2rem 2rem auto 4rem 3rem 0.5rem;
+    grid-template-rows: 1rem 3rem 2rem auto 4rem 3rem 1rem;
     grid-row-gap: 0.5rem;
     grid-template-areas:
+    ". . ."
     ". ratetitle ."
-    ". ratebar ."
     ". opiniontitle ."
     ". opinion ."
     ". veracitycheck ."
     ". btnsubmit ."
     ". . .";
+
+ 
     border-top: solid 1px;
 }
 
@@ -48,51 +36,6 @@
     display: flex;
     padding: 0.25rem;
 }
-
-#ratebar {
-    grid-area: ratebar;
-    display: grid;
-    grid-template-columns: 1rem 1rem 1rem 1rem 1rem;
-    grid-column-gap: 0.5rem;
-    grid-template-areas: 
-    "onestar twostar threestar fourstar fivestar";
-}
-
-#onestar {
-    grid-area: onestar;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-#twostar {
-    grid-area: twostar;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-#threestar {
-    grid-area: threestar;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-#fourstar {
-    grid-area: fourstar;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-#fivestar {
-    grid-area: fivestar;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
 
 #opiniontitle {
     grid-area: opiniontitle;
@@ -106,6 +49,7 @@
     padding: 0.25rem;
     align-items: center;
     justify-content: center;
+
 }
 
 #veracitycheck {
