@@ -2,7 +2,7 @@
     grid-area: content;
     display: grid;
     grid-template-columns: 1rem 1fr 1rem;
-    grid-template-rows: 1rem 20rem 0.5rem 3rem 0.5rem 10rem 4rem 0.5rem 2rem 2rem 4rem 0.5rem 4rem;
+    grid-template-rows: 1rem auto 0.5rem 3rem 0.5rem 10rem 4rem 0.5rem 2rem 2rem 4rem 0.5rem 4rem;
     grid-template-areas: ". . ."
         ". registerimage ."
         ". . ."
@@ -18,22 +18,35 @@
         " . googleregister .";
 }
 
-#registerimage {
+#registerimg {
     grid-area: registerimage;
     display: flex;
-    /* height: 20rem; */
+    justify-content: center;
+    align-items: center;
 }
 
-img {
+.registerimage {
+    grid-area: registerimage;
+    display: block;
     max-width: 100%;
     height: auto;
 }
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
 
 #username {
     grid-area: username;
     display: flex;
     padding: 0.25rem;
-    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-bottom-color: #BE216C;
     border-radius: 0.25rem;
 }
 
@@ -50,14 +63,22 @@ img {
 #email {
     grid-area: email;
     display: flex;
-    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-color: #BE216C;
     border-radius: 0.25rem;
 }
 
 #password {
     grid-area: password;
     display: flex;
-    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-color: #BE216C;
     border-radius: 0.25rem;
 }
 
@@ -66,8 +87,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
-    border-radius: 0.25rem;
+    background-color: #C1D93A;
+    border: none;
+    border-radius: 2rem;
     cursor: pointer;
 }
 
@@ -87,11 +109,15 @@ img {
 }
 
 #registerbtn {
+    color: white;
     grid-area: registerbtn;
     display: flex;
     padding: 0.25rem;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
+    background-color: #E19B38;
+    border-radius: 1rem;
 }
 
 #ortext {
@@ -106,8 +132,10 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
-    border-radius: 0.25rem;
+    background-color: #3B5998;
+    border: none;
+    border-radius: 2rem;
+    color: white;
     cursor: pointer;
 }
 
@@ -116,7 +144,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
-    border-radius: 0.25rem;
+    border: none;
+    border-radius: 2rem;
     cursor: pointer;
 }

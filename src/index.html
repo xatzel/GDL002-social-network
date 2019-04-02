@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="styles/reviews-rate.css">
     <link rel="stylesheet" type="text/css" href="styles/register.css">
     <link rel="stylesheet" type="text/css" href="styles/userlogin.css">
+    <link rel="stylesheet" type="text/css" href="styles/faq.css">
+    <link rel="stylesheet" type="text/css" href="styles/devices.css">
 
 </head>
 
@@ -30,23 +32,21 @@
 
         <div id="sidenavMenu" class="sidenav">
             <a href="javascript:void(0)" class="menuCloseBtn" id="menuCloseBtn"> &times; </a>
-            <!--<button class="sidenavItem" id="logIn"><a href="#" data-target="register">¡Regístrate!</a></button>-->
-            <!--<button class="sidenavItem" id="logIn"><a href="#" data-target="userlogin">Inicia Sesión</a></button>-->
+            <a href="#" data-target="homescreen" class="navlink sidenavItem">Inicio</a>
+            <a href="#" data-target="faqscreen" class="navlink sidenavItem">FAQ</a>
             <button class="sidenavItem dropdown-btn" id="dropdownBtn">Categorías
                 <i class="fas fa-caret-down"></i>
             </button>
 
             <div class="dropdown-container" id="menuDropdown">
-                <input type="button" value="Salud" class="subm" id="subHealth">
-                <input type="button" value="Hospedaje" class="subm" id="subAccomodation">
-                <input type="button" value="Pet-Friendly" class="subm" id="subPlaces">
-                <input type="button" value="Autoservicios" class="subm" id="subShopping">
-                <input type="button" value="Entrenamiento" class="subm" id="subEducation">
-                <input type="button" value="Non-Profit" class="subm" id="subNonProfit">
+                <button id="subhealth" data-category="health" class="subm">Salud</button>
+                <button id="subaccommodation" data-category="accommodation" class="subm">Alojamiento</button>
+                <button id="subpetfriendly" data-category="petfriendly" class="subm">Lugares PetFriendly</button>
+                <button id="subshopping" data-category="shopping" class="subm">Autoservicios</button>
+                <button id="subeducation" data-category="education" class="subm">Educación</button>
+                <button id="subnonprofit" data-category="nonprofit" class="subm">Protectoras De Animales</button>
             </div>
 
-            <button class="sidenavItem" id="suggestVendor">Sugiere un lugar</button>
-            <button class="sidenavItem" id="aboutUs">Quiénes somos</button>
             <button class="sidenavItem" id="logOut">Cerrar Sesión</button>
 
         </div>
@@ -54,7 +54,7 @@
 
         <!---------- PANTALLA HOME---------->
 
-        <div class="page" id="homescreen">
+        <div class="page active" id="homescreen">
 
             <header>
 
@@ -63,22 +63,35 @@
                 <div id="btnsearch" class="headerelements"><i class="fas fa-search"></i></div>
 
             </header>
+            <!-- -------------------- Slideshow ----------------- -->
+            <div id="mainimg">
+                <div class="introSlides fade"><img class="mainimage" src="images/assets/introCat.png"></div>
+                <div class="introSlides fade"><img class="mainimage" src="images/assets/introDog.png"></div>
+                <div class="introSlides fade"><img class="mainimage" src="images/assets/introRabbit.png"></div>
 
-            <div id="mainimage"><img src="images/banners/PoogleLogo.png"></div>
+                <a href="javascript:void(0)" class="prev" id="prevSlide">&#10094;</a>
+                <a href="javascript:void(0)" class="next" id="nextSlide">&#10095;</a>
+            </div>
+
+            <!-- ----------- Category icons --------------- -->
 
             <section id="categories">
 
-                <div id="health"><img class="categoryimg" src="images/icons/009-red-cross.svg" width="100%"
-                        height="100%"></div>
-                <div id="accommodation"><img class="categoryimg" src="images/icons/006-dog-house.svg" width="100%"
-                        height="100%"></div>
-                <div id="places"><img class="categoryimg" src="images/icons/007-pet.svg" width="100%" height="100%">
+                <div id="health" data-category="health"><img class="categoryimg" src="images/icons/009-red-cross.svg"
+                        width="100%" height="100%"></div>
+                <div id="accommodation" data-category="accommodation"><img class="categoryimg"
+                        src="images/icons/006-dog-house.svg" width="100%" height="100%"></div>
+
+                <div id="petfriendly" data-category="petfriendly"><img class="categoryimg"
+                        src="images/icons/007-pet.svg" width="100%" height="100%">
+
                 </div>
-                <div id="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg" width="100%"
-                        height="100%"></div>
-                <div id="education"><img class="categoryimg" src="images/icons/011-graduation-cap.svg" width="100%"
-                        height="100%"></div>
-                <div id="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg" width="100%" height="100%">
+                <div id="shopping" data-category="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg"
+                        width="100%" height="100%"></div>
+                <div id="education" data-category="education"><img class="categoryimg"
+                        src="images/icons/011-graduation-cap.svg" width="100%" height="100%"></div>
+                <div id="nonprofit" data-category="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg"
+                        width="100%" height="100%">
                 </div>
 
             </section>
@@ -92,8 +105,9 @@ n
         <!---------- PANTALLA REGISTRO USUARIOS---------->
 
 
-        <div class="page" id="register">
-            <div id="registerimage"><img src="images/banners/PoogleLogo.png"></div>
+        <div id="register">
+
+            <div id="registerimg"><img class="registerimage" src="images/assets/Introduction.png"></div>
             <input id="username" placeholder="Elige un nombre de usuario">
 
             <div id="emailandpassword">
@@ -109,7 +123,7 @@ n
             <div id="registeredusers">
 
                 <div id="textregister">¿Ya tienes una cuenta?</div>
-                <div id="registerbtn">Inicia sesión</div>
+                <div id="registerbtn"><a href="#" data-target="userloginscreen" class="navlink">Inicia sesión</a></div>
 
             </div>
 
@@ -121,7 +135,7 @@ n
 
         <!---------- PANTALLA INICIO DE SESION---------->
 
-        <div id="userloginscreen">
+        <div class="page" id="userloginscreen">
 
             <div id="loginimage"></div>
 
@@ -148,7 +162,15 @@ n
 
             <div id="useragreement">Al iniciar sesión estarás de acuerdo con nuestras políticas de privacidad.</div>
 
+        </div>
 
+        <!---------- PANTALLA PREGUNTAS FRECUENTES---------->
+
+        <div class="page" id="faqscreen">
+
+            <div id="faqimage"></div>
+            <h1 id="faqtitle">¿Quienes somos?</h1>
+            <p id="faqtext">Somos una herramienta de búsqueda de servicios para mascotas en Zapopan.</p>
 
         </div>
 
@@ -156,11 +178,17 @@ n
 
     <!------------- JS SCRIPTS------------->
 
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
     <script src="data/services.js"></script>
-    <script src="ConfigFireB.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+    <script src="javascript/ConfigFireB.js"></script>
+    <script src="javascript/firestore.js"></script>
+    <script src="javascript/data.js"></script>
+    <script src="javascript/main.js"></script>
 
 
 </body>
