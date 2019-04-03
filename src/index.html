@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="styles/register.css">
     <link rel="stylesheet" type="text/css" href="styles/userlogin.css">
     <link rel="stylesheet" type="text/css" href="styles/faq.css">
+    <link rel="stylesheet" type="text/css" href="styles/suggestscreen.css">
     <link rel="stylesheet" type="text/css" href="styles/devices.css">
 
 </head>
@@ -63,14 +64,16 @@
                 <div id="btnsearch" class="headerelements"><i class="fas fa-search"></i></div>
 
             </header>
+
             <!-- -------------------- Slideshow ----------------- -->
             <div id="mainimg">
-                <div class="introSlides fade"><img class="mainimage" src="images/assets/introCat.png"></div>
-                <div class="introSlides fade"><img class="mainimage" src="images/assets/introDog.png"></div>
-                <div class="introSlides fade"><img class="mainimage" src="images/assets/introRabbit.png"></div>
-
-                <a href="javascript:void(0)" class="prev" id="prevSlide">&#10094;</a>
-                <a href="javascript:void(0)" class="next" id="nextSlide">&#10095;</a>
+                <figure>
+                    <img src="images/assets/slideshowCat.jpg">
+                    <img src="images/assets/slideshowDog.jpg">
+                    <img src="images/assets/slideshowRabbit.jpg">
+                    <!-- <img src="https://image.freepik.com/free-photo/studio-shot-cute-border-collie-dog_23-2148097523.jpg"> -->
+                    <img src="images/assets/slideshowCat.jpg">
+                </figure>
             </div>
 
             <!-- ----------- Category icons --------------- -->
@@ -84,12 +87,14 @@
 
                 <div id="petfriendly" data-category="petfriendly"><img class="categoryimg"
                         src="images/icons/007-pet.svg" width="100%" height="100%">
-
                 </div>
+
                 <div id="shopping" data-category="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg"
                         width="100%" height="100%"></div>
+
                 <div id="education" data-category="education"><img class="categoryimg"
                         src="images/icons/011-graduation-cap.svg" width="100%" height="100%"></div>
+
                 <div id="nonprofit" data-category="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg"
                         width="100%" height="100%">
                 </div>
@@ -171,6 +176,40 @@ n
             <div id="faqimage"></div>
             <h1 id="faqtitle">¿Quienes somos?</h1>
             <p id="faqtext">Somos una herramienta de búsqueda de servicios para mascotas en Zapopan.</p>
+
+        </div>
+
+        <!---------- PANTALLA SUGIERE UN LUGAR---------->
+
+        <div class="page" id="suggestscreen">
+
+            <div id="suggestscreentitle">¡Sugiere un lugar!</div>
+            <div id="suggestscreentext">Para sugerir que aparezca un establecimiento en nuestro listado, por favor completa la información a continuación: </div>
+
+            <div id="suggestscreenname">Nombre: </div>
+            <input id="suggestname" type="text" class="suggestitems" placeholder="Nombre del lugar que sugieres">
+
+            <div id="suggestscreencategory">Categoría: </div>
+            <input id="suggestcategory" type="text" class="suggestitems" placeholder="Salud/Alojamiento/Lugares Pet Friendly/Tiendas de autoservicio/Educación/Protectoras de animales">
+
+            <div id="suggestscreenwebsite">Website: </div>
+            <input id="suggestwebsite" type="text" class="suggestitems" placeholder="O url de su página de Facebook...">
+
+            <div id="suggestscreenaddress">Dirección: </div>
+            <input id="suggestaddress" type="text" class="suggestitems" placeholder="Calle - número - colonia - código postal">
+
+
+            <div id="suggestscreentelephone">Teléfono: </div>
+            <input id="suggesttelephone" type="text" class="suggestitems" placeholder="+ 52 (--- --- ----)">
+
+
+            <div id="suggestscreenschedule">Horario de atención: </div>
+            <input id="suggestschedule" type="text" class="suggestitems" placeholder="L-V 8:00 AM - 8:OO PM">
+
+            <div id="suggestscreenperks">Servicios que ofrece: </div>
+            <input id="suggestperks" type="text" class="suggestitems" placeholder="Rayos X, Transporte, Estética">
+
+            <button id="submitsuggestion">ENVIAR SUGERENCIA</button>
 
         </div>
 
