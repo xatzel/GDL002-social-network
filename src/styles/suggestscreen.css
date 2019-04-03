@@ -1,5 +1,5 @@
 #suggestscreen {
-    display: grid;
+    display: none;
     grid-area: content;
     grid-template-columns: 20vw 0.5rem 60vw;
     grid-template-rows: 4rem auto 3rem 3rem 3rem 3rem 3rem 3rem 3rem 4rem 1rem;

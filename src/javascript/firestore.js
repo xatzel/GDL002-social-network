@@ -15,6 +15,7 @@ const subNonProfitBtn = document.querySelector('#subnonprofit');
 
 const suggestForm = document.querySelector('#suggestform');
 
+
 //Para almacenar en constante la base de datos de firestore
 const db = firebase.firestore();
 
@@ -58,6 +59,19 @@ const showCategory = (event) => {
                 }
 
             };
+
+            const sendReview = () => {
+                console.log(opinion.value);
+                db.collection('reviews').add({
+
+                    opinion: rateForm.opinion.value
+
+                });
+
+                rateForm.opinion.value = '';
+
+            };
+
 
             let cardInfo = document.createElement('div');
             cardInfo.setAttribute('class', 'cardinfolayout');
@@ -194,7 +208,7 @@ const showCategory = (event) => {
 
 //Elementos de RateForm
 
-            let rateForm = document.createElement('div');
+            let rateForm = document.createElement('form');
             rateForm.setAttribute('id', 'rateform');
 
             let rateTitle = document.createElement('div');
@@ -207,6 +221,7 @@ const showCategory = (event) => {
 
             let opinion = document.createElement('textarea');
             opinion.setAttribute('id', 'opinion');
+            opinion.setAttribute('name', 'opinion')
             opinion.setAttribute('class', 'textinput');
             opinion.setAttribute('placeholder', 'Escribe aquí tu opinión...');
 
@@ -226,6 +241,7 @@ const showCategory = (event) => {
             submitBtn.setAttribute('id', 'btnsubmit');
             submitBtn.setAttribute('type', 'button');
             submitBtn.setAttribute('value', 'Enviar');
+            submitBtn.addEventListener('click', sendReview);
 
             rateForm.appendChild(submitBtn);
             veracityCheck.appendChild(checkbox);
@@ -247,8 +263,7 @@ const showCategory = (event) => {
 
 };
 
-//Función que agrega lugares sugeridos a base de datos en firestore
-
+//Función que se ejecuta al hacer click en botón y agrega lugares sugeridos a base de datos en firestore
 suggestForm.addEventListener('submit', (event) => {
 
     event.preventDefault();
@@ -274,6 +289,29 @@ suggestForm.addEventListener('submit', (event) => {
 });
 
 
+
+//Funcion que se ejecuta al hacer click en botón y agrega opinion de usuario
+/*
+rateForm.addEventListener('submit', (e) => {
+
+    e.preventDefault();
+
+    db.collection('reviews').add({
+
+        opinion: suggestForm.opinion.value
+
+    });
+
+    rateForm.opinion.value = '';
+
+
+});
+
+*/
+
+
+
+
 //Botones de la barra de categorías
 healthBtn.addEventListener('click', showCategory);
 accommodationBtn.addEventListener('click', showCategory);
@@ -289,5 +327,5 @@ subShoppingBtn.addEventListener('click', showCategory);
 subEducationBtn.addEventListener('click', showCategory);
 subNonProfitBtn.addEventListener('click', showCategory);
 
-//Boton enviar sugerencia de lugar
-submitSuggestionBtn = document.querySelector('#submitsuggestion');
+
+
