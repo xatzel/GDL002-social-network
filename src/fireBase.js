@@ -10,6 +10,13 @@ function register() {
 		var errorMessage = error.message;
 		console.log(errorCode);
 		console.log(errorMessage);
+		firebase.auth().onAuthStateChanged(function(user) {
+			var dbUser = db.collection('users').doc(user.uid).set({
+				email: user.email,
+
+				someotherproperty: 'some user preference'
+			});
+		});
 	});
 	/*let contactsRef = firebase.database().ref('contactosWeb');
 realTimeRegister (e){
@@ -29,13 +36,15 @@ realTimeRegister (e){
 		let passwordAdd = document.getElementById('password').value;
 		firebase.auth().signInWithEmailAndPassword(emailAdd, passwordAdd).catch(function(error) {
 			// Handle Errors here.
-			var errorCode = error.code;
-			var errorMessage = error.message;
-			// ...
+			let errorCode = error.code;
+			let errorMessage = error.message;
+			console.log(errorCode);
+			console.log(errorMessage);
 		});
 	}
 	document.getElementById('formContacto').addEventListener('click', logIn);
 
+	function Authentication() {}
 	/*function observer() {
 		firebase.auth().onAuthStateChanged(function(user) {
 			if (user) {
