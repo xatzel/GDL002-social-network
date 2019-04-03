@@ -310,30 +310,6 @@ suggestForm.addEventListener('submit', (event) => {
 
 });
 
-
-
-//Funcion que se ejecuta al hacer click en botón y agrega opinion de usuario
-/*
-rateForm.addEventListener('submit', (e) => {
-
-    e.preventDefault();
-
-    db.collection('reviews').add({
-
-        opinion: suggestForm.opinion.value
-
-    });
-
-    rateForm.opinion.value = '';
-
-
-});
-
-*/
-
-
-
-
 //Botones de la barra de categorías
 healthBtn.addEventListener('click', showCategory);
 accommodationBtn.addEventListener('click', showCategory);
