@@ -1,72 +1,63 @@
-document.getElementById('formContacto').addEventListener('submit', register);
+document.getElementById('createuserbtn').addEventListener('click', register);
 
 function register() {
-	let names = document.getElementById('username').value;
+	sendSignInLinkToEmail();
+	saveData();
+	let username = document.getElementById('username').value;
 	let emails = document.getElementById('email').value;
 	let passwords = document.getElementById('password').value;
-	firebase.auth().createUserWithEmailAndPassword(names, emails, passwords).catch(function(error) {
+	firebase.auth().createUserWithEmailAndPassword(username, emails, passwords).catch(function(error) {
 		// Handle Errors here.
-		var errorCode = error.code;
-		var errorMessage = error.message;
-		console.log(errorCode);
-		console.log(errorMessage);
-		firebase.auth().onAuthStateChanged(function(user) {
-			var dbUser = db.collection('users').doc(user.uid).set({
-				email: user.email,
-
-				someotherproperty: 'some user preference'
-			});
-		});
+		let errorCode = error.code;
+		let errorMessage = error.message;
 	});
-	/*let contactsRef = firebase.database().ref('contactosWeb');
-realTimeRegister (e){
-  e.preventDefault();
-    let names = document.getElementById('username').value;
-	  let emails = document.getElementById('email').value;
-    let passwords = document.getElementById('password').value;
-    let newcommentRef = contactsRef.push();
-	  newcommentRef.set({
-		  name: names,
-		  email: emails,
-      password: passwords
-    }*/
 
 	function logIn() {
-		let emailAdd = document.getElementById('email').value;
-		let passwordAdd = document.getElementById('password').value;
+		let emailAdd = document.getElementById('useremail').value;
+		let passwordAdd = document.getElementById('userpassword').value;
 		firebase.auth().signInWithEmailAndPassword(emailAdd, passwordAdd).catch(function(error) {
 			// Handle Errors here.
 			let errorCode = error.code;
 			let errorMessage = error.message;
-			console.log(errorCode);
-			console.log(errorMessage);
 		});
 	}
-	document.getElementById('formContacto').addEventListener('click', logIn);
+	document.getElementById('emailloginbtn').addEventListener('click', logIn);
 
-	function Authentication() {}
-	/*function observer() {
-		firebase.auth().onAuthStateChanged(function(user) {
-			if (user) {
-				// se puede ingresar una funcion donde aparece toda
-				//la informacion que deseas ver dentro de tu paginaweb
-				//se crea otra funcion y se manda a llamar aqui
-				funcion logOut()
-				var displayName = user.displayName;
-				var email = user.email;
-				var emailVerified = user.emailVerified;
-				var photoURL = user.photoURL;
-				var isAnonymous = user.isAnonymous;
-				var uid = user.uid;
-				var providerData = user.providerData;
-				// ...
-			} else {
-			}
-		});
+	function sendSignInLinkToEmail() {
+		firebase
+			.auth()
+			.sendSignInLinkToEmail(email, actionCodeSettings)
+			.then(function() {
+				// The link was successfully sent. Inform the user.
+				// Save the email locally so you don't need to ask the user for it again
+				// if they open the link on the same device.
+				window.localStorage.setItem('emailForSignIn', email);
+			})
+			.catch(function(error) {
+				// Some error occurred, you can inspect the code: error.code
+			});
 	}
-function logOut(){
-  let contenido = document.getElementById("div de contenido");
-  contenido.innerHTML = 
-  } 
-*/
+
+	function saveData() {
+		let names = document.getElementById('username').value;
+		let mails = document.getElementById('email').value;
+		let password = document.getElementById('password').value;
+		let user = firebase.auth().currentUser;
+		if (user) {
+			db
+				.collection('users')
+				.doc(user.id)
+				.set({
+					name: names,
+					password: password,
+					email: mails
+				})
+				.then(function() {
+					console.log('Document successfully written!');
+				})
+				.catch(function(error) {
+					console.error('Error writing document: ', error);
+				});
+		}
+	}
 }

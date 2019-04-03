@@ -1,45 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 * {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12pt;
-    font-weight: 300;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;
+	font-weight: 300;
 }
 
 body {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 main {
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    overflow: auto;
-    grid-template-columns: auto;
-    grid-template-rows: 0.5rem auto 0.5rem;
-    grid-template-areas: ".""content"".";
-    grid-template-areas: ".""content"".";
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	overflow: auto;
+	grid-template-columns: auto;
+	grid-template-rows: 0.5rem auto 0.5rem;
+	grid-template-areas: ".""content"".";
+	grid-template-areas: ".""content"".";
 }
 
 #homescreen {
-    grid-area: content;
-    display: none;
-    grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
-    grid-template-rows: 3rem 0.5rem auto 3rem 0.5rem auto 0.5rem 3rem;
-    grid-template-areas: "header header header header header header header header"". . . . . . . ."". mainimage mainimage mainimage mainimage mainimage mainimage ."". categories categories categories categories categories categories ."". . . . . . . ."". feed feed feed feed feed feed ."". . . . . . . ."
-        "footer footer footer footer footer footer footer footer";
-    visibility: hidden;
+	grid-area: content;
+	visibility: visible;
+	grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
+	grid-template-rows: 3rem 0.5rem auto 3rem 0.5rem auto 0.5rem 3rem;
+	grid-template-areas: "header header header header header header header header"". . . . . . . ."". mainimage mainimage mainimage mainimage mainimage mainimage ."". categories categories categories categories categories categories ."". . . . . . . ."". feed feed feed feed feed feed ."". . . . . . . ."
+		"footer footer footer footer footer footer footer footer";
 }
 
 header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
-    grid-template-areas: ". btnmenu searchbar searchbar searchbar searchbar btnsearch .";
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+	grid-area: header;
+	display: grid;
+	grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
+	grid-template-areas: ". btnmenu searchbar searchbar searchbar searchbar btnsearch .";
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 /* #homescreen {
@@ -51,57 +50,57 @@ header {
 } */
 
 .headerelements {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #btnmenu {
-    grid-area: btnmenu;
-    display: block;
+	grid-area: btnmenu;
+	display: block;
 }
 
 .sidenav {
-    height: 100%;
-    width: 0rem;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    background-color: #181818;
-    overflow-x: hidden;
-    padding-top: 1.25rem;
-    transition: 0.5s;
+	height: 100%;
+	width: 0rem;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background-color: #181818;
+	overflow-x: hidden;
+	padding-top: 1.25rem;
+	transition: 0.5s;
 }
 
 /* Open sidenav menu button */
 
 .btnmenu {
-    text-decoration: none;
-    border: none;
-    background: none;
+	text-decoration: none;
+	border: none;
+	background: none;
 }
 
 /* Close sidenav menu button */
 
 .menuCloseBtn {
-    color: #818181;
-    top: 0;
-    right: 1.5rem;
-    font-size: 2.25rem;
-    margin-right: 0.5rem;
-    float: right;
-    text-decoration: none;
+	color: #818181;
+	top: 0;
+	right: 1.5rem;
+	font-size: 2.25rem;
+	margin-right: 0.5rem;
+	float: right;
+	text-decoration: none;
 }
 
 .sidenavItem {
-    color: #818181;
-    top: 0;
-    right: 1.5rem;
-    font-size: 15pt;
-    margin-left: 0.5rem;
-    float: right;
-    text-decoration: none;
+	color: #818181;
+	top: 0;
+	right: 1.5rem;
+	font-size: 15pt;
+	margin-left: 0.5rem;
+	float: right;
+	text-decoration: none;
 }
 
 /*Elements within sidenavBar*/
@@ -109,229 +108,229 @@ header {
 .sidenavItem,
 .dropdown-btn,
 .subm {
-    padding: 1.5rem 0.5rem 1.5rem 1rem;
-    font-size: 1.125rem;
-    color: #818181;
-    display: block;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-    transition: 0.3s;
-    text-decoration: none;
+	padding: 1.5rem 0.5rem 1.5rem 1rem;
+	font-size: 1.125rem;
+	color: #818181;
+	display: block;
+	border: none;
+	background: none;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+	transition: 0.3s;
+	text-decoration: none;
 }
 
 #logIn {
-    background-color: #be216c;
-    color: #f1f1f1;
-    font-weight: bold;
+	background-color: #be216c;
+	color: #f1f1f1;
+	font-weight: bold;
 }
 
 .sidenavItem:hover,
 .dropdown-btn:hover {
-    color: #706b6b;
-    background-color: #c1d93a;
+	color: #706b6b;
+	background-color: #c1d93a;
 }
 
 .subm:hover {
-    background-color: #e19b38;
-    color: white;
+	background-color: #e19b38;
+	color: white;
 }
 
 /* Sidenav Menu Dropdown */
 
 .dropdown-container {
-    display: none;
-    padding-left: 0.5rem;
-    float: right;
-    margin-right: 1.5rem;
+	display: none;
+	padding-left: 0.5rem;
+	float: right;
+	margin-right: 1.5rem;
 }
 
 .showDropdownMenu {
-    display: block;
-    padding-left: 0.5rem;
-    float: right;
-    margin-right: 1.5rem;
+	display: block;
+	padding-left: 0.5rem;
+	float: right;
+	margin-right: 1.5rem;
 }
 
 .fa-caret-down {
-    float: right;
-    padding-right: 0.5rem;
+	float: right;
+	padding-right: 0.5rem;
 }
 
 #searchbar {
-    grid-area: searchbar;
-    font-size: 12pt;
-    padding: 0.25rem;
-    border: solid 1px;
-    border-radius: 0.15rem;
+	grid-area: searchbar;
+	font-size: 12pt;
+	padding: 0.25rem;
+	border: solid 1px;
+	border-radius: 0.15rem;
 }
 
 #btnsearch {
-    grid-area: btnsearch;
+	grid-area: btnsearch;
 }
 
 /* Slideshow */
 #mainimg {
-    grid-area: mainimage;
-    background-size: cover;
-    align-self: center;
-    overflow: hidden;
+	grid-area: mainimage;
+	background-size: cover;
+	align-self: center;
+	overflow: hidden;
 }
 
 #mainimg figure {
-    position: relative;
-    width: 500%;
-    margin: 0;
-    left: 0;
-    animation: slider 30s infinite;
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: slider 30s infinite;
 }
 
 #mainimg figure img {
-    width: 20%;
-    float: left;
+	width: 20%;
+	float: left;
 }
 
 @keyframes slider {
-    0% {
-        left: 0;
-    }
+	0% {
+		left: 0;
+	}
 
-    25% {
-        left: 0;
-    }
+	25% {
+		left: 0;
+	}
 
-    45% {
-        left: -100%;
-    }
+	45% {
+		left: -100%;
+	}
 
-    50% {
-        left: -100%;
-    }
+	50% {
+		left: -100%;
+	}
 
-    70% {
-        left: -200%;
-    }
+	70% {
+		left: -200%;
+	}
 
-    75% {
-        left: -200%;
-    }
+	75% {
+		left: -200%;
+	}
 
-    95% {
-        left: -300%;
-    }
+	95% {
+		left: -300%;
+	}
 
-    100% {
-        left: -300%;
-    }
+	100% {
+		left: -300%;
+	}
 }
 
 .categoryimg {
-    object-fit: fill;
+	object-fit: fill;
 }
 
 #categories {
-    grid-area: categories;
-    display: grid;
-    grid-template-columns: auto 1fr auto 1fr auto 1fr auto 1fr auto 1fr auto;
-    grid-template-areas: "health . accommodation . petfriendly . shopping . education . nonprofit";
-    border-bottom: solid 1px;
-    cursor: pointer;
+	grid-area: categories;
+	display: grid;
+	grid-template-columns: auto 1fr auto 1fr auto 1fr auto 1fr auto 1fr auto;
+	grid-template-areas: "health . accommodation . petfriendly . shopping . education . nonprofit";
+	border-bottom: solid 1px;
+	cursor: pointer;
 }
 
 #health {
-    grid-area: health;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.25rem;
+	grid-area: health;
+	display: block;
+	height: 3rem;
+	width: 3rem;
+	padding: 0.25rem;
 }
 
 #health:hover {
-    border-bottom: solid 4px rgb(234, 125, 24);
+	border-bottom: solid 4px rgb(234, 125, 24);
 }
 
 #accommodation {
-    grid-area: accommodation;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.25rem;
+	grid-area: accommodation;
+	display: block;
+	height: 3rem;
+	width: 3rem;
+	padding: 0.25rem;
 }
 
 #accommodation:hover {
-    border-bottom: solid 4px rgb(24, 175, 234);
+	border-bottom: solid 4px rgb(24, 175, 234);
 }
 
 #petfriendly {
-    grid-area: petfriendly;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.25rem;
+	grid-area: petfriendly;
+	display: block;
+	height: 3rem;
+	width: 3rem;
+	padding: 0.25rem;
 }
 
 #petfriendly:hover {
-    border-bottom: solid 4px rgb(219, 48, 182);
+	border-bottom: solid 4px rgb(219, 48, 182);
 }
 
 #shopping {
-    grid-area: shopping;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.25rem;
+	grid-area: shopping;
+	display: block;
+	height: 3rem;
+	width: 3rem;
+	padding: 0.25rem;
 }
 
 #shopping:hover {
-    border-bottom: solid 4px rgb(221, 51, 102);
+	border-bottom: solid 4px rgb(221, 51, 102);
 }
 
 #education {
-    grid-area: education;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.25rem;
+	grid-area: education;
+	display: block;
+	height: 3rem;
+	width: 3rem;
+	padding: 0.25rem;
 }
 
 #education:hover {
-    border-bottom: solid 4px rgb(253, 240, 57);
+	border-bottom: solid 4px rgb(253, 240, 57);
 }
 
 #nonprofit {
-    grid-area: nonprofit;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    padding: 0.25rem;
+	grid-area: nonprofit;
+	display: block;
+	height: 3rem;
+	width: 3rem;
+	padding: 0.25rem;
 }
 
 #nonprofit:hover {
-    border-bottom: solid 4px rgb(95, 196, 37);
+	border-bottom: solid 4px rgb(95, 196, 37);
 }
 
 #feed {
-    grid-area: feed;
+	grid-area: feed;
 }
 
 #suggestscreen {
-    visibility: visible;
+	visibility: visible;
 }
 
 /* Nav toggle */
 
 .page {
-    display: none;
-    width: 100%;
-    min-height: 100%;
-    /* allow for content off the bottom of the page */
-    position: absolute;
-    /* or absolute if the user needs to scroll for more content */
+	display: none;
+	width: 100%;
+	min-height: 100%;
+	/* allow for content off the bottom of the page */
+	position: absolute;
+	/* or absolute if the user needs to scroll for more content */
 }
 
 .active {
-    display: grid;
+	display: grid;
 }
