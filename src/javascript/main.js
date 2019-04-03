@@ -112,39 +112,6 @@ document.getElementById('dropdownBtn').addEventListener('click', () => {
 
 //---------------------- BUTTONS ---------------------------------
 
-//Slideshow next & previous
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-const plusSlides = (n) => {
-    showSlides((slideIndex += n));
-};
-
-const currentSlide = (n) => {
-    showSlides((slideIndex = n));
-};
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName('introSlides');
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
-    }
-    slides[slideIndex - 1].style.display = 'grid';
-}
-
-//click nav buttons
-
-document.getElementById('nextSlide').addEventListener('click', showSlides(1));
-document.getElementById('prevSlide').addEventListener('click', showSlides(-1));
-
 //OPEN & CLOSE SIDENAV MENU
 document.getElementById('btnmenu').addEventListener('click', () => {
     document.getElementById('sidenavMenu').style.width = '12.5rem';
