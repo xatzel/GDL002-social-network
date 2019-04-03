@@ -1,3 +1,5 @@
+
+
 //------------------Categories-------------------------------------
 const feed = document.querySelector('#feed');
 const healthBtn = document.querySelector('#health');
@@ -15,11 +17,10 @@ const subNonProfitBtn = document.querySelector('#subnonprofit');
 
 const suggestForm = document.querySelector('#suggestform');
 
-
 //Para almacenar en constante la base de datos de firestore
 const db = firebase.firestore();
 
-//Función que muestra elementos según su categoría
+//Función que muestra elementos según la categoría seleccionada
 const showCategory = (event) => {
 
     let eventTargetCategory = event.currentTarget.dataset.category;
@@ -60,15 +61,35 @@ const showCategory = (event) => {
 
             };
 
+            const validateReview = () => {
+
+                if (opinion.value.length < 1) {
+
+                    opinion.placeholder = "Tu opinión no puede estar vacía"
+                    opinion.style.background = 'rgb(255, 153, 153)';
+
+
+                } else {
+                    opinion.style.background = 'rgb(255, 255, 255)'
+                    sendReview();
+
+                }
+            }
+
+
             const sendReview = () => {
-                console.log(opinion.value);
+
                 db.collection('reviews').add({
 
                     opinion: rateForm.opinion.value
 
                 });
 
-                rateForm.opinion.value = '';
+               opinion.value = '';
+               opinion.placeholder = '¡Gracias por tu valioso aporte!';
+               opinionTitle.style.display = 'none';
+               submitBtn.style.display = 'none';
+               veracityCheck.style.display = 'none';
 
             };
 
@@ -227,9 +248,10 @@ const showCategory = (event) => {
 
             let veracityCheck = document.createElement('div');
             veracityCheck.setAttribute('id', 'veracitycheck');
-            veracityCheck.innerHTML = ('Juro que es la verdad y nadamas que la verdad');
+            veracityCheck.innerHTML = ('Juro que estoy diciendo la verdad');
 
             let checkbox = document.createElement('input');
+            checkbox.setAttribute('id', 'checkbox');
             checkbox.setAttribute('type', 'checkbox');
             checkbox.setAttribute('value', 'true');
 
@@ -241,7 +263,7 @@ const showCategory = (event) => {
             submitBtn.setAttribute('id', 'btnsubmit');
             submitBtn.setAttribute('type', 'button');
             submitBtn.setAttribute('value', 'Enviar');
-            submitBtn.addEventListener('click', sendReview);
+            submitBtn.addEventListener('click', validateReview);
 
             rateForm.appendChild(submitBtn);
             veracityCheck.appendChild(checkbox);

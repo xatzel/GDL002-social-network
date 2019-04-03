@@ -26,8 +26,6 @@
     ". veracitycheck ."
     ". btnsubmit ."
     ". . .";
-
- 
     border-top: solid 1px;
 }
 
@@ -46,10 +44,13 @@
 #opinion {
     grid-area: opinion;
     display: flex;
-    padding: 0.25rem;
+    padding: 0.5rem;
     align-items: center;
     justify-content: center;
+}
 
+#opinion::placeholder {
+    padding: 0.5rem;
 }
 
 #veracitycheck {
