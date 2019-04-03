@@ -1,20 +1,20 @@
 #suggestscreen {
-    display: grid;
+    /* display: grid; */
     grid-area: content;
     grid-template-columns: 20vw 0.5rem 60vw;
     grid-template-rows: 4rem auto 3rem 3rem 3rem 3rem 3rem 3rem 3rem 4rem 1rem;
     grid-row-gap: 0.5rem;
     grid-template-areas: "suggestscreentitle suggestscreentitle suggestscreentitle"
-                         "suggestscreentext suggestscreentext suggestscreentext"
-                         "suggestscreenname . suggestname"
-                         "suggestscreencategory . suggestcategory"
-                         "suggestscreenwebsite . suggestwebsite"
-                         "suggestscreenaddress . suggestaddress"
-                         "suggestscreentelephone . suggesttelephone"
-                         "suggestscreenschedule . suggestschedule"
-                         "suggestscreenperks . suggestperks"
-                         ". . submitsuggestion"
-                            ;
+        "suggestscreentext suggestscreentext suggestscreentext"
+        "suggestscreenname . suggestname"
+        "suggestscreencategory . suggestcategory"
+        "suggestscreenwebsite . suggestwebsite"
+        "suggestscreenaddress . suggestaddress"
+        "suggestscreentelephone . suggesttelephone"
+        "suggestscreenschedule . suggestschedule"
+        "suggestscreenperks . suggestperks"
+        ". . submitsuggestion"
+    ;
 }
 
 #suggestscreentitle {
@@ -46,7 +46,7 @@
 #suggestname {
     display: flex;
     grid-area: suggestname;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -60,7 +60,7 @@
 #suggestcategory {
     display: flex;
     grid-area: suggestcategory;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -74,7 +74,7 @@
 #suggestwebsite {
     display: flex;
     grid-area: suggestwebsite;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -89,7 +89,7 @@
 #suggestaddress {
     display: flex;
     grid-area: suggestaddress;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -103,7 +103,7 @@
 #suggesttelephone {
     display: flex;
     grid-area: suggesttelephone;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -117,7 +117,7 @@
 #suggestschedule {
     display: flex;
     grid-area: suggestschedule;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -131,7 +131,7 @@
 #suggestperks {
     display: flex;
     grid-area: suggestperks;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -139,7 +139,7 @@
     display: flex;
     grid-area: submitsuggestion;
     background-color: rgb(219, 48, 182);
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     border-radius: 0.15rem;
     cursor: pointer;
