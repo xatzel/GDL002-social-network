@@ -1,146 +1,139 @@
 #suggestscreen {
-    display: none;
-    grid-area: content;
-    grid-template-columns: 20vw 0.5rem 60vw;
-    grid-template-rows: 4rem auto 3rem 3rem 3rem 3rem 3rem 3rem 3rem 4rem 1rem;
-    grid-row-gap: 0.5rem;
-    grid-template-areas: "suggestscreentitle suggestscreentitle suggestscreentitle"
-                         "suggestscreentext suggestscreentext suggestscreentext"
-                         "suggestscreenname . suggestname"
-                         "suggestscreencategory . suggestcategory"
-                         "suggestscreenwebsite . suggestwebsite"
-                         "suggestscreenaddress . suggestaddress"
-                         "suggestscreentelephone . suggesttelephone"
-                         "suggestscreenschedule . suggestschedule"
-                         "suggestscreenperks . suggestperks"
-                         ". . submitsuggestion"
-                            ;
+	/* display: grid; */
+	grid-area: content;
+	grid-template-columns: 20vw 0.5rem 60vw;
+	grid-template-rows: 4rem auto 3rem 3rem 3rem 3rem 3rem 3rem 3rem 4rem 1rem;
+	grid-row-gap: 0.5rem;
+	grid-template-areas: "suggestscreentitle suggestscreentitle suggestscreentitle"
+		"suggestscreentext suggestscreentext suggestscreentext" "suggestscreenname . suggestname"
+		"suggestscreencategory . suggestcategory" "suggestscreenwebsite . suggestwebsite"
+		"suggestscreenaddress . suggestaddress" "suggestscreentelephone . suggesttelephone"
+		"suggestscreenschedule . suggestschedule" "suggestscreenperks . suggestperks" ". . submitsuggestion";
 }
 
 #suggestscreentitle {
-    display: flex;
-    grid-area: suggestscreentitle;
-    justify-content: flex-start;
-    align-items: center;
-    font-weight: bold;
-    font-size: 2em;
-    padding: 0.25rem;
+	display: flex;
+	grid-area: suggestscreentitle;
+	justify-content: flex-start;
+	align-items: center;
+	font-weight: bold;
+	font-size: 2em;
+	padding: 0.25rem;
 }
 
 #suggestscreentext {
-    display: flex;
-    grid-area: suggestscreentext;
-    overflow: hidden;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0.25rem;
+	display: flex;
+	grid-area: suggestscreentext;
+	overflow: hidden;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.25rem;
 }
 
 #suggestscreenname {
-    display: flex;
-    grid-area: suggestscreenname;
-    justify-content: flex-end;
-    align-items: center;
+	display: flex;
+	grid-area: suggestscreenname;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 #suggestname {
-    display: flex;
-    grid-area: suggestname;
-    justify-content:center;
-    align-items: center;
+	display: flex;
+	grid-area: suggestname;
+	justify-content: center;
+	align-items: center;
 }
 
 #suggestscreencategory {
-    display: flex;
-    grid-area: suggestscreencategory;
-    justify-content: flex-end;
-    align-items: center;
+	display: flex;
+	grid-area: suggestscreencategory;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 #suggestcategory {
-    display: flex;
-    grid-area: suggestcategory;
-    justify-content:center;
-    align-items: center;
+	display: flex;
+	grid-area: suggestcategory;
+	justify-content: center;
+	align-items: center;
 }
 
 #suggestscreenwebsite {
-    display: flex;
-    grid-area: suggestscreenwebsite;
-    justify-content: flex-end;
-    align-items: center;
+	display: flex;
+	grid-area: suggestscreenwebsite;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 #suggestwebsite {
-    display: flex;
-    grid-area: suggestwebsite;
-    justify-content:center;
-    align-items: center;
+	display: flex;
+	grid-area: suggestwebsite;
+	justify-content: center;
+	align-items: center;
 }
 
-
 #suggestscreenaddress {
-    display: flex;
-    grid-area: suggestscreenaddress;
-    justify-content: flex-end;
-    align-items: center;
+	display: flex;
+	grid-area: suggestscreenaddress;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 #suggestaddress {
-    display: flex;
-    grid-area: suggestaddress;
-    justify-content:center;
-    align-items: center;
+	display: flex;
+	grid-area: suggestaddress;
+	justify-content: center;
+	align-items: center;
 }
 
 #suggestscreentelephone {
-    display: flex;
-    grid-area: suggestscreentelephone;
-    justify-content: flex-end;
-    align-items: center;
+	display: flex;
+	grid-area: suggestscreentelephone;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 #suggesttelephone {
-    display: flex;
-    grid-area: suggesttelephone;
-    justify-content:center;
-    align-items: center;
+	display: flex;
+	grid-area: suggesttelephone;
+	justify-content: center;
+	align-items: center;
 }
 
 #suggestscreenschedule {
-    display: flex;
-    grid-area: suggestscreenschedule;
-    justify-content: flex-end;
-    align-items: center;
+	display: flex;
+	grid-area: suggestscreenschedule;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 #suggestschedule {
-    display: flex;
-    grid-area: suggestschedule;
-    justify-content:center;
-    align-items: center;
+	display: flex;
+	grid-area: suggestschedule;
+	justify-content: center;
+	align-items: center;
 }
 
 #suggestscreenperks {
-    display: flex;
-    grid-area: suggestscreenperks;
-    justify-content: flex-end;
-    align-items: center;
+	display: flex;
+	grid-area: suggestscreenperks;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 #suggestperks {
-    display: flex;
-    grid-area: suggestperks;
-    justify-content:center;
-    align-items: center;
+	display: flex;
+	grid-area: suggestperks;
+	justify-content: center;
+	align-items: center;
 }
 
 #submitsuggestion {
-    display: flex;
-    grid-area: submitsuggestion;
-    background-color: rgb(219, 48, 182);
-    justify-content:center;
-    align-items: center;
-    border-radius: 0.15rem;
-    cursor: pointer;
+	display: flex;
+	grid-area: submitsuggestion;
+	background-color: rgb(219, 48, 182);
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.15rem;
+	cursor: pointer;
 }

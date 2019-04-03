@@ -28,14 +28,13 @@
 
     <main>
 
-        <!----------SIDENAV MENU---------->
+        <!-- -------------SIDENAV MENU  -->
 
 
         <div id="sidenavMenu" class="sidenav">
             <a href="javascript:void(0)" class="menuCloseBtn" id="menuCloseBtn"> &times; </a>
-            <a href="#" data-target="homescreen" class="navlink sidenavItem">Inicio</a>
-            <a href="#" data-target="faqscreen" class="navlink sidenavItem">FAQ</a>
-            <button class="sidenavItem dropdown-btn" id="dropdownBtn">Categorías
+            <button data-target="homescreen" class="navlink sidenavItem">Inicio</button>
+            <button data-target="homescreen" class="navlink sidenavItem dropdown-btn" id="dropdownBtn">Categorías
                 <i class="fas fa-caret-down"></i>
             </button>
 
@@ -47,7 +46,8 @@
                 <button id="subeducation" data-category="education" class="subm">Educación</button>
                 <button id="subnonprofit" data-category="nonprofit" class="subm">Protectoras De Animales</button>
             </div>
-
+            <button data-target="faqscreen" class="navlink sidenavItem">FAQ</button>
+            <button data-target="suggestscreen" class="navlink sidenavItem" id="suggestPlace">Sugiere un lugar</button>
             <button class="sidenavItem" id="logOut">Cerrar Sesión</button>
 
         </div>
@@ -55,7 +55,7 @@
 
         <!---------- PANTALLA HOME---------->
 
-        <div class="page active" id="homescreen">
+        <div class="page" id="homescreen">
 
             <header>
 
@@ -103,14 +103,13 @@
 
             <section id="feed"></section>
 
-            <footer></footer>
 
         </div>
 
         <!---------- PANTALLA REGISTRO USUARIOS---------->
 
 
-        <div id="register">
+        <div class="page active" id="register">
 
             <div id="registerimg"><img class="registerimage" src="images/assets/Introduction.png"></div>
             <input id="username" placeholder="Elige un nombre de usuario">
@@ -184,19 +183,22 @@
         <div class="page" id="suggestscreen">
 
             <div id="suggestscreentitle">¡Sugiere un lugar!</div>
-            <div id="suggestscreentext">Para sugerir que aparezca un establecimiento en nuestro listado, por favor completa la información a continuación: </div>
+            <div id="suggestscreentext">Para sugerir que aparezca un establecimiento en nuestro listado, por favor
+                completa la información a continuación: </div>
 
             <div id="suggestscreenname">Nombre: </div>
             <input id="suggestname" type="text" class="suggestitems" placeholder="Nombre del lugar que sugieres">
 
             <div id="suggestscreencategory">Categoría: </div>
-            <input id="suggestcategory" type="text" class="suggestitems" placeholder="Salud/Alojamiento/Lugares Pet Friendly/Tiendas de autoservicio/Educación/Protectoras de animales">
+            <input id="suggestcategory" type="text" class="suggestitems"
+                placeholder="Salud/Alojamiento/Lugares Pet Friendly/Tiendas de autoservicio/Educación/Protectoras de animales">
 
             <div id="suggestscreenwebsite">Website: </div>
             <input id="suggestwebsite" type="text" class="suggestitems" placeholder="O url de su página de Facebook...">
 
             <div id="suggestscreenaddress">Dirección: </div>
-            <input id="suggestaddress" type="text" class="suggestitems" placeholder="Calle - número - colonia - código postal">
+            <input id="suggestaddress" type="text" class="suggestitems"
+                placeholder="Calle - número - colonia - código postal">
 
 
             <div id="suggestscreentelephone">Teléfono: </div>
