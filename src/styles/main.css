@@ -127,6 +127,10 @@ header {
     background-color: rgba(190, 33, 108, 0.2);
 }
 
+#logOut:hover {
+    background-color: #e19b38;
+}
+
 #suggestPlace:hover {
     color: #f1f1f1;
     background-color: #be216c;
