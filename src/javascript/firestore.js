@@ -6,12 +6,14 @@ const petfriendlyBtn = document.querySelector('#petfriendly');
 const shoppingBtn = document.querySelector('#shopping');
 const educationBtn = document.querySelector('#education');
 
-const subHealthbtn = document.querySelector('#subhealth');
-const subAccommodationbtn = document.querySelector('#subaccommodation');
-const subPetFriendlybtn = document.querySelector('#subpetfriendly');
-const subShoppingbtn = document.querySelector('#subshopping');
-const subEducationbtn = document.querySelector('#subeducation');
-const subNonProfitbtn = document.querySelector('#subnonprofit');
+const subHealthBtn = document.querySelector('#subhealth');
+const subAccommodationBtn = document.querySelector('#subaccommodation');
+const subPetFriendlyBtn = document.querySelector('#subpetfriendly');
+const subShoppingBtn = document.querySelector('#subshopping');
+const subEducationBtn = document.querySelector('#subeducation');
+const subNonProfitBtn = document.querySelector('#subnonprofit');
+
+const suggestForm = document.querySelector('#suggestform');
 
 //Para almacenar en constante la base de datos de firestore
 const db = firebase.firestore();
@@ -245,6 +247,31 @@ const showCategory = (event) => {
 
 };
 
+//Función que agrega lugares sugeridos a base de datos en firestore
+
+suggestForm.addEventListener('submit', (event) => {
+
+    event.preventDefault();
+
+    db.collection('suggestedVendors').add({
+        name: suggestForm.name.value,
+        category: suggestForm.category.value,
+        website: suggestForm.website.value,
+        address: suggestForm.address.value,
+        telephone: suggestForm.telephone.value,
+        schedule: suggestForm.schedule.value,
+        perks: suggestForm.perks.value,
+    });
+
+    suggestForm.name.value = '';
+    suggestForm.category.value = '';
+    suggestForm.website.value = '';
+    suggestForm.address.value = '';
+    suggestForm.telephone.value = '';
+    suggestForm.schedule.value = '';
+    suggestForm.perks.value = '';
+
+});
 
 
 //Botones de la barra de categorías
@@ -255,10 +282,12 @@ shoppingBtn.addEventListener('click', showCategory);
 educationBtn.addEventListener('click', showCategory);
 
 //Botones de la barra de menú
-subHealthbtn.addEventListener('click', showCategory);
-subAccommodationbtn.addEventListener('click', showCategory);
-subPetFriendlybtn.addEventListener('click', showCategory);
-subShoppingbtn.addEventListener('click', showCategory);
-subEducationbtn.addEventListener('click', showCategory);
-subNonProfitbtn.addEventListener('click', showCategory);
+subHealthBtn.addEventListener('click', showCategory);
+subAccommodationBtn.addEventListener('click', showCategory);
+subPetFriendlyBtn.addEventListener('click', showCategory);
+subShoppingBtn.addEventListener('click', showCategory);
+subEducationBtn.addEventListener('click', showCategory);
+subNonProfitBtn.addEventListener('click', showCategory);
 
+//Boton enviar sugerencia de lugar
+submitSuggestionBtn = document.querySelector('#submitsuggestion');
