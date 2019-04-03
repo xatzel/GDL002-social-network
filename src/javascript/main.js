@@ -8,12 +8,12 @@
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         // User is signed in.
-        document.getElementById('homescreen').style.display = 'grid';
-        document.getElementById('register').style.display = 'none';
+        document.getElementById('homescreen').classList.add('active');
+        document.getElementById('register').classList.remove('active');
     } else {
         // No user is signed in.
-        document.getElementById('homescreen').style.display = 'none';
-        document.getElementById('register').style.display = 'grid';
+        document.getElementById('homescreen').classList.remove('active');
+        document.getElementById('register').classList.add('active');
     }
 });
 
@@ -25,8 +25,7 @@ document.querySelector('#createuserbtn').addEventListener('click', () => {
 
     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
         // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        let errorMessage = error.message;
 
         window.alert('Error Message : ' + errorMessage);
         // ...
@@ -74,11 +73,14 @@ const app = {
         console.log(currentPage)
         history.pushState({}, currentPage, `#${currentPage}`);
         document.getElementById(currentPage).dispatchEvent(app.show);
+        app.poppin();
     },
 
     poppin: function (ev) {
+        ev && ev.preventDefault();
         console.log(location.hash, 'popstate event');
         let hash = location.hash.replace('#', '');
+        console.log(document.querySelector('.active'), 'document.querySelector(.active)');
         document.querySelector('.active').classList.remove('active');
         document.getElementById(hash).classList.add('active');
         console.log(hash)
@@ -111,39 +113,6 @@ document.getElementById('dropdownBtn').addEventListener('click', () => {
 
 
 //---------------------- BUTTONS ---------------------------------
-
-//Slideshow next & previous
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-const plusSlides = (n) => {
-    showSlides((slideIndex += n));
-};
-
-const currentSlide = (n) => {
-    showSlides((slideIndex = n));
-};
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName('introSlides');
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
-    }
-    slides[slideIndex - 1].style.display = 'grid';
-}
-
-//click nav buttons
-
-document.getElementById('nextSlide').addEventListener('click', showSlides(1));
-document.getElementById('prevSlide').addEventListener('click', showSlides(-1));
 
 //OPEN & CLOSE SIDENAV MENU
 document.getElementById('btnmenu').addEventListener('click', () => {
