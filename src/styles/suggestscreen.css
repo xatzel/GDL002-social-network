@@ -1,14 +1,19 @@
 #suggestscreen {
-	/* display: grid; */
-	grid-area: content;
-	grid-template-columns: 20vw 0.5rem 60vw;
-	grid-template-rows: 4rem auto 3rem 3rem 3rem 3rem 3rem 3rem 3rem 4rem 1rem;
-	grid-row-gap: 0.5rem;
-	grid-template-areas: "suggestscreentitle suggestscreentitle suggestscreentitle"
-		"suggestscreentext suggestscreentext suggestscreentext" "suggestscreenname . suggestname"
-		"suggestscreencategory . suggestcategory" "suggestscreenwebsite . suggestwebsite"
-		"suggestscreenaddress . suggestaddress" "suggestscreentelephone . suggesttelephone"
-		"suggestscreenschedule . suggestschedule" "suggestscreenperks . suggestperks" ". . submitsuggestion";
+
+    /* display: grid; */
+    align-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    color: #181818;
+    grid-area: content;
+    grid-template-columns: 20vw 0.5rem 60vw;
+    grid-template-rows: auto auto 3rem 3rem 3rem 3rem 3rem 3rem 3rem 4rem 1rem;
+    grid-row-gap: 0.5rem;
+    grid-template-areas: "suggestscreentitle suggestscreentitle suggestscreentitle"
+        "suggestscreentext suggestscreentext suggestscreentext""suggestscreenname . suggestname"
+        "suggestscreencategory . suggestcategory""suggestscreenwebsite . suggestwebsite"
+        "suggestscreenaddress . suggestaddress""suggestscreentelephone . suggesttelephone"
+        "suggestscreenschedule . suggestschedule""suggestscreenperks . suggestperks"". . submitsuggestion";
 }
 
 #suggestscreentitle {
@@ -38,10 +43,17 @@
 }
 
 #suggestname {
-	display: flex;
-	grid-area: suggestname;
-	justify-content: center;
-	align-items: center;
+
+    display: flex;
+    grid-area: suggestname;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-bottom-color: #be216c;
+    border-radius: 0.25rem;
 }
 
 #suggestscreencategory {
@@ -52,10 +64,17 @@
 }
 
 #suggestcategory {
-	display: flex;
-	grid-area: suggestcategory;
-	justify-content: center;
-	align-items: center;
+
+    display: flex;
+    grid-area: suggestcategory;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-bottom-color: #be216c;
+    border-radius: 0.25rem;
 }
 
 #suggestscreenwebsite {
@@ -66,10 +85,18 @@
 }
 
 #suggestwebsite {
-	display: flex;
-	grid-area: suggestwebsite;
-	justify-content: center;
-	align-items: center;
+
+    display: flex;
+    grid-area: suggestwebsite;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-bottom-color: #be216c;
+    border-radius: 0.25rem;
+
 }
 
 #suggestscreenaddress {
@@ -80,10 +107,18 @@
 }
 
 #suggestaddress {
-	display: flex;
-	grid-area: suggestaddress;
-	justify-content: center;
-	align-items: center;
+
+    display: flex;
+    grid-area: suggestaddress;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-bottom-color: #be216c;
+    border-radius: 0.25rem;
+
 }
 
 #suggestscreentelephone {
@@ -94,10 +129,18 @@
 }
 
 #suggesttelephone {
-	display: flex;
-	grid-area: suggesttelephone;
-	justify-content: center;
-	align-items: center;
+
+    display: flex;
+    grid-area: suggesttelephone;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-bottom-color: #be216c;
+    border-radius: 0.25rem;
+
 }
 
 #suggestscreenschedule {
@@ -108,10 +151,18 @@
 }
 
 #suggestschedule {
-	display: flex;
-	grid-area: suggestschedule;
-	justify-content: center;
-	align-items: center;
+
+    display: flex;
+    grid-area: suggestschedule;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-bottom-color: #be216c;
+    border-radius: 0.25rem;
+
 }
 
 #suggestscreenperks {
@@ -122,18 +173,29 @@
 }
 
 #suggestperks {
-	display: flex;
-	grid-area: suggestperks;
-	justify-content: center;
-	align-items: center;
+
+    display: flex;
+    grid-area: suggestperks;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 0.3rem;
+    border-bottom-color: #be216c;
+    border-radius: 0.25rem;
 }
 
 #submitsuggestion {
-	display: flex;
-	grid-area: submitsuggestion;
-	background-color: rgb(219, 48, 182);
-	justify-content: center;
-	align-items: center;
-	border-radius: 0.15rem;
-	cursor: pointer;
+    display: flex;
+    grid-area: submitsuggestion;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #181818;
+    background-color: #c1d93a;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
 }
+

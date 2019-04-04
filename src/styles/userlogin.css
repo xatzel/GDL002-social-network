@@ -1,15 +1,15 @@
 #userloginscreen {
-    display: none;
+    /* display: none; */
     grid-area: content;
     grid-template-columns: auto;
     grid-template-rows: 0.5rem 10rem 1rem auto 0.5rem 2rem 0.5rem;
-    grid-template-areas:    "."
-                            "loginimage"
-                            "."
-                            "loginalternatives"
-                            "."
-                            "useragreement"
-                            ".";
+    grid-template-areas: "."
+        "loginimage"
+        "."
+        "loginalternatives"
+        "."
+        "useragreement"
+        ".";
 }
 
 #loginimage {
@@ -18,7 +18,7 @@
     background-color: black;
 }
 
-#useragreement{
+#useragreement {
     grid-area: useragreement;
     display: flex;
     align-items: center;
@@ -34,13 +34,13 @@
     grid-template-rows: 3rem 3rem 3rem 4rem;
     grid-row-gap: 1rem;
     grid-template-areas:
-                            ". continuefacebook ."
-                            ". continuegoogle ."
-                            ". continueemail ."
-                            ". toregisterscreen .";
+        ". continuefacebook ."
+        ". continuegoogle ."
+        ". continueemail ."
+        ". toregisterscreen .";
 }
 
-#continuefacebook{
+#continuefacebook {
     grid-area: continuefacebook;
     display: flex;
     align-items: center;
@@ -62,7 +62,7 @@
 
 }
 
-#continueemail{
+#continueemail {
     grid-area: continueemail;
     display: flex;
     align-items: center;
@@ -80,13 +80,13 @@
     grid-template-columns: 1rem 1fr 1rem;
     grid-template-rows: 3rem 0.5rem 3rem 0.5rem 4rem 2rem 2rem;
     grid-row-gap: 0.5rem;
-    grid-template-areas:    ". useremail ."
-                            ". . ."
-                            ". userpassword . "
-                            ". . ."
-                            ". emailloginbtn ."
-                            ". forgotpassword ."
-                            ". toregisterscreen .";
+    grid-template-areas: ". useremail ."
+        ". . ."
+        ". userpassword . "
+        ". . ."
+        ". emailloginbtn ."
+        ". forgotpassword ."
+        ". toregisterscreen .";
 }
 
 #useremail {
@@ -117,7 +117,7 @@
     cursor: pointer;
 }
 
-#forgotpassword{
+#forgotpassword {
     grid-area: forgotpassword;
     display: flex;
     align-items: center;
@@ -125,7 +125,7 @@
     cursor: pointer;
 }
 
-#toregisterscreen{
+#toregisterscreen {
     grid-area: toregisterscreen;
     display: flex;
     align-items: center;
