@@ -1,4 +1,4 @@
-//------------------Categories-------------------------------------
+//------------------Categories------------------------------------->
 const feed = document.querySelector('#feed');
 const healthBtn = document.querySelector('#health');
 const accommodationBtn = document.querySelector('#accommodation');
@@ -14,238 +14,223 @@ const subEducationbtn = document.querySelector('#subeducation');
 const subNonProfitbtn = document.querySelector('#subnonprofit');
 
 //Para almacenar en constante la base de datos de firestore
-const db = firebase.firestore();
+//const db = firebase.firestore();
 
 //Función que muestra elementos según su categoría
 const showCategory = (event) => {
+	let eventTargetCategory = event.currentTarget.dataset.category;
 
-    let eventTargetCategory = event.currentTarget.dataset.category;
+	db.collection(eventTargetCategory).get().then((snapshot) => {
+		feed.innerHTML = '';
 
-    db.collection(eventTargetCategory).get().then((snapshot) => {
+		const renderCard = (doc) => {
+			const showSecondaryInfo = () => {
+				if (secondaryInfo.style.display === 'grid') {
+					secondaryInfo.style.display = 'none';
+				} else {
+					secondaryInfo.style.display = 'grid';
+				}
+			};
 
-        feed.innerHTML = '';
+			const showReviews = () => {
+				if (reviewContainer.style.display === 'grid') {
+					reviewContainer.style.display = 'none';
+				} else {
+					reviewContainer.style.display = 'grid';
+				}
+			};
 
-        const renderCard = (doc) => {
+			const showRateForm = () => {
+				if (rateForm.style.display === 'grid') {
+					rateForm.style.display = 'none';
+				} else {
+					rateForm.style.display = 'grid';
+				}
+			};
 
-            const showSecondaryInfo = () => {
+			let cardInfo = document.createElement('div');
+			cardInfo.setAttribute('class', 'cardinfolayout');
 
-                if (secondaryInfo.style.display === 'grid') {
-                    secondaryInfo.style.display = 'none';
-                } else {
-                    secondaryInfo.style.display = 'grid';
-                }
+			let primaryInfo = document.createElement('div');
+			primaryInfo.setAttribute('class', 'primaryinfolayout');
 
-            };
+			let leftbar = document.createElement('div');
+			leftbar.setAttribute('id', 'leftbar');
 
-            const showReviews = () => {
+			let name = document.createElement('div');
+			name.setAttribute('id', 'name');
+			name.innerHTML = doc.data().name;
 
-                if (reviewContainer.style.display === 'grid') {
-                    reviewContainer.style.display = 'none';
-                } else {
-                    reviewContainer.style.display = 'grid';
-                }
+			let likes = document.createElement('div');
+			likes.setAttribute('id', 'likes');
+			likes.innerHTML = doc.data().likes;
 
-            };
+			let perks = document.createElement('div');
+			perks.setAttribute('id', 'perks');
+			perks.innerHTML = doc.data().perks;
 
-            const showRateForm = () => {
+			let btnLike = document.createElement('div');
+			btnLike.setAttribute('id', 'btnlike');
+			btnLike.innerHTML = '<i class="far fa-thumbs-up"></i>';
 
-                if (rateForm.style.display === 'grid') {
-                    rateForm.style.display = 'none';
-                } else {
-                    rateForm.style.display = 'grid';
-                }
+			let btnMore = document.createElement('div');
+			btnMore.setAttribute('id', 'btnmore');
+			btnMore.innerHTML = '<i class="fas fa-caret-down"></i>';
+			btnMore.addEventListener('click', showSecondaryInfo);
 
-            };
+			primaryInfo.appendChild(leftbar);
+			primaryInfo.appendChild(name);
+			primaryInfo.appendChild(likes);
+			primaryInfo.appendChild(perks);
+			primaryInfo.appendChild(btnLike);
+			primaryInfo.appendChild(btnMore);
 
-            let cardInfo = document.createElement('div');
-            cardInfo.setAttribute('class', 'cardinfolayout');
+			cardInfo.appendChild(primaryInfo);
 
-            let primaryInfo = document.createElement('div');
-            primaryInfo.setAttribute('class', 'primaryinfolayout')
+			let secondaryInfo = document.createElement('div');
+			secondaryInfo.setAttribute('class', 'secondaryinfolayout');
 
-            let leftbar = document.createElement('div');
-            leftbar.setAttribute('id', 'leftbar');
+			let secondaryLeftBar = document.createElement('div');
+			secondaryLeftBar.setAttribute('id', 'secondaryleftbar');
 
-            let name = document.createElement('div');
-            name.setAttribute('id', 'name');
-            name.innerHTML = doc.data().name;
+			let contactInfo = document.createElement('div');
+			contactInfo.setAttribute('id', 'contactinfo');
 
-            let likes = document.createElement('div');
-            likes.setAttribute('id', 'likes');
-            likes.innerHTML = doc.data().likes;
+			let schedule = document.createElement('div');
+			schedule.setAttribute('id', 'schedule');
+			schedule.innerHTML = '<i class="fas fa-clock"></i>';
 
-            let perks = document.createElement('div');
-            perks.setAttribute('id', 'perks');
-            perks.innerHTML = doc.data().perks;
+			let scheduleInfo = document.createElement('div');
+			scheduleInfo.setAttribute('id', 'scheduleinfo');
+			scheduleInfo.innerHTML = doc.data().scheduleinfo;
 
-            let btnLike = document.createElement('div');
-            btnLike.setAttribute('id', 'btnlike');
-            btnLike.innerHTML = '<i class="far fa-thumbs-up"></i>';
+			let telephone = document.createElement('div');
+			telephone.setAttribute('id', 'telephone');
+			telephone.innerHTML = '<i class="fas fa-phone"></i>';
 
-            let btnMore = document.createElement('div');
-            btnMore.setAttribute('id', 'btnmore');
-            btnMore.innerHTML = '<i class="fas fa-caret-down"></i>';
-            btnMore.addEventListener('click', showSecondaryInfo);
+			let telephoneInfo = document.createElement('div');
+			telephoneInfo.setAttribute('id', 'telephoneinfo');
+			telephoneInfo.innerHTML = doc.data().telephoneinfo;
 
-            primaryInfo.appendChild(leftbar);
-            primaryInfo.appendChild(name);
-            primaryInfo.appendChild(likes);
-            primaryInfo.appendChild(perks);
-            primaryInfo.appendChild(btnLike);
-            primaryInfo.appendChild(btnMore);
+			let website = document.createElement('div');
+			website.setAttribute('id', 'website');
+			website.innerHTML = '<i class="fas fa-globe"></i>';
 
-            cardInfo.appendChild(primaryInfo);
+			let websiteInfo = document.createElement('div');
+			websiteInfo.setAttribute('id', 'websiteinfo');
+			websiteInfo.innerHTML = doc.data().websiteinfo;
 
-            let secondaryInfo = document.createElement('div');
-            secondaryInfo.setAttribute('class', "secondaryinfolayout");
+			let address = document.createElement('div');
+			address.setAttribute('id', 'address');
+			address.innerHTML = '<i class="fas fa-map-marker"></i>';
 
-            let secondaryLeftBar = document.createElement('div');
-            secondaryLeftBar.setAttribute('id', 'secondaryleftbar');
+			let addressInfo = document.createElement('div');
+			addressInfo.setAttribute('id', 'addressinfo');
+			addressInfo.innerHTML = doc.data().addressinfo;
 
-            let contactInfo = document.createElement('div');
-            contactInfo.setAttribute('id', 'contactinfo');
+			let reviewGrid = document.createElement('div');
+			reviewGrid.setAttribute('id', 'reviewgrid');
 
-            let schedule = document.createElement('div');
-            schedule.setAttribute('id', 'schedule');
-            schedule.innerHTML = '<i class="fas fa-clock"></i>';
+			let showReviewsBtn = document.createElement('div');
+			showReviewsBtn.setAttribute('class', 'btnshowreviewsstyle');
+			showReviewsBtn.innerHTML = 'Opiniones';
+			showReviewsBtn.addEventListener('click', showReviews);
 
-            let scheduleInfo = document.createElement('div');
-            scheduleInfo.setAttribute('id', 'scheduleinfo');
-            scheduleInfo.innerHTML = doc.data().scheduleinfo;
+			let showRateFormBtn = document.createElement('div');
+			showRateFormBtn.setAttribute('id', 'btnrate');
+			showRateFormBtn.innerHTML = 'Calificar';
+			showRateFormBtn.addEventListener('click', showRateForm);
 
-            let telephone = document.createElement('div');
-            telephone.setAttribute('id', 'telephone');
-            telephone.innerHTML = '<i class="fas fa-phone"></i>';
+			reviewGrid.appendChild(showRateFormBtn);
+			reviewGrid.appendChild(showReviewsBtn);
 
-            let telephoneInfo = document.createElement('div');
-            telephoneInfo.setAttribute('id', 'telephoneinfo');
-            telephoneInfo.innerHTML = doc.data().telephoneinfo;
+			contactInfo.appendChild(addressInfo);
+			contactInfo.appendChild(address);
+			contactInfo.appendChild(websiteInfo);
+			contactInfo.appendChild(website);
+			contactInfo.appendChild(telephoneInfo);
+			contactInfo.appendChild(telephone);
+			contactInfo.appendChild(scheduleInfo);
+			contactInfo.appendChild(schedule);
 
-            let website = document.createElement('div');
-            website.setAttribute('id', 'website');
-            website.innerHTML = '<i class="fas fa-globe"></i>';
+			secondaryInfo.appendChild(reviewGrid);
+			secondaryInfo.appendChild(contactInfo);
+			secondaryInfo.appendChild(secondaryLeftBar);
 
-            let websiteInfo = document.createElement('div');
-            websiteInfo.setAttribute('id', 'websiteinfo');
-            websiteInfo.innerHTML = doc.data().websiteinfo;
+			cardInfo.appendChild(secondaryInfo);
 
-            let address = document.createElement('div');
-            address.setAttribute('id', 'address');
-            address.innerHTML = '<i class="fas fa-map-marker"></i>';
+			//Elementos de Opiniones
+			let reviewContainer = document.createElement('div');
+			reviewContainer.setAttribute('class', 'reviewcontainerstyle');
 
-            let addressInfo = document.createElement('div');
-            addressInfo.setAttribute('id', 'addressinfo');
-            addressInfo.innerHTML = doc.data().addressinfo;
+			let editBtn = document.createElement('div');
+			editBtn.setAttribute('id', 'btnedit');
+			editBtn.innerHTML = '<i class="far fa-edit fa-xs"></i>';
 
-            let reviewGrid = document.createElement('div');
-            reviewGrid.setAttribute('id', 'reviewgrid');
+			let authorInfo = document.createElement('div');
+			authorInfo.setAttribute('id', 'authorinfo');
+			authorInfo.innerHTML = 'Fulanita de tal escribió: ';
 
-            let showReviewsBtn = document.createElement('div');
-            showReviewsBtn.setAttribute('class', 'btnshowreviewsstyle');
-            showReviewsBtn.innerHTML = 'Opiniones';
-            showReviewsBtn.addEventListener('click', showReviews);
+			let writtenReview = document.createElement('div');
+			writtenReview.setAttribute('id', 'writtenreview');
+			writtenReview.innerHTML = 'Fido se enfermó de la panza y el veterinario lo apapachó y lo curó.';
 
-            let showRateFormBtn = document.createElement('div');
-            showRateFormBtn.setAttribute('id', 'btnrate');
-            showRateFormBtn.innerHTML = 'Calificar';
-            showRateFormBtn.addEventListener('click', showRateForm);
+			reviewContainer.appendChild(editBtn);
+			reviewContainer.appendChild(authorInfo);
+			reviewContainer.appendChild(writtenReview);
+			cardInfo.appendChild(reviewContainer);
 
-            reviewGrid.appendChild(showRateFormBtn);
-            reviewGrid.appendChild(showReviewsBtn);
+			//Elementos de RateForm
 
-            contactInfo.appendChild(addressInfo);
-            contactInfo.appendChild(address);
-            contactInfo.appendChild(websiteInfo);
-            contactInfo.appendChild(website);
-            contactInfo.appendChild(telephoneInfo);
-            contactInfo.appendChild(telephone);
-            contactInfo.appendChild(scheduleInfo);
-            contactInfo.appendChild(schedule);
+			let rateForm = document.createElement('div');
+			rateForm.setAttribute('id', 'rateform');
 
-            secondaryInfo.appendChild(reviewGrid);
-            secondaryInfo.appendChild(contactInfo);
-            secondaryInfo.appendChild(secondaryLeftBar);
+			let rateTitle = document.createElement('div');
+			rateTitle.setAttribute('id', 'ratetitle');
+			rateTitle.innerHTML = '¡Comparte tu opinión acerca de este establecimiento!';
 
-            cardInfo.appendChild(secondaryInfo);
+			let opinionTitle = document.createElement('div');
+			opinionTitle.setAttribute('id', 'opiniontitle');
+			opinionTitle.innerHTML = 'Tu opinión: ';
 
-//Elementos de Opiniones
-            let reviewContainer = document.createElement('div');
-            reviewContainer.setAttribute('class', 'reviewcontainerstyle');
+			let opinion = document.createElement('textarea');
+			opinion.setAttribute('id', 'opinion');
+			opinion.setAttribute('class', 'textinput');
+			opinion.setAttribute('placeholder', 'Escribe aquí tu opinión...');
 
-            let editBtn = document.createElement('div');
-            editBtn.setAttribute('id', 'btnedit');
-            editBtn.innerHTML = '<i class="far fa-edit fa-xs"></i>';
+			let veracityCheck = document.createElement('div');
+			veracityCheck.setAttribute('id', 'veracitycheck');
+			veracityCheck.innerHTML = 'Juro que es la verdad y nadamas que la verdad';
 
-            let authorInfo = document.createElement('div');
-            authorInfo.setAttribute('id', 'authorinfo');
-            authorInfo.innerHTML = 'Fulanita de tal escribió: ';
+			let checkbox = document.createElement('input');
+			checkbox.setAttribute('type', 'checkbox');
+			checkbox.setAttribute('value', 'true');
 
-            let writtenReview = document.createElement('div');
-            writtenReview.setAttribute('id', 'writtenreview');
-            writtenReview.innerHTML = 'Fido se enfermó de la panza y el veterinario lo apapachó y lo curó.';
+			let checkboxBtn = document.createElement('input');
+			checkboxBtn.setAttribute('type', 'checkbox');
+			checkboxBtn.setAttribute('value', 'true');
 
+			let submitBtn = document.createElement('input');
+			submitBtn.setAttribute('id', 'btnsubmit');
+			submitBtn.setAttribute('type', 'button');
+			submitBtn.setAttribute('value', 'Enviar');
 
-            reviewContainer.appendChild(editBtn);
-            reviewContainer.appendChild(authorInfo);
-            reviewContainer.appendChild(writtenReview);
-            cardInfo.appendChild(reviewContainer);
+			rateForm.appendChild(submitBtn);
+			veracityCheck.appendChild(checkbox);
+			rateForm.appendChild(veracityCheck);
+			rateForm.appendChild(opinion);
+			rateForm.appendChild(opinionTitle);
+			rateForm.appendChild(rateTitle);
+			cardInfo.appendChild(rateForm);
 
-//Elementos de RateForm
+			feed.appendChild(cardInfo);
+		};
 
-            let rateForm = document.createElement('div');
-            rateForm.setAttribute('id', 'rateform');
-
-            let rateTitle = document.createElement('div');
-            rateTitle.setAttribute('id', 'ratetitle');
-            rateTitle.innerHTML = ('¡Comparte tu opinión acerca de este establecimiento!');
-
-            let opinionTitle = document.createElement('div');
-            opinionTitle.setAttribute('id', 'opiniontitle');
-            opinionTitle.innerHTML = ('Tu opinión: ');
-
-            let opinion = document.createElement('textarea');
-            opinion.setAttribute('id', 'opinion');
-            opinion.setAttribute('class', 'textinput');
-            opinion.setAttribute('placeholder', 'Escribe aquí tu opinión...');
-
-            let veracityCheck = document.createElement('div');
-            veracityCheck.setAttribute('id', 'veracitycheck');
-            veracityCheck.innerHTML = ('Juro que es la verdad y nadamas que la verdad');
-
-            let checkbox = document.createElement('input');
-            checkbox.setAttribute('type', 'checkbox');
-            checkbox.setAttribute('value', 'true');
-
-            let checkboxBtn = document.createElement('input');
-            checkboxBtn.setAttribute('type', 'checkbox');
-            checkboxBtn.setAttribute('value', 'true');
-
-            let submitBtn = document.createElement('input');
-            submitBtn.setAttribute('id', 'btnsubmit');
-            submitBtn.setAttribute('type', 'button');
-            submitBtn.setAttribute('value', 'Enviar');
-
-            rateForm.appendChild(submitBtn);
-            veracityCheck.appendChild(checkbox);
-            rateForm.appendChild(veracityCheck);
-            rateForm.appendChild(opinion);
-            rateForm.appendChild(opinionTitle);
-            rateForm.appendChild(rateTitle);
-            cardInfo.appendChild(rateForm);
-
-            feed.appendChild(cardInfo);
-
-        };
-
-        snapshot.docs.forEach((doc) => {
-            renderCard(doc);
-        });
-
-    });
-
+		snapshot.docs.forEach((doc) => {
+			renderCard(doc);
+		});
+	});
 };
-
-
 
 //Botones de la barra de categorías
 healthBtn.addEventListener('click', showCategory);
@@ -261,4 +246,3 @@ subPetFriendlybtn.addEventListener('click', showCategory);
 subShoppingbtn.addEventListener('click', showCategory);
 subEducationbtn.addEventListener('click', showCategory);
 subNonProfitbtn.addEventListener('click', showCategory);
-
