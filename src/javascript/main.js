@@ -98,26 +98,18 @@ const searchInput = document.querySelector('#searchbar').value;
 
 const menuBtn = document.querySelector('#btnmenu');
 
-//OPEN & CLOSE SIDENAV MENU
-document.getElementById('btnmenu').addEventListener('click', () => {
-    document.getElementById('sidenavMenu').style.width = '12.5rem';
-});
-document.getElementById('menuCloseBtn').addEventListener('click', () => {
-    document.getElementById('sidenavMenu').style.width = '0rem';
-});
-
-//OPEN SIDEMENU DROPDOWN
-document.getElementById('dropdownBtn').addEventListener('click', () => {
-    document.getElementById('menuDropdown').classList.toggle('showDropdownMenu');
-});
-
 
 //---------------------- BUTTONS ---------------------------------
 
 //OPEN & CLOSE SIDENAV MENU
 document.getElementById('btnmenu').addEventListener('click', () => {
-    document.getElementById('sidenavMenu').style.width = '12.5rem';
+    document.getElementById('sidenavMenu').classList.add('open');
 });
 document.getElementById('menuCloseBtn').addEventListener('click', () => {
-    document.getElementById('sidenavMenu').style.width = '0rem';
+    document.getElementById('sidenavMenu').classList.remove('open');
+});
+
+//OPEN SIDEMENU DROPDOWN
+document.getElementById('dropdownBtn').addEventListener('click', () => {
+    document.getElementById('menuDropdown').classList.toggle('showDropdownMenu');
 });
