@@ -132,28 +132,3 @@ document.querySelector('#logOut').addEventListener('click', () => {
 			// An error happened.
 		});
 });
-
- /// FIREBASE LOGIN
-
-//homescreen logged in
-//register log in screen
-
-
-
-/*Log In user
-document.querySelector('#createuserbtn').addEventListener('click', () => {
-    //let userName = document.querySelector("#username").value;
-    let userEmail = document.querySelector('#email').value;
-    let userPass = document.querySelector('#password').value;
-
-    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
-        // Handle Errors here.
-        let errorMessage = error.message;
-
-        window.alert('Error Message : ' + errorMessage);
-        // ...
-    });
-});
-
-
-*/

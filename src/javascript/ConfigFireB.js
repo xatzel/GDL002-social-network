@@ -1,5 +1,3 @@
-// FIREBASE esta parte se puede agregar a otro documento y se esconde en git ignore
-// por que mi apikey tiene informacion confidencial
 // Initialize Firebase
 let config = {
     apiKey: 'AIzaSyDwDFXpRkKoNxX_EOWwVIAHVo654hR0i8c',

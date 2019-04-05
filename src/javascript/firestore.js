@@ -19,10 +19,6 @@ const suggestForm = document.querySelector('#suggestform');
 
 const reviewContainer = document.querySelector('#reviewcontainer');
 
-//Para almacenar en constante la base de datos de firestore
-
-const db = firebase.firestore();
-
 //Función que muestra elementos según la categoría seleccionada
 
 const showCategory = (event) => {

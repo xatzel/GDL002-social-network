@@ -1,7 +1,6 @@
 'use strict';
 
 //---------------------------- Router ------------------------------//
-
 const app = {
 	pages: [],
 	show: new Event('show'),
@@ -47,9 +46,7 @@ document.addEventListener('DOMContentLoaded', app.init);
 
 const searchBtn = document.querySelector('#btnsearch').value;
 const searchInput = document.querySelector('#searchbar').value;
-
 const menuBtn = document.querySelector('#btnmenu');
-
 
 //---------------------- BUTTONS ---------------------------------
 
@@ -66,4 +63,3 @@ document.getElementById('menuCloseBtn').addEventListener('click', () => {
 document.getElementById('dropdownBtn').addEventListener('click', () => {
     document.getElementById('menuDropdown').classList.toggle('showDropdownMenu');
 });
-
