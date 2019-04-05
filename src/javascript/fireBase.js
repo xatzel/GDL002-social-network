@@ -1,4 +1,3 @@
-
 document.getElementById('createuserbtn').addEventListener('click', register);
 
 function register() {
@@ -132,3 +131,4 @@ document.querySelector('#logOut').addEventListener('click', () => {
 			// An error happened.
 		});
 });
+
