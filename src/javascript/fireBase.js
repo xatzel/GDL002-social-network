@@ -1,7 +1,7 @@
 function login(){
     let emailAdd = document.getElementById(email).value;
     let passwordAdd = document.getElementById(password).value;
-     
+
     firebase.auth().createUserWithEmailAndPassword(emailAdd, passwordAdd)
      .catch(function(error) {
         // Handle Errors here.
@@ -10,5 +10,5 @@ function login(){
         console.log(errorCode);
         console.log(errorMessage);
       });
-    
+
 }

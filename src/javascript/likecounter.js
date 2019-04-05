@@ -45,3 +45,4 @@ function getCount(ref) {
     });
 }
 // [END get_count]
+
