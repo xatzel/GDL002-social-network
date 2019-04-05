@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 * {
+
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 12pt;
     font-weight: 300;
+
 }
 
 body {
@@ -13,15 +15,15 @@ body {
 }
 
 main {
+
     display: grid;
     height: 100vh;
     width: 100vw;
     overflow: auto;
     grid-template-columns: auto;
     grid-template-rows: 0.5rem auto 0.5rem;
-    grid-template-areas: "."
-                        "content"
-                        ".";
+
+    grid-template-areas: ".""header""content"".""footer";
 
 }
 
@@ -30,6 +32,7 @@ main {
     /* display: none; */
     grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
     grid-template-rows: 3rem 0.5rem auto 3rem 0.5rem auto 0.5rem 3rem;
+
     grid-template-areas:    "header header header header header header header header"
                             ". . . . . . . ."
                             ". mainimage mainimage mainimage mainimage mainimage mainimage ."
@@ -49,14 +52,6 @@ header {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
-
-/* #homescreen {
-    grid-area: content;
-    display: none;
-    grid-template-columns: 1fr 15vw 15vw 15vw 15vw 15vw 15vw 1fr;
-    grid-template-rows: 3rem auto 3rem 0.5rem auto 0.5rem 3rem;
-    grid-template-areas: "header header header header header header header header"". mainimage mainimage mainimage mainimage mainimage mainimage ."". categories categories categories categories categories categories ."". . . . . . . ."". feed feed feed feed feed feed ."". . . . . . . .""footer footer footer footer footer footer footer footer";
-} */
 
 .headerelements {
     display: flex;
@@ -81,6 +76,11 @@ header {
     padding-top: 1.25rem;
     transition: 0.5s;
 }
+
+.open {
+    width: 9rem;
+}
+
 
 /* Open sidenav menu button */
 
@@ -118,7 +118,7 @@ header {
 .dropdown-btn,
 .subm {
     padding: 1.5rem 0.5rem 1.5rem 1rem;
-    font-size: 1.125rem;
+    font-size: 12pt;
     color: #818181;
     display: block;
     border: none;
@@ -131,16 +131,27 @@ header {
     text-decoration: none;
 }
 
-#logIn {
-    background-color: #be216c;
+
+#suggestPlace {
+    /* background-color: #be216c; */
+    color: #818181;
+    background-color: rgba(190, 33, 108, 0.2);
+}
+
+#logOut:hover {
+    background-color: #e19b38;
+}
+
+#suggestPlace:hover {
     color: #f1f1f1;
-    font-weight: bold;
+    background-color: #be216c;
 }
 
 .sidenavItem:hover,
 .dropdown-btn:hover {
-    color: #706b6b;
+    color: #f1f1f1;
     background-color: #c1d93a;
+
 }
 
 .subm:hover {
@@ -325,11 +336,6 @@ header {
     grid-area: feed;
 }
 
-#suggestPlace {
-    background-color: #be216c;
-    color: #f1f1f1;
-}
-
 /* Nav toggle */
 
 .page {
@@ -344,3 +350,27 @@ header {
 .active {
     display: grid;
 }
+
+/* Media queries bigger screens */
+
+/* @media only screen and (min-width: 700px) {
+    .open {
+        width: 15rem;
+    }
+
+    .sidenavItem,
+    .dropdown-btn,
+    .subm {
+        font-size: 16pt;
+        margin-left: 1rem;
+    }
+
+    .fas {
+        font-size: 30px;
+    }
+
+    .categoryimg {
+        width: 150%;
+    }
+
+} */

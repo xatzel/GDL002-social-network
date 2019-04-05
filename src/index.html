@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>POOGLE</title>
+    <title>Poogle</title>
 
-    <!---------- ESTILOS CSS---------->
+    <!---------- Styles CSS---------->
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -28,8 +28,7 @@
 
     <main>
 
-        <!-- -------------SIDENAV MENU  -->
-
+        <!----- SIDENAV MENU  ----->
 
         <div id="sidenavMenu" class="sidenav">
             <a href="javascript:void(0)" class="menuCloseBtn" id="menuCloseBtn"> &times; </a>
@@ -53,8 +52,7 @@
         </div>
 
 
-        <!---------- PANTALLA HOME---------->
-
+        <!---------- Home screen---------->
         <div class="page" id="homescreen">
 
             <header>
@@ -65,7 +63,7 @@
 
             </header>
 
-            <!-- -------------------- Slideshow ----------------- -->
+            <!------- Slideshow -------->
             <div id="mainimg">
                 <figure>
                     <img src="images/assets/slideshowCat.jpg">
@@ -76,27 +74,26 @@
                 </figure>
             </div>
 
-            <!-- ----------- Category icons --------------- -->
+            <!------ Category icons ------>
 
             <section id="categories">
 
-                <div id="health" data-category="health"><img class="categoryimg" src="images/icons/009-red-cross.svg"
-                        width="100%" height="100%"></div>
-                <div id="accommodation" data-category="accommodation"><img class="categoryimg"
-                        src="images/icons/006-dog-house.svg" width="100%" height="100%"></div>
-
-                <div id="petfriendly" data-category="petfriendly"><img class="categoryimg"
-                        src="images/icons/007-pet.svg" width="100%" height="100%">
+                <div id="health" data-category="health"><img class="categoryimg" src="images/icons/009-red-cross.svg">
                 </div>
 
-                <div id="shopping" data-category="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg"
-                        width="100%" height="100%"></div>
+                <div id="accommodation" data-category="accommodation"><img class="categoryimg"
+                        src="images/icons/006-dog-house.svg"></div>
+
+                <div id="petfriendly" data-category="petfriendly"><img class="categoryimg"
+                        src="images/icons/007-pet.svg"></div>
+
+                <div id="shopping" data-category="shopping"><img class="categoryimg"
+                        src="images/icons/013-pet-shop.svg"></div>
 
                 <div id="education" data-category="education"><img class="categoryimg"
-                        src="images/icons/011-graduation-cap.svg" width="100%" height="100%"></div>
+                        src="images/icons/011-graduation-cap.svg"></div>
 
-                <div id="nonprofit" data-category="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg"
-                        width="100%" height="100%">
+                <div id="nonprofit" data-category="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg">
                 </div>
 
             </section>
@@ -108,12 +105,12 @@
 
         </div>
 
-        <!---------- PANTALLA REGISTRO USUARIOS---------->
+        <!---------- User registry screen---------->
 
 
         <div class="page active" id="register">
 
-            <div id="registerimg"><img class="registerimage" src="images/assets/Introduction.png"></div>
+            <div id="registerimg"><img class="registerimage" src="images/assets/Introduction.jpg"></div>
             <input id="username" placeholder="Elige un nombre de usuario">
 
             <div id="emailandpassword">
@@ -129,7 +126,7 @@
             <div id="registeredusers">
 
                 <div id="textregister">¿Ya tienes una cuenta?</div>
-                <div id="registerbtn"><a href="#" data-target="userloginscreen" class="navlink">Inicia sesión</a></div>
+                <div id="registerbtn"><button data-target="userloginscreen" class="navlink">Inicia sesión</button></div>
 
             </div>
 
@@ -139,7 +136,7 @@
 
         </div>
 
-        <!---------- PANTALLA INICIO DE SESION---------->
+        <!---------- Login screen---------->
 
         <div class="page" id="userloginscreen">
 
@@ -170,27 +167,41 @@
 
         </div>
 
-        <!---------- PANTALLA PREGUNTAS FRECUENTES---------->
+        <!---------- FAQ screen---------->
 
         <div class="page" id="faqscreen">
 
-            <div id="faqimage"></div>
-            <h1 id="faqtitle">¿Quienes somos?</h1>
-            <p id="faqtext">Somos una herramienta de búsqueda de servicios para mascotas en Zapopan.</p>
+            <header>
+
+                <button class="headerelements btnmenu" id="btnmenu"><i class="fas fa-bars"></i></button>
+                <input id="searchbar" class="headerelements" placeholder="Busca aquí lo que necesites">
+                <div id="btnsearch" class="headerelements"><i class="fas fa-search"></i></div>
+
+            </header>
+
+            <div id="faqimage"><img src="images/assets/bannerFAQMob-10.jpg"></div>
+            <div id="faqtitle">Es normal tener dudas, permítenos responderlas</div>
+
+            <div class="faqcontainer" id="faqtext"></div>
 
         </div>
 
-        <!---------- PANTALLA SUGIERE UN LUGAR---------->
+        <!---------- Suggest a place screen---------->
 
         <div class="page" id="suggestscreen">
+            <header>
 
-            <form id="suggestform">
 
-                <div id="suggestscreentitle">¡Sugiere un lugar!</div>
-                <div id="suggestscreentext">Para sugerir que aparezca un establecimiento en nuestro listado, por favor completa la información a continuación: </div>
+                <button class="headerelements btnmenu" id="btnmenu"><i class="fas fa-bars"></i></button>
+                <input id="searchbar" class="headerelements" placeholder="Busca aquí lo que necesites">
+                <div id="btnsearch" class="headerelements"><i class="fas fa-search"></i></div>
 
-                <div id="suggestscreenname">Nombre: </div>
-                <input id="suggestname" name="name" type="text" class="suggestitems" placeholder="Nombre del lugar que sugieres">
+            </header>
+
+            <div id="suggestscreentitle"><img src="images/assets/bannerSuggestMob.jpg"></div>
+            <div id="suggestscreentext">Para sugerir que aparezca un establecimiento en nuestro listado, por favor
+                completa la información a continuación: </div>
+
 
                 <div id="suggestscreencategory">Categoría: </div>
                 <input id="suggestcategory" name="category" type="text" class="suggestitems" placeholder="Salud/Alojamiento/Lugares Pet Friendly/Tiendas de autoservicio/Educación/Protectoras de animales">
@@ -209,8 +220,10 @@
                 <div id="suggestscreenschedule">Horario de atención: </div>
                 <input id="suggestschedule" name="schedule" type="text" class="suggestitems" placeholder="L-V 8:00 AM - 8:OO PM">
 
-                <div id="suggestscreenperks">Servicios que ofrece: </div>
-                <input id="suggestperks" name="perks" type="text" class="suggestitems" placeholder="Rayos X, Transporte, Estética">
+
+            <div id="suggestscreenschedule">Horario de atención: </div>
+            <input id="suggestschedule" type="text" class="suggestitems" placeholder="L-V 8:00 AM - 8:00 PM">
+
 
                 <button id="submitsuggestion">ENVIAR SUGERENCIA</button>
 
@@ -231,8 +244,9 @@
     <script src="data/services.js"></script>
     <script src="javascript/ConfigFireB.js"></script>
     <script src="javascript/firestore.js"></script>
-    <script src="javascript/main.js"></script>
+    <script src="javascript/fireBase.js"></script>
 
+    <script src="javascript/main.js"></script>
 
 </body>
 
