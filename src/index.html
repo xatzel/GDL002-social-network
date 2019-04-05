@@ -98,7 +98,9 @@
 
             </section>
 
-            <section id="feed"></section>
+            <section id="feed">
+                <div id="reviewcontainer" class="reviewcontainerstyle"></div>
+            </section>
 
 
         </div>
@@ -189,6 +191,7 @@
         <div class="page" id="suggestscreen">
             <header>
 
+
                 <button class="headerelements btnmenu" id="btnmenu"><i class="fas fa-bars"></i></button>
                 <input id="searchbar" class="headerelements" placeholder="Busca aquí lo que necesites">
                 <div id="btnsearch" class="headerelements"><i class="fas fa-search"></i></div>
@@ -199,32 +202,32 @@
             <div id="suggestscreentext">Para sugerir que aparezca un establecimiento en nuestro listado, por favor
                 completa la información a continuación: </div>
 
-            <div id="suggestscreenname">Nombre: </div>
-            <input id="suggestname" type="text" class="suggestitems" placeholder="Nombre del lugar que sugieres">
 
-            <div id="suggestscreencategory">Categoría: </div>
-            <input id="suggestcategory" type="text" class="suggestitems"
-                placeholder="Salud/Alojamiento/Lugares Pet Friendly/Tiendas de autoservicio/Educación/Protectoras de animales">
+                <div id="suggestscreencategory">Categoría: </div>
+                <input id="suggestcategory" name="category" type="text" class="suggestitems" placeholder="Salud/Alojamiento/Lugares Pet Friendly/Tiendas de autoservicio/Educación/Protectoras de animales">
 
-            <div id="suggestscreenwebsite">Website: </div>
-            <input id="suggestwebsite" type="text" class="suggestitems" placeholder="O url de su página de Facebook...">
+                <div id="suggestscreenwebsite">Website: </div>
+                <input id="suggestwebsite" name="website" type="text" class="suggestitems" placeholder="O url de su página de Facebook...">
 
-            <div id="suggestscreenaddress">Dirección: </div>
-            <input id="suggestaddress" type="text" class="suggestitems"
-                placeholder="Calle - número - colonia - código postal">
+                <div id="suggestscreenaddress">Dirección: </div>
+                <input id="suggestaddress" name="address" type="text" class="suggestitems" placeholder="Calle - número - colonia - código postal">
 
 
-            <div id="suggestscreentelephone">Teléfono: </div>
-            <input id="suggesttelephone" type="text" class="suggestitems" placeholder="+ 52 (--- --- ----)">
+                <div id="suggestscreentelephone">Teléfono: </div>
+                <input id="suggesttelephone" name="telephone" type="text" class="suggestitems" placeholder="+ 52 (--- --- ----)">
+
+
+                <div id="suggestscreenschedule">Horario de atención: </div>
+                <input id="suggestschedule" name="schedule" type="text" class="suggestitems" placeholder="L-V 8:00 AM - 8:OO PM">
 
 
             <div id="suggestscreenschedule">Horario de atención: </div>
             <input id="suggestschedule" type="text" class="suggestitems" placeholder="L-V 8:00 AM - 8:00 PM">
 
-            <div id="suggestscreenperks">Servicios que ofrece: </div>
-            <input id="suggestperks" type="text" class="suggestitems" placeholder="Rayos X, Transporte, Estética">
 
-            <button id="submitsuggestion">ENVIAR SUGERENCIA</button>
+                <button id="submitsuggestion">ENVIAR SUGERENCIA</button>
+
+            </form>
 
         </div>
 
@@ -242,7 +245,7 @@
     <script src="javascript/ConfigFireB.js"></script>
     <script src="javascript/firestore.js"></script>
     <script src="javascript/fireBase.js"></script>
-    <script src="javascript/data.js"></script>
+
     <script src="javascript/main.js"></script>
 
 </body>
