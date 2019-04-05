@@ -3,6 +3,7 @@ document.getElementById('createuserbtn').addEventListener('click', register);
 function register() {
 	//	saveData();
 
+
 	let username = document.getElementById('username').value;
 	let emails = document.getElementById('email').value;
 	let passwords = document.getElementById('password').value;
@@ -118,3 +119,4 @@ function signInWithGoogle() {
 		});
 }
 document.getElementById('googleregister').addEventListener('click', signInWithGoogle);
+

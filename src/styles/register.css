@@ -16,6 +16,10 @@
         ". facebookregister ."
         ". . ."
         " . googleregister .";
+    /* background-image: url("https://i.imgur.com/eLjIsDn.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center; */
 }
 
 #registerimg {
@@ -35,6 +39,7 @@
 img {
     width: 100%;
     object-fit: cover;
+    /* visibility: hidden; */
 }
 
 
@@ -47,7 +52,7 @@ img {
     border-top: none;
     border-bottom-width: 0.3rem;
     border-bottom-color: #BE216C;
-    border-radius: 0.25rem;
+    /* border-radius: 0.25rem; */
 }
 
 #emailandpassword {
@@ -68,7 +73,7 @@ img {
     border-top: none;
     border-bottom-width: 0.3rem;
     border-color: #BE216C;
-    border-radius: 0.25rem;
+    /* border-radius: 0.25rem; */
 }
 
 #password {
@@ -79,7 +84,7 @@ img {
     border-top: none;
     border-bottom-width: 0.3rem;
     border-color: #BE216C;
-    border-radius: 0.25rem;
+    /* border-radius: 0.25rem; */
 }
 
 #createuserbtn {
@@ -152,4 +157,6 @@ img {
     border: none;
     border-radius: 2rem;
     cursor: pointer;
+    background-color: #DB4437;
+    color: white;
 }

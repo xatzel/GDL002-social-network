@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>POOGLE</title>
+    <title>Poogle</title>
 
-    <!---------- ESTILOS CSS---------->
+    <!---------- Styles CSS---------->
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -28,8 +28,7 @@
 
     <main>
 
-        <!-- -------------SIDENAV MENU  -->
-
+        <!----- SIDENAV MENU  ----->
 
         <div id="sidenavMenu" class="sidenav">
             <a href="javascript:void(0)" class="menuCloseBtn" id="menuCloseBtn"> &times; </a>
@@ -53,8 +52,7 @@
         </div>
 
 
-        <!---------- PANTALLA HOME---------->
-
+        <!---------- Home screen---------->
         <div class="page" id="homescreen">
 
             <header>
@@ -65,7 +63,7 @@
 
             </header>
 
-            <!-------- Slideshow -------->
+            <!------- Slideshow -------->
             <div id="mainimg">
                 <figure>
                     <img src="images/assets/slideshowCat.jpg">
@@ -76,27 +74,26 @@
                 </figure>
             </div>
 
-            <!-- ----------- Category icons --------------- -->
+            <!------ Category icons ------>
 
             <section id="categories">
 
-                <div id="health" data-category="health"><img class="categoryimg" src="images/icons/009-red-cross.svg"
-                        width="100%" height="100%"></div>
-                <div id="accommodation" data-category="accommodation"><img class="categoryimg"
-                        src="images/icons/006-dog-house.svg" width="100%" height="100%"></div>
-
-                <div id="petfriendly" data-category="petfriendly"><img class="categoryimg"
-                        src="images/icons/007-pet.svg" width="100%" height="100%">
+                <div id="health" data-category="health"><img class="categoryimg" src="images/icons/009-red-cross.svg">
                 </div>
 
-                <div id="shopping" data-category="shopping"><img class="categoryimg" src="images/icons/013-pet-shop.svg"
-                        width="100%" height="100%"></div>
+                <div id="accommodation" data-category="accommodation"><img class="categoryimg"
+                        src="images/icons/006-dog-house.svg"></div>
+
+                <div id="petfriendly" data-category="petfriendly"><img class="categoryimg"
+                        src="images/icons/007-pet.svg"></div>
+
+                <div id="shopping" data-category="shopping"><img class="categoryimg"
+                        src="images/icons/013-pet-shop.svg"></div>
 
                 <div id="education" data-category="education"><img class="categoryimg"
-                        src="images/icons/011-graduation-cap.svg" width="100%" height="100%"></div>
+                        src="images/icons/011-graduation-cap.svg"></div>
 
-                <div id="nonprofit" data-category="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg"
-                        width="100%" height="100%">
+                <div id="nonprofit" data-category="nonprofit"><img class="categoryimg" src="images/icons/012-paw.svg">
                 </div>
 
             </section>
@@ -106,7 +103,7 @@
 
         </div>
 
-        <!---------- PANTALLA REGISTRO USUARIOS---------->
+        <!---------- User registry screen---------->
 
 
         <div class="page active" id="register">
@@ -137,7 +134,7 @@
 
         </div>
 
-        <!---------- PANTALLA INICIO DE SESION---------->
+        <!---------- Login screen---------->
 
         <div class="page" id="userloginscreen">
 
@@ -168,9 +165,17 @@
 
         </div>
 
-        <!---------- PANTALLA PREGUNTAS FRECUENTES---------->
+        <!---------- FAQ screen---------->
 
         <div class="page" id="faqscreen">
+
+            <header>
+
+                <button class="headerelements btnmenu" id="btnmenu"><i class="fas fa-bars"></i></button>
+                <input id="searchbar" class="headerelements" placeholder="Busca aquí lo que necesites">
+                <div id="btnsearch" class="headerelements"><i class="fas fa-search"></i></div>
+
+            </header>
 
             <div id="faqimage"><img src="images/assets/bannerFAQMob-10.jpg"></div>
             <div id="faqtitle">Es normal tener dudas, permítenos responderlas</div>
@@ -179,9 +184,16 @@
 
         </div>
 
-        <!---------- PANTALLA SUGIERE UN LUGAR---------->
+        <!---------- Suggest a place screen---------->
 
         <div class="page" id="suggestscreen">
+            <header>
+
+                <button class="headerelements btnmenu" id="btnmenu"><i class="fas fa-bars"></i></button>
+                <input id="searchbar" class="headerelements" placeholder="Busca aquí lo que necesites">
+                <div id="btnsearch" class="headerelements"><i class="fas fa-search"></i></div>
+
+            </header>
 
             <div id="suggestscreentitle"><img src="images/assets/bannerSuggestMob.jpg"></div>
             <div id="suggestscreentext">Para sugerir que aparezca un establecimiento en nuestro listado, por favor
@@ -207,7 +219,7 @@
 
 
             <div id="suggestscreenschedule">Horario de atención: </div>
-            <input id="suggestschedule" type="text" class="suggestitems" placeholder="L-V 8:00 AM - 8:OO PM">
+            <input id="suggestschedule" type="text" class="suggestitems" placeholder="L-V 8:00 AM - 8:00 PM">
 
             <div id="suggestscreenperks">Servicios que ofrece: </div>
             <input id="suggestperks" type="text" class="suggestitems" placeholder="Rayos X, Transporte, Estética">
@@ -232,7 +244,6 @@
     <script src="javascript/fireBase.js"></script>
     <script src="javascript/data.js"></script>
     <script src="javascript/main.js"></script>
-
 
 </body>
 
