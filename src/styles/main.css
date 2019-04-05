@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 * {
+
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 12pt;
     font-weight: 300;
+
 }
 
 body {
@@ -13,6 +15,7 @@ body {
 }
 
 main {
+
     display: grid;
     height: 100vh;
     width: 100vw;
@@ -20,6 +23,7 @@ main {
     grid-template-columns: auto;
     grid-template-rows: 0.5rem auto 0.5rem;
     grid-template-areas: ".""header""content"".""footer";
+
 }
 
 #homescreen {
