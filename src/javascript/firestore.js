@@ -21,260 +21,287 @@ const reviewContainer = document.querySelector('#reviewcontainer');
 
 //Función que muestra elementos según la categoría seleccionada
 
-const showCategory = event => {
-    feed.innerHTML = '';
+const showCategory = (event) => {
 
-    let eventTargetCategory = event.currentTarget.dataset.category;
+	feed.innerHTML = '';
 
-    const renderCard = doc => {
-        const showSecondaryInfo = () => {
-            if (secondaryInfo.style.display === 'grid') {
-                secondaryInfo.style.display = 'none';
-            } else {
-                secondaryInfo.style.display = 'grid';
-            }
-        };
+	let eventTargetCategory = event.currentTarget.dataset.category;
 
-        const showReviews = () => {
-            const renderReviewCard = reviewsdoc => {
-                let editBtn = document.createElement('div');
-                editBtn.setAttribute('id', 'btnedit');
-                editBtn.innerHTML = '<i class="far fa-edit fa-xs"></i>';
+	const renderCard = (doc) => {
 
-                let authorInfo = document.createElement('div');
-                authorInfo.setAttribute('id', 'authorinfo');
-                authorInfo.innerHTML = 'Fulanita de tal escribió: ';
+		const showSecondaryInfo = () => {
 
-                let writtenReview = document.createElement('div');
-                writtenReview.setAttribute('id', 'writtenreview');
-                writtenReview.innerHTML = reviewsdoc.data().opinion;
+			if (secondaryInfo.style.display === 'grid') {
+				secondaryInfo.style.display = 'none';
+			} else {
+				secondaryInfo.style.display = 'grid';
+			}
 
-                reviewContainer.appendChild(editBtn);
-                reviewContainer.appendChild(authorInfo);
-                reviewContainer.appendChild(writtenReview);
-                cardInfo.appendChild(reviewContainer);
-            };
+		};
 
-            db.collection('reviews')
-                .get()
-                .then(snapshotreviews => {
-                    snapshotreviews.forEach(reviewsdoc => {
-                        if (reviewsdoc.data().name === doc.data().name) {
-                            renderReviewCard(reviewsdoc);
-                        }
-                    });
-                });
+		const showReviews = () => {
 
-            if (reviewContainer.style.display === 'grid') {
-                reviewContainer.style.display = 'none';
-            } else {
-                reviewContainer.style.display = 'grid';
-            }
-        };
+			const renderReviewCard = (reviewsdoc) => {
 
-        const showRateForm = () => {
-            if (rateForm.style.display === 'grid') {
-                rateForm.style.display = 'none';
-            } else {
-                rateForm.style.display = 'grid';
-            }
-        };
+				let editBtn = document.createElement('div');
+				editBtn.setAttribute('id', 'btnedit');
+				editBtn.innerHTML = '<i class="far fa-edit fa-xs"></i>';
 
-        const validateReview = () => {
-            if (opinion.value.length < 1) {
-                opinion.placeholder = 'Tu opinión no puede estar vacía';
-                opinion.style.background = 'rgb(255, 153, 153)';
-            } else {
-                opinion.style.background = 'rgb(255, 255, 255)';
-                sendReview();
-            }
-        };
+				let authorInfo = document.createElement('div');
+				authorInfo.setAttribute('id', 'authorinfo');
+				authorInfo.innerHTML = 'Fulanita de tal escribió: ';
+	
+				let writtenReview = document.createElement('div');
+				writtenReview.setAttribute('id', 'writtenreview');
+				writtenReview.innerHTML = reviewsdoc.data().opinion;
+	
+	
+				reviewContainer.appendChild(editBtn);
+				reviewContainer.appendChild(authorInfo);
+				reviewContainer.appendChild(writtenReview);
+				cardInfo.appendChild(reviewContainer);
+			
+			};
 
-        const sendReview = () => {
-            db.collection('reviews').add({
+			db.collection('reviews').get().then((snapshotreviews) => {
+		
+				snapshotreviews.forEach((reviewsdoc) => {
+		
+					if (reviewsdoc.data().name === doc.data().name) {
+						renderReviewCard(reviewsdoc);
+					}
+		
+				});
+		
+			});
+
+			if (reviewContainer.style.display === 'grid') {
+				reviewContainer.style.display = 'none';
+			} else {
+				reviewContainer.style.display = 'grid';
+			}
+
+		};
+
+		const showRateForm = () => {
+
+			if (rateForm.style.display === 'grid') {
+				rateForm.style.display = 'none';
+			} else {
+				rateForm.style.display = 'grid';
+			}
+
+		};
+
+		const validateReview = () => {
+
+			if (opinion.value.length < 1) {
+
+				opinion.placeholder = "Tu opinión no puede estar vacía"
+				opinion.style.background = 'rgb(255, 153, 153)';
+
+			} else {
+
+				opinion.style.background = 'rgb(255, 255, 255)'
+				sendReview();
+
+			}
+		};
+
+		const sendReview = () => {
+
+			db.collection('reviews').add({
+
                 opinion: rateForm.opinion.value,
-                name: primaryInfo.name,
-            });
+                name : primaryInfo.name
 
-            opinion.value = '';
-            opinion.placeholder = '¡Gracias por tu valioso aporte!';
-            opinionTitle.style.display = 'none';
-            submitBtn.style.display = 'none';
-            veracityCheck.style.display = 'none';
-        };
+			});
 
-        let cardInfo = document.createElement('div');
-        cardInfo.setAttribute('class', 'cardinfolayout');
+			opinion.value = '';
+			opinion.placeholder = '¡Gracias por tu valioso aporte!';
+			opinionTitle.style.display = 'none';
+			submitBtn.style.display = 'none';
+			veracityCheck.style.display = 'none';
 
-        let primaryInfo = document.createElement('div');
-        primaryInfo.setAttribute('class', 'primaryinfolayout');
+		};
 
-        let leftbar = document.createElement('div');
-        leftbar.setAttribute('id', 'leftbar');
+		let cardInfo = document.createElement('div');
+		cardInfo.setAttribute('class', 'cardinfolayout');
 
-        let name = document.createElement('div');
-        name.setAttribute('id', 'name');
-        name.innerHTML = doc.data().name;
+		let primaryInfo = document.createElement('div');
+		primaryInfo.setAttribute('class', 'primaryinfolayout')
 
-        let likes = document.createElement('div');
-        likes.setAttribute('id', 'likes');
-        likes.innerHTML = doc.data().likes;
+		let leftbar = document.createElement('div');
+		leftbar.setAttribute('id', 'leftbar');
 
-        let perks = document.createElement('div');
-        perks.setAttribute('id', 'perks');
-        perks.innerHTML = doc.data().perks;
+		let name = document.createElement('div');
+		name.setAttribute('id', 'name');
+		name.innerHTML = doc.data().name;
 
-        let btnLike = document.createElement('div');
-        btnLike.setAttribute('id', 'btnlike');
-        btnLike.innerHTML = '<i class="far fa-thumbs-up"></i>';
+		let likes = document.createElement('div');
+		likes.setAttribute('id', 'likes');
+		likes.innerHTML = doc.data().likes;
 
-        let btnMore = document.createElement('div');
-        btnMore.setAttribute('id', 'btnmore');
-        btnMore.innerHTML = '<i class="fas fa-caret-down"></i>';
-        btnMore.addEventListener('click', showSecondaryInfo);
+		let perks = document.createElement('div');
+		perks.setAttribute('id', 'perks');
+		perks.innerHTML = doc.data().perks;
 
-        primaryInfo.appendChild(leftbar);
-        primaryInfo.appendChild(name);
-        primaryInfo.appendChild(likes);
-        primaryInfo.appendChild(perks);
-        primaryInfo.appendChild(btnLike);
-        primaryInfo.appendChild(btnMore);
+		let btnLike = document.createElement('div');
+		btnLike.setAttribute('id', 'btnlike');
+		btnLike.innerHTML = '<i class="far fa-thumbs-up"></i>';
 
-        cardInfo.appendChild(primaryInfo);
+		let btnMore = document.createElement('div');
+		btnMore.setAttribute('id', 'btnmore');
+		btnMore.innerHTML = '<i class="fas fa-caret-down"></i>';
+		btnMore.addEventListener('click', showSecondaryInfo);
 
-        let secondaryInfo = document.createElement('div');
-        secondaryInfo.setAttribute('class', 'secondaryinfolayout');
+		primaryInfo.appendChild(leftbar);
+		primaryInfo.appendChild(name);
+		primaryInfo.appendChild(likes);
+		primaryInfo.appendChild(perks);
+		primaryInfo.appendChild(btnLike);
+		primaryInfo.appendChild(btnMore);
 
-        let secondaryLeftBar = document.createElement('div');
-        secondaryLeftBar.setAttribute('id', 'secondaryleftbar');
+		cardInfo.appendChild(primaryInfo);
 
-        let contactInfo = document.createElement('div');
-        contactInfo.setAttribute('id', 'contactinfo');
+		let secondaryInfo = document.createElement('div');
+		secondaryInfo.setAttribute('class', "secondaryinfolayout");
 
-        let schedule = document.createElement('div');
-        schedule.setAttribute('id', 'schedule');
-        schedule.innerHTML = '<i class="fas fa-clock"></i>';
+		let secondaryLeftBar = document.createElement('div');
+		secondaryLeftBar.setAttribute('id', 'secondaryleftbar');
 
-        let scheduleInfo = document.createElement('div');
-        scheduleInfo.setAttribute('id', 'scheduleinfo');
-        scheduleInfo.innerHTML = doc.data().scheduleinfo;
+		let contactInfo = document.createElement('div');
+		contactInfo.setAttribute('id', 'contactinfo');
 
-        let telephone = document.createElement('div');
-        telephone.setAttribute('id', 'telephone');
-        telephone.innerHTML = '<i class="fas fa-phone"></i>';
+		let schedule = document.createElement('div');
+		schedule.setAttribute('id', 'schedule');
+		schedule.innerHTML = '<i class="fas fa-clock"></i>';
 
-        let telephoneInfo = document.createElement('div');
-        telephoneInfo.setAttribute('id', 'telephoneinfo');
-        telephoneInfo.innerHTML = doc.data().telephoneinfo;
+		let scheduleInfo = document.createElement('div');
+		scheduleInfo.setAttribute('id', 'scheduleinfo');
+		scheduleInfo.innerHTML = doc.data().scheduleinfo;
 
-        let website = document.createElement('div');
-        website.setAttribute('id', 'website');
-        website.innerHTML = '<i class="fas fa-globe"></i>';
+		let telephone = document.createElement('div');
+		telephone.setAttribute('id', 'telephone');
+		telephone.innerHTML = '<i class="fas fa-phone"></i>';
 
-        let websiteInfo = document.createElement('div');
-        websiteInfo.setAttribute('id', 'websiteinfo');
-        websiteInfo.innerHTML = doc.data().websiteinfo;
+		let telephoneInfo = document.createElement('div');
+		telephoneInfo.setAttribute('id', 'telephoneinfo');
+		telephoneInfo.innerHTML = doc.data().telephoneinfo;
 
-        let address = document.createElement('div');
-        address.setAttribute('id', 'address');
-        address.innerHTML = '<i class="fas fa-map-marker"></i>';
+		let website = document.createElement('div');
+		website.setAttribute('id', 'website');
+		website.innerHTML = '<i class="fas fa-globe"></i>';
 
-        let addressInfo = document.createElement('div');
-        addressInfo.setAttribute('id', 'addressinfo');
-        addressInfo.innerHTML = doc.data().addressinfo;
+		let websiteInfo = document.createElement('div');
+		websiteInfo.setAttribute('id', 'websiteinfo');
+		websiteInfo.innerHTML = doc.data().websiteinfo;
 
-        let reviewGrid = document.createElement('div');
-        reviewGrid.setAttribute('id', 'reviewgrid');
+		let address = document.createElement('div');
+		address.setAttribute('id', 'address');
+		address.innerHTML = '<i class="fas fa-map-marker"></i>';
 
-        let showReviewsBtn = document.createElement('div');
-        showReviewsBtn.setAttribute('class', 'btnshowreviewsstyle');
-        showReviewsBtn.innerHTML = 'Opiniones';
-        showReviewsBtn.addEventListener('click', showReviews);
+		let addressInfo = document.createElement('div');
+		addressInfo.setAttribute('id', 'addressinfo');
+		addressInfo.innerHTML = doc.data().addressinfo;
 
-        let showRateFormBtn = document.createElement('div');
-        showRateFormBtn.setAttribute('id', 'btnrate');
-        showRateFormBtn.innerHTML = 'Calificar';
-        showRateFormBtn.addEventListener('click', showRateForm);
+		let reviewGrid = document.createElement('div');
+		reviewGrid.setAttribute('id', 'reviewgrid');
 
-        reviewGrid.appendChild(showRateFormBtn);
-        reviewGrid.appendChild(showReviewsBtn);
+		let showReviewsBtn = document.createElement('div');
+		showReviewsBtn.setAttribute('class', 'btnshowreviewsstyle');
+		showReviewsBtn.innerHTML = 'Opiniones';
+		showReviewsBtn.addEventListener('click', showReviews);
 
-        contactInfo.appendChild(addressInfo);
-        contactInfo.appendChild(address);
-        contactInfo.appendChild(websiteInfo);
-        contactInfo.appendChild(website);
-        contactInfo.appendChild(telephoneInfo);
-        contactInfo.appendChild(telephone);
-        contactInfo.appendChild(scheduleInfo);
-        contactInfo.appendChild(schedule);
+		let showRateFormBtn = document.createElement('div');
+		showRateFormBtn.setAttribute('id', 'btnrate');
+		showRateFormBtn.innerHTML = 'Calificar';
+		showRateFormBtn.addEventListener('click', showRateForm);
 
-        secondaryInfo.appendChild(reviewGrid);
-        secondaryInfo.appendChild(contactInfo);
-        secondaryInfo.appendChild(secondaryLeftBar);
+		reviewGrid.appendChild(showRateFormBtn);
+		reviewGrid.appendChild(showReviewsBtn);
 
-        cardInfo.appendChild(secondaryInfo);
+		contactInfo.appendChild(addressInfo);
+		contactInfo.appendChild(address);
+		contactInfo.appendChild(websiteInfo);
+		contactInfo.appendChild(website);
+		contactInfo.appendChild(telephoneInfo);
+		contactInfo.appendChild(telephone);
+		contactInfo.appendChild(scheduleInfo);
+		contactInfo.appendChild(schedule);
 
-        //Elementos de RateForm
-        let rateForm = document.createElement('form');
-        rateForm.setAttribute('id', 'rateform');
+		secondaryInfo.appendChild(reviewGrid);
+		secondaryInfo.appendChild(contactInfo);
+		secondaryInfo.appendChild(secondaryLeftBar);
 
-        let rateTitle = document.createElement('div');
-        rateTitle.setAttribute('id', 'ratetitle');
-        rateTitle.innerHTML = '¡Comparte tu opinión acerca de este establecimiento!';
+		cardInfo.appendChild(secondaryInfo);
 
-        let opinionTitle = document.createElement('div');
-        opinionTitle.setAttribute('id', 'opiniontitle');
-        opinionTitle.innerHTML = 'Tu opinión: ';
+		//Elementos de RateForm
+		let rateForm = document.createElement('form');
+		rateForm.setAttribute('id', 'rateform');
 
-        let opinion = document.createElement('textarea');
-        opinion.setAttribute('id', 'opinion');
-        opinion.setAttribute('name', 'opinion');
-        opinion.setAttribute('class', 'textinput');
-        opinion.setAttribute('placeholder', 'Escribe aquí tu opinión...');
+		let rateTitle = document.createElement('div');
+		rateTitle.setAttribute('id', 'ratetitle');
+		rateTitle.innerHTML = ('¡Comparte tu opinión acerca de este establecimiento!');
 
-        let veracityCheck = document.createElement('div');
-        veracityCheck.setAttribute('id', 'veracitycheck');
-        veracityCheck.innerHTML = 'Juro que estoy diciendo la verdad';
+		let opinionTitle = document.createElement('div');
+		opinionTitle.setAttribute('id', 'opiniontitle');
+		opinionTitle.innerHTML = ('Tu opinión: ');
 
-        let checkbox = document.createElement('input');
-        checkbox.setAttribute('id', 'checkbox');
-        checkbox.setAttribute('type', 'checkbox');
-        checkbox.setAttribute('value', 'true');
+		let opinion = document.createElement('textarea');
+		opinion.setAttribute('id', 'opinion');
+		opinion.setAttribute('name', 'opinion')
+		opinion.setAttribute('class', 'textinput');
+		opinion.setAttribute('placeholder', 'Escribe aquí tu opinión...');
 
-        let checkboxBtn = document.createElement('input');
-        checkboxBtn.setAttribute('type', 'checkbox');
-        checkboxBtn.setAttribute('value', 'true');
+		let veracityCheck = document.createElement('div');
+		veracityCheck.setAttribute('id', 'veracitycheck');
+		veracityCheck.innerHTML = ('Juro que estoy diciendo la verdad');
 
-        let submitBtn = document.createElement('input');
-        submitBtn.setAttribute('id', 'btnsubmit');
-        submitBtn.setAttribute('type', 'button');
-        submitBtn.setAttribute('value', 'Enviar');
-        submitBtn.addEventListener('click', validateReview);
+		let checkbox = document.createElement('input');
+		checkbox.setAttribute('id', 'checkbox');
+		checkbox.setAttribute('type', 'checkbox');
+		checkbox.setAttribute('value', 'true');
 
-        rateForm.appendChild(submitBtn);
-        veracityCheck.appendChild(checkbox);
-        rateForm.appendChild(veracityCheck);
-        rateForm.appendChild(opinion);
-        rateForm.appendChild(opinionTitle);
-        rateForm.appendChild(rateTitle);
-        cardInfo.appendChild(rateForm);
+		let checkboxBtn = document.createElement('input');
+		checkboxBtn.setAttribute('type', 'checkbox');
+		checkboxBtn.setAttribute('value', 'true');
 
-        feed.appendChild(cardInfo);
-    };
+		let submitBtn = document.createElement('input');
+		submitBtn.setAttribute('id', 'btnsubmit');
+		submitBtn.setAttribute('type', 'button');
+		submitBtn.setAttribute('value', 'Enviar');
+		submitBtn.addEventListener('click', validateReview);
 
-    db.collection('vendors')
-        .get()
-        .then(snapshot => {
-            snapshot.forEach(doc => {
-                if (eventTargetCategory === doc.data().category) {
-                    renderCard(doc);
-                }
-            });
-        });
+		rateForm.appendChild(submitBtn);
+		veracityCheck.appendChild(checkbox);
+		rateForm.appendChild(veracityCheck);
+		rateForm.appendChild(opinion);
+		rateForm.appendChild(opinionTitle);
+		rateForm.appendChild(rateTitle);
+		cardInfo.appendChild(rateForm);
+
+		feed.appendChild(cardInfo);
+
+	};
+
+    db.collection('vendors').get().then((snapshot) => {
+
+		snapshot.forEach((doc) => {
+
+			if (eventTargetCategory === doc.data().category) {
+				renderCard(doc);
+			}
+
+		});
+
+	});
+
 };
 
 //Función que se ejecuta al hacer click en botón y agrega lugares sugeridos a base de datos en firestore
-suggestForm.addEventListener('submit', event => {
+suggestForm.addEventListener('submit', (event) => {
+
     event.preventDefault();
 
     db.collection('suggestedVendors').add({
@@ -294,6 +321,7 @@ suggestForm.addEventListener('submit', event => {
     suggestForm.telephone.value = '';
     suggestForm.schedule.value = '';
     suggestForm.perks.value = '';
+
 });
 
 //Botones de la barra de categorías

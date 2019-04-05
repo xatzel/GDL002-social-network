@@ -1,4 +1,5 @@
 'use strict';
+
 //---------------------------- Router ------------------------------//
 const app = {
     pages: [],
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', app.init);
 const searchBtn = document.querySelector('#btnsearch').value;
 const searchInput = document.querySelector('#searchbar').value;
 const menuBtn = document.querySelector('#btnmenu');
+
 //---------------------- BUTTONS ---------------------------------
 //OPEN & CLOSE SIDENAV MENU
 document.getElementById('btnmenu').addEventListener('click', () => {
