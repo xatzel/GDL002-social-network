@@ -2,7 +2,7 @@
     /* display: none; */
     grid-area: content;
     grid-template-columns: auto;
-    grid-template-rows: 0.5rem 10rem 1rem 2rem 0.5rem auto 0.5rem;
+    grid-template-rows: 0.5rem auto 1rem 2rem 0.5rem auto 0.5rem;
     grid-template-areas: "."
         "faqimage"
         "."

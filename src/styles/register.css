@@ -120,6 +120,11 @@ img {
     border-radius: 1rem;
 }
 
+#registerbtn button {
+    border: none;
+    background: none;
+}
+
 #ortext {
     grid-area: ortext;
     display: flex;
